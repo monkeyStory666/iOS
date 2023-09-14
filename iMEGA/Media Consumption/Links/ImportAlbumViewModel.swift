@@ -1,6 +1,8 @@
 import Combine
 import MEGAAnalyticsiOS
 import MEGADomain
+import MEGAL10n
+import MEGAPermissions
 import MEGAPresentation
 import MEGASwift
 import SwiftUI
@@ -9,18 +11,23 @@ final class ImportAlbumViewModel: ObservableObject {
     enum Constants {
         static let disabledOpacity = 0.3
     }
+    // Private State
     private let publicAlbumUseCase: any PublicAlbumUseCaseProtocol
     private let albumNameUseCase: any AlbumNameUseCaseProtocol
     private let accountStorageUseCase: any AccountStorageUseCaseProtocol
     private let importPublicAlbumUseCase: any ImportPublicAlbumUseCaseProtocol
+    private let saveMediaUseCase: any SaveMediaToPhotosUseCaseProtocol
+    private let permissionHandler: any DevicePermissionsHandling
     private let tracker: any AnalyticsTracking
+    private weak var transferWidgetResponder: (any TransferWidgetResponderProtocol)?
+    private let monitorUseCase: any NetworkMonitorUseCaseProtocol
     
     private var publicLinkWithDecryptionKey: URL?
     private var subscriptions = Set<AnyCancellable>()
     private var showSnackBarSubscription: AnyCancellable?
-    private var snackBarMessage = ""
     private var renamedAlbum: String?
-    
+
+    // Public State
     private(set) var importAlbumTask: Task<Void, Never>?
     private(set) var reservedAlbumNames: [String]?
     
@@ -43,13 +50,16 @@ final class ImportAlbumViewModel: ObservableObject {
     @Published var showStorageQuotaWillExceed = false
     @Published var importFolderLocation: NodeEntity?
     @Published var showRenameAlbumAlert = false
-    @Published var showSnackBar = false
+    @Published var showPhotoPermissionAlert = false
+    @Published var showNoInternetConnection = false
     @Published private(set) var isSelectionEnabled = false
     @Published private(set) var selectButtonOpacity = 0.0
     @Published private(set) var publicAlbumName: String?
     @Published private(set) var selectionNavigationTitle: String = ""
     @Published private(set) var isToolbarButtonsDisabled = true
     @Published private(set) var showLoading = false
+    @Published private(set) var snackBarViewModel: SnackBarViewModel?
+    
     @Published private(set) var isShareLinkButtonDisabled = true
     
     private var albumLink: String {
@@ -82,13 +92,21 @@ final class ImportAlbumViewModel: ObservableObject {
          accountStorageUseCase: some AccountStorageUseCaseProtocol,
          importPublicAlbumUseCase: some ImportPublicAlbumUseCaseProtocol,
          accountUseCase: some AccountUseCaseProtocol,
-         tracker: some AnalyticsTracking) {
+         saveMediaUseCase: some SaveMediaToPhotosUseCaseProtocol,
+         transferWidgetResponder: (some TransferWidgetResponderProtocol)?,
+         permissionHandler: some DevicePermissionsHandling,
+         tracker: some AnalyticsTracking,
+         monitorUseCase: some NetworkMonitorUseCaseProtocol) {
         self.publicLink = publicLink
         self.publicAlbumUseCase = publicAlbumUseCase
         self.albumNameUseCase = albumNameUseCase
         self.accountStorageUseCase = accountStorageUseCase
         self.importPublicAlbumUseCase = importPublicAlbumUseCase
+        self.saveMediaUseCase = saveMediaUseCase
+        self.transferWidgetResponder = transferWidgetResponder
+        self.permissionHandler = permissionHandler
         self.tracker = tracker
+        self.monitorUseCase = monitorUseCase
         
         photoLibraryContentViewModel = PhotoLibraryContentViewModel(library: PhotoLibrary(),
                                                                     contentMode: .albumLink)
@@ -123,7 +141,7 @@ final class ImportAlbumViewModel: ObservableObject {
         publicLinkWithDecryptionKey = linkWithDecryption
         await loadPublicAlbum()
     }
-    
+            
     func enablePhotoLibraryEditMode(_ enable: Bool) {
         photoLibraryContentViewModel.selection.editMode = enable ? .active : .inactive
     }
@@ -138,6 +156,10 @@ final class ImportAlbumViewModel: ObservableObject {
     
     @MainActor
     func importAlbum() async {
+        guard monitorUseCase.isConnected() else {
+            showNoInternetConnection = true
+            return
+        }
         do {
             try await accountStorageUseCase.refreshCurrentAccountDetails()
         } catch {
@@ -145,7 +167,7 @@ final class ImportAlbumViewModel: ObservableObject {
             return
         }
         
-        guard !accountStorageUseCase.willStorageQuotaExceed(after: photoLibraryContentViewModel.photosToImport) else {
+        guard !accountStorageUseCase.willStorageQuotaExceed(after: photoLibraryContentViewModel.photosToAction) else {
             showStorageQuotaWillExceed.toggle()
             return
         }
@@ -158,24 +180,46 @@ final class ImportAlbumViewModel: ObservableObject {
         showImportAlbumLocation.toggle()
     }
     
-    func snackBarViewModel() -> SnackBarViewModel {
-        let snackBar = SnackBar(message: snackBarMessage)
-        let viewModel = SnackBarViewModel(snackBar: snackBar)
+    @MainActor
+    func saveToPhotos() async {
+        guard monitorUseCase.isConnected() else {
+            showNoInternetConnection = true
+            return
+        }
+        let photosToSave = photoLibraryContentViewModel.photosToAction
+                
+        guard photosToSave.isNotEmpty else {
+            return
+        }
         
-        showSnackBarSubscription = viewModel.$isShowSnackBar
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] isShown in
-                guard let self else { return }
-                if isShown {
-                    snackBarMessage = ""
-                }
-                showSnackBar = isShown
-            }
+        let granted = await permissionHandler.requestPhotoLibraryAccessPermissions()
         
-        return viewModel
+        guard granted else {
+            showPhotoPermissionAlert = true
+            MEGALogError("[Import Album] PhotoLibraryAccessPermissions not granted")
+            return
+        }
+        
+        transferWidgetResponder?.setProgressViewInKeyWindow()
+        transferWidgetResponder?.updateProgressView(bottomConstant: -140)
+        transferWidgetResponder?.bringProgressToFrontKeyWindowIfNeeded()
+        transferWidgetResponder?.showWidgetIfNeeded()
+        
+        showSnackBar(message: Strings.Localizable.General.SaveToPhotos.started(photosToSave.count))
+
+        do {
+            try await saveMediaUseCase.saveToPhotos(nodes: photosToSave)
+        } catch {
+            MEGALogError("[Import Album] Error saving media nodes: \(error)")
+            showSnackBar(message: error.localizedDescription)
+        }
     }
-    
+
     func renameAlbum(newName: String) {
+        guard monitorUseCase.isConnected() else {
+            showNoInternetConnection = true
+            return
+        }
         renamedAlbum = newName
         showImportAlbumLocation.toggle()
     }
@@ -212,6 +256,25 @@ final class ImportAlbumViewModel: ObservableObject {
         publicLinkWithDecryptionKey = nil
     }
     
+    private func makeSnackBarViewModel(message: String) -> SnackBarViewModel {
+        
+        showSnackBarSubscription?.cancel()
+        
+        let snackBar = SnackBar(message: message)
+        let viewModel = SnackBarViewModel(snackBar: snackBar)
+        
+        showSnackBarSubscription = viewModel.$isShowSnackBar
+            .filter { !$0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                snackBarViewModel = nil
+            }
+        return viewModel
+    }
+    
+    // MARK: Subscriptions
+    
     private func subscribeToSelection() {
         subscribeToEditMode()
         subscribeToSelectionHidden()
@@ -225,10 +288,8 @@ final class ImportAlbumViewModel: ObservableObject {
                 switch $0 {
                 case 0:
                     return Strings.Localizable.selectTitle
-                case 1:
-                    return Strings.Localizable.oneItemSelected(1)
                 default:
-                    return Strings.Localizable.itemsSelected($0)
+                    return Strings.Localizable.General.Format.itemsSelected($0)
                 }
             }.assign(to: &$selectionNavigationTitle)
         
@@ -306,14 +367,18 @@ final class ImportAlbumViewModel: ObservableObject {
             .compactMap { $0 }
             .sink { [weak self] in
                 guard let self else { return }
-                handeImportFolderSelection(folder: $0)
+                handleImportFolderSelection(folder: $0)
             }
             .store(in: &subscriptions)
     }
     
-    private func handeImportFolderSelection(folder: NodeEntity) {
+    private func handleImportFolderSelection(folder: NodeEntity) {
+        guard monitorUseCase.isConnected() else {
+            showNoInternetConnection = true
+            return
+        }
         guard let albumName else { return }
-        let photos = photoLibraryContentViewModel.photosToImport
+        let photos = photoLibraryContentViewModel.photosToAction
         
         importAlbumTask = Task { [weak self] in
             guard let self else { return }
@@ -345,8 +410,12 @@ final class ImportAlbumViewModel: ObservableObject {
     
     @MainActor
     private func showSnackBar(message: String) {
-        snackBarMessage = message
-        showSnackBar.toggle()
+        guard let snackBarViewModel else {
+            snackBarViewModel = makeSnackBarViewModel(message: message)
+            return
+        }
+        
+        snackBarViewModel.update(snackBar: SnackBar(message: message))
     }
     
     @MainActor
@@ -356,7 +425,7 @@ final class ImportAlbumViewModel: ObservableObject {
 }
 
 private extension PhotoLibraryContentViewModel {
-    var photosToImport: [NodeEntity] {
+    var photosToAction: [NodeEntity] {
         if selection.editMode.isEditing {
             return Array(selection.photos.values)
         }

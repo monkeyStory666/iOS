@@ -1,10 +1,11 @@
-
 #import "MEGARemoveRequestDelegate.h"
 
 #import "SVProgressHUD.h"
 
 #import "DisplayMode.h"
 #import "MEGA-Swift.h"
+
+@import MEGAL10nObjc;
 
 @interface MEGARemoveRequestDelegate ()
 
@@ -42,7 +43,7 @@
     
     if (error.type) {
         [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
-        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@ %@", request.requestString, NSLocalizedString(error.name, nil)]];
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@ %@", request.requestString, LocalizedString(error.name, @"")]];
         return;
     }
     
@@ -55,9 +56,9 @@
             [SVProgressHUD showImage:[UIImage imageNamed:@"hudMinus"] status:message];
         } else if (self.mode == DisplayModeSharedItem) {
             if (self.totalRequests > 1) {
-                [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"sharesLeft", @"Message shown when some shares have been left")];
+                [SVProgressHUD showSuccessWithStatus:LocalizedString(@"sharesLeft", @"Message shown when some shares have been left")];
             } else {
-                [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"shareLeft", @"Message shown when a share has been left")];
+                [SVProgressHUD showSuccessWithStatus:LocalizedString(@"shareLeft", @"Message shown when a share has been left")];
             }
         }
         

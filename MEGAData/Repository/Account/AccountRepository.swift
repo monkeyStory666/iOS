@@ -13,8 +13,8 @@ final class AccountRepository: NSObject, AccountRepositoryProtocol {
     private let sdk: MEGASdk
     private let currentUserSource: CurrentUserSource
     
-    private let requestResultSourcePublisher = PassthroughSubject<Result<AccountRequestEntity, Error>, Never>()
-    var requestResultPublisher: AnyPublisher<Result<AccountRequestEntity, Error>, Never> {
+    private let requestResultSourcePublisher = PassthroughSubject<Result<AccountRequestEntity, any Error>, Never>()
+    var requestResultPublisher: AnyPublisher<Result<AccountRequestEntity, any Error>, Never> {
         requestResultSourcePublisher.eraseToAnyPublisher()
     }
     
@@ -78,7 +78,7 @@ final class AccountRepository: NSObject, AccountRepositoryProtocol {
     }
     
     func incomingContactsRequestsCount() -> Int {
-        sdk.incomingContactRequests().size.intValue
+        sdk.incomingContactRequests().size
     }
     
     func relevantUnseenUserAlertsCount() -> UInt {

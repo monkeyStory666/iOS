@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGAPresentation
 import MEGAUIKit
 import UIKit
@@ -96,7 +97,8 @@ final class HomeViewController: UIViewController {
         return offlineVC
     }()
 
-    var searchResultViewController: HomeSearchResultViewController!
+    var searchResultViewController: UIViewController!
+    var searchResultsBridge: SearchResultsBridge!
 
     // MARK: - ViewController Lifecycles
 
@@ -291,8 +293,10 @@ final class HomeViewController: UIViewController {
     
     private func setupSearchBarView(_ searchBarView: MEGASearchBarView) {
         searchBarView.delegate = self
-        searchBarView.edittingDelegate = searchResultViewController
-        searchResultViewController.searchHintSelectDelegate = searchBarView
+        searchBarView.editingDelegate = searchResultsBridge
+        searchResultsBridge.didSelectTextTrampoline = {[weak searchBarView] text in
+            searchBarView?.didSelect(searchText: text)
+        }
     }
 
     private func setupBannerCollection() {
@@ -655,6 +659,7 @@ extension HomeViewController: MEGASearchBarViewDelegate {
         searchResultViewController?.removeFromParent()
         searchResultContainerView?.removeFromSuperview()
         searchResultContainerView = nil
+        searchResultsBridge.didFinishSearching()
     }
 }
 

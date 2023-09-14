@@ -1,4 +1,3 @@
-
 #import "MyAccountHallTableViewCell.h"
 
 #import "MEGA-Swift.h"
@@ -30,6 +29,14 @@
     
     if (self.pendingView != nil) {
         [self layoutPendingView];
+    }
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    
+    if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
+        [self setupCell];
     }
 }
 

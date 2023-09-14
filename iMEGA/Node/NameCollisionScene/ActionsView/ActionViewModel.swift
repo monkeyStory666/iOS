@@ -1,3 +1,4 @@
+import MEGAL10n
 
 final class ActionViewModel: ObservableObject {
     

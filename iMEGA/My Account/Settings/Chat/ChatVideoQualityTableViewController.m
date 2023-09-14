@@ -1,9 +1,10 @@
-
 #import "ChatVideoQualityTableViewController.h"
 
 #import "MEGA-Swift.h"
 
 #import "ChatVideoUploadQuality.h"
+
+@import MEGAL10nObjc;
 
 @interface ChatVideoQualityTableViewController ()
 
@@ -23,12 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = NSLocalizedString(@"videoQuality", @"Title that refers to the quality of the chat (Either Online or Offline)");
+    self.navigationItem.title = LocalizedString(@"videoQuality", @"Title that refers to the quality of the chat (Either Online or Offline)");
     
-    _lowLabel.text = NSLocalizedString(@"media.quality.low", @"Low");
-    _mediumLabel.text = NSLocalizedString(@"media.quality.medium", @"Medium");
-    _highLabel.text = NSLocalizedString(@"media.quality.high", @"High");
-    _originalLabel.text = NSLocalizedString(@"media.quality.original", @"Original");
+    _lowLabel.text = LocalizedString(@"media.quality.low", @"Low");
+    _mediumLabel.text = LocalizedString(@"media.quality.medium", @"Medium");
+    _highLabel.text = LocalizedString(@"media.quality.high", @"High");
+    _originalLabel.text = LocalizedString(@"media.quality.original", @"Original");
     
     [self updateAppearance];
 }

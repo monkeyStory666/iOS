@@ -5,8 +5,8 @@ protocol NameCollisionViewRouting: Routing {
     func showNameCollisionsView()
     func resolvedUploadCollisions(_ transfers: [CancellableTransfer])
     func dismiss()
-    func showCopyOrMoveSuccess()
-    func showCopyOrMoveError()
+    func showCopyOrMoveSuccess() async
+    func showCopyOrMoveError() async
     func showProgressIndicator()
 }
 
@@ -235,23 +235,38 @@ final class NameCollisionViewModel: ObservableObject {
             router.resolvedUploadCollisions(transfers ?? [])
         case .move:
             Task {
-                let moveNodeHandles = try await nameCollisionUseCase.moveNodesFromResolvedCollisions(collisions)
-                await finishedTask(for: moveNodeHandles)
+                await processMoveCollisions()
             }
         case .copy:
             Task {
-                let copyNodeHandles = try await nameCollisionUseCase.copyNodesFromResolvedCollisions(collisions, isFolderLink: isFolderLink)
-                await finishedTask(for: copyNodeHandles)
+                await processCopyCollisions()
             }
         }
     }
-    
-    @MainActor
-    private func finishedTask(for handles: [HandleEntity]) {
+
+    private func processMoveCollisions() async {
+        do {
+            let moveNodeHandles = try await nameCollisionUseCase.moveNodesFromResolvedCollisions(collisions)
+            await finishedTask(for: moveNodeHandles)
+        } catch {
+           await router.showCopyOrMoveError()
+        }
+    }
+
+    private func processCopyCollisions() async {
+        do {
+            let copyNodeHandles = try await nameCollisionUseCase.copyNodesFromResolvedCollisions(collisions, isFolderLink: isFolderLink)
+            await finishedTask(for: copyNodeHandles)
+        } catch {
+            await router.showCopyOrMoveError()
+        }
+    }
+
+    private func finishedTask(for handles: [HandleEntity]) async {
         if handles.count == collisions.count {
-            router.showCopyOrMoveSuccess()
+           await router.showCopyOrMoveSuccess()
         } else {
-            router.showCopyOrMoveError()
+           await router.showCopyOrMoveError()
         }
     }
     

@@ -1,7 +1,9 @@
 import Combine
 import Foundation
 import MEGADomain
+import MEGAL10n
 import MEGAPermissions
+import MEGAPresentation
 import MEGASwift
 import MEGAUI
 
@@ -32,9 +34,7 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
     private(set) var displayDateString: String?
     
     private var subscriptions = Set<AnyCancellable>()
-    private var loadingChatRoomInfoTask: Task<Void, Never>?
-    
-    private var isViewOnScreen = false
+
     private var loadingChatRoomInfoSubscription: AnyCancellable?
     private var searchString = ""
     
@@ -48,7 +48,7 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
     var callDurationCapturedTime: TimeInterval?
     var timerSubscription: AnyCancellable?
     let permissionHandler: any DevicePermissionsHandling
-    
+
     init(chatListItem: ChatListItemEntity,
          router: some ChatRoomsListRouting,
          chatRoomUseCase: any ChatRoomUseCaseProtocol,
@@ -113,19 +113,29 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
     }
     
     // MARK: - Interface methods
-    
-    func onViewAppear() {
-        isViewOnScreen = true
-        
-        loadChatRoomInfo()
+
+    func loadChatRoomInfo() async {
+        let chatId = chatListItem.chatId
+
+        guard !Task.isCancelled else {
+            MEGALogDebug("Task cancelled for \(chatId) - won't update description")
+            return
+        }
+
+        do {
+            try await updateDescription()
+        } catch {
+            MEGALogDebug("Unable to load description for \(chatId) - \(error.localizedDescription)")
+        }
+
+        do {
+            try Task.checkCancellation()
+            await sendObjectChangeNotification()
+        } catch {
+            MEGALogDebug("Task cancelled for \(chatId) - won't send object change notification")
+        }
     }
-    
-    func cancelLoading() {
-        isViewOnScreen = false
-        
-        cancelChatRoomInfoTask()
-    }
-    
+
     func chatStatusColor(forChatStatus chatStatus: ChatStatusEntity) -> UIColor? {
         switch chatStatus {
         case .online:
@@ -296,39 +306,7 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
         
         return options
     }
-    
-    private func cancelChatRoomInfoTask() {
-        loadingChatRoomInfoTask?.cancel()
-        loadingChatRoomInfoTask = nil
-    }
-    
-    private func loadChatRoomInfo() {
-        loadingChatRoomInfoTask = Task { [weak self] in
-            guard let self else { return }
-            
-            let chatId = chatListItem.chatId
-            
-            defer {
-                cancelChatRoomInfoTask()
-            }
-            
-            do {
-                try await self.updateDescription()
-            } catch {
-                MEGALogDebug("Unable to load description for \(chatId) - \(error.localizedDescription)")
-            }
-            
-            guard self.isViewOnScreen else { return }
-            
-            do {
-                try Task.checkCancellation()
-                await sendObjectChangeNotification()
-            } catch {
-                MEGALogDebug("Task cancelled for \(chatId)")
-            }
-        }
-    }
-    
+
     private func loadChatRoomSearchString() {
         Task { [weak self] in
             guard let self, let chatRoom = self.chatRoomUseCase.chatRoom(forChatId: self.chatListItem.chatId) else {
@@ -755,11 +733,21 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
                 return
             }
             
-            startOrJoinCall()
+            if chatRoomUseCase.shouldOpenWaitingRoom(forChatId: chatListItem.chatId)
+                && DIContainer.featureFlagProvider.isFeatureFlagEnabled(for: .waitingRoom) {
+                openWaitingRoom()
+            } else {
+                startOrJoinCall()
+            }
         }
     }
     
-    func startOrJoinCall() {
+    private func openWaitingRoom() {
+        guard let scheduledMeeting = scheduledMeetingUseCase.scheduledMeetingsByChat(chatId: chatListItem.chatId).first else { return }
+        router.presentWaitingRoom(for: scheduledMeeting)
+    }
+    
+    private func startOrJoinCall() {
         guard let chatRoom = chatRoomUseCase.chatRoom(forChatId: chatListItem.chatId) else {
             MEGALogError("Not able to fetch chat room for start or join call")
             return
@@ -769,7 +757,11 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
             prepareAndShowCallUI(for: call, in: chatRoom)
         } else {
             if let scheduledMeeting = scheduledMeetingUseCase.scheduledMeetingsByChat(chatId: chatListItem.chatId).first {
-                startMeetingCallNoRinging(for: scheduledMeeting, in: chatRoom)
+                if chatRoom.isWaitingRoomEnabled {
+                    startMeetingInWaitingRoomChat(for: scheduledMeeting, in: chatRoom)
+                } else {
+                    startMeetingCallNoRinging(for: scheduledMeeting, in: chatRoom)
+                }
             } else {
                 startCall(in: chatRoom)
             }
@@ -804,6 +796,24 @@ final class ChatRoomViewModel: ObservableObject, Identifiable, CallInProgressTim
                     self?.router.showErrorMessage(Strings.Localizable.Error.noMoreParticipantsAreAllowedInThisGroupCall)
                 default:
                     self?.router.showErrorMessage(Strings.Localizable.somethingWentWrong)
+                    MEGALogError("Not able to start scheduled meeting call")
+                }
+            }
+        }
+    }
+    
+    private func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, in chatRoom: ChatRoomEntity) {
+        callUseCase.startMeetingInWaitingRoomChat(for: scheduledMeeting, enableVideo: false, enableAudio: true) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let call):
+                prepareAndShowCallUI(for: call, in: chatRoom)
+            case .failure(let error):
+                switch error {
+                case .tooManyParticipants:
+                    router.showErrorMessage(Strings.Localizable.Error.noMoreParticipantsAreAllowedInThisGroupCall)
+                default:
+                    router.showErrorMessage(Strings.Localizable.somethingWentWrong)
                     MEGALogError("Not able to start scheduled meeting call")
                 }
             }

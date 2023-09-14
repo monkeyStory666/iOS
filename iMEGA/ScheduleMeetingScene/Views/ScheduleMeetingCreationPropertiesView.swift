@@ -1,4 +1,4 @@
-
+import MEGAL10n
 import SwiftUI
 
 struct ScheduleMeetingCreationPropertiesView: View {

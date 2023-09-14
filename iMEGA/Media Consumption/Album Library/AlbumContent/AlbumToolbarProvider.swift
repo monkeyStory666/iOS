@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGASDKRepo
 import UIKit
 
@@ -155,11 +156,7 @@ extension AlbumContentViewController: AlbumToolbarProvider {
             return
         }
         
-        let favoriteUseCase = NodeFavouriteActionUseCase(
-            nodeFavouriteRepository: NodeFavouriteActionRepository(
-                sdk: MEGASdkManager.sharedMEGASdk()
-            )
-        )
+        let favoriteUseCase = NodeFavouriteActionUseCase(nodeFavouriteRepository: NodeFavouriteActionRepository.newRepo)
         
         selectedNodes.forEach { node in
             if node.isFavourite {
@@ -184,7 +181,9 @@ extension AlbumContentViewController: AlbumToolbarProvider {
         
         endEditingMode()
         
-        let saveMediaUseCase = SaveMediaToPhotosUseCase(downloadFileRepository: DownloadFileRepository(sdk: MEGASdkManager.sharedMEGASdk()), fileCacheRepository: FileCacheRepository.newRepo, nodeRepository: NodeRepository.newRepo)
+        let saveMediaUseCase = SaveMediaToPhotosUseCase(downloadFileRepository: DownloadFileRepository(sdk: MEGASdk.shared),
+                                                        fileCacheRepository: FileCacheRepository.newRepo,
+                                                        nodeRepository: NodeRepository.newRepo)
         
         TransfersWidgetViewController.sharedTransfer().setProgressViewInKeyWindow()
         TransfersWidgetViewController.sharedTransfer().progressView?.showWidgetIfNeeded()

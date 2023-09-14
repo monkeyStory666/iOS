@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 
 extension NodeVersionsViewController {
     @objc func setToolbarActionsEnabled(_ boolValue: Bool) {
@@ -16,5 +17,13 @@ extension NodeVersionsViewController {
         let isBackupNode = BackupsUseCase(backupsRepository: BackupsRepository.newRepo, nodeRepository: NodeRepository.newRepo).isBackupNode(node.toNodeEntity())
         
         setToolbarItems(isBackupNode ? [downloadBarButtonItem, flexibleItem, removeBarButtonItem] : [downloadBarButtonItem, flexibleItem, revertBarButtonItem, flexibleItem, removeBarButtonItem], animated: true)
+    }
+    
+    @objc func selectedCountTitle() -> String {
+        guard let selectedCount = selectedNodesArray?.count,
+              selectedCount > 0 else {
+            return Strings.Localizable.selectTitle
+        }
+        return Strings.Localizable.General.Format.itemsSelected(selectedCount)
     }
 }

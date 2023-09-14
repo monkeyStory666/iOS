@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGAPermissions
 import MEGAPresentation
 import MEGASdk
@@ -37,15 +38,20 @@ extension MEGALinkManager {
             MEGALinkManager.showLinkNotValid()
             return
         }
+        let sdk: MEGASdk = .sharedSdk
+        let nodeProvider: some PublicAlbumNodeProviderProtocol = PublicAlbumNodeProvider.shared
         let userAlbumRepository = UserAlbumRepository.newRepo
         let shareAlbumRepository = ShareAlbumRepository(
-            sdk: MEGASdk.shared,
-            publicAlbumNodeProvider: PublicAlbumNodeProvider.shared)
+            sdk: sdk,
+            publicAlbumNodeProvider: nodeProvider)
+        
+        let nodeRepository: NodeRepository = .newRepo
+        
         let importAlbumUseCase = ImportPublicAlbumUseCase(
             saveAlbumToFolderUseCase: SaveAlbumToFolderUseCase(
                 nodeActionRepository: NodeActionRepository.newRepo,
                 shareAlbumRepository: shareAlbumRepository,
-                nodeRepository: NodeRepository.newRepo),
+                nodeRepository: nodeRepository),
             userAlbumRepository: userAlbumRepository)
         
         let vm = ImportAlbumViewModel(
@@ -58,9 +64,19 @@ extension MEGALinkManager {
             importPublicAlbumUseCase: importAlbumUseCase,
             accountUseCase: AccountUseCase(
                 repository: AccountRepository.newRepo),
-            tracker: DIContainer.tracker)
+            saveMediaUseCase: SaveMediaToPhotosUseCase(
+                downloadFileRepository: DownloadFileRepository(
+                    sdk: sdk,
+                    nodeProvider: nodeProvider),
+                fileCacheRepository: FileCacheRepository.newRepo,
+                nodeRepository: nodeRepository),
+            transferWidgetResponder: TransfersWidgetViewController.sharedTransfer(),
+            permissionHandler: DevicePermissionsHandler.makeHandler(),
+            tracker: DIContainer.tracker,
+            monitorUseCase: NetworkMonitorUseCase(repo: NetworkMonitorRepository()))
         
-        let viewController = UIHostingController(dismissibleView: ImportAlbumView(viewModel: vm))
+        let viewController = UIHostingController(dismissibleView: ImportAlbumView(
+            viewModel: vm))
         viewController.modalPresentationStyle = .fullScreen
         UIApplication.mnz_visibleViewController().present(viewController, animated: true)
     }
@@ -94,7 +110,7 @@ extension MEGALinkManager {
             // does it make sense to handle this error apart from early return?
             return
         }
-        let notificationText = String(format: NSLocalizedString("You have joined %@", comment: "Text shown in a notification to let the user know that has joined a public chat room after login or account creation"), chatTitle)
+        let notificationText = String(format: Strings.localized("You have joined %@", comment: "Text shown in a notification to let the user know that has joined a public chat room after login or account creation"), chatTitle)
         
         if shouldAskForNotificationsPermissions {
             SVProgressHUD.showSuccess(withStatus: notificationText)
@@ -156,13 +172,22 @@ extension MEGALinkManager {
         )
     }
     
-    @objc class func shouldOpenWaitingRoom(chatRoom: MEGAChatRoom) -> Bool {
-        let isModerator = chatRoom.ownPrivilege.toOwnPrivilegeEntity() == .moderator
-        return !isModerator && chatRoom.isWaitingRoomEnabled && DIContainer.featureFlagProvider.isFeatureFlagEnabled(for: .waitingRoom)
+    @objc class func hasActiveMeeting(for request: MEGAChatRequest) -> Bool {
+        let list = request.megaHandleList
+        guard let list else { return false }
+        return list.size > 0 && list.megaHandle(at: 0) != 0
     }
     
-    @objc class func openWaitingRoom(for chatId: ChatIdEntity) {
+    @objc class func shouldOpenWaitingRoom(forChatOptions bitMask: Int) -> Bool {
+        MEGAChatSdk.shared.hasChatOptionEnabled(for: .waitingRoom, chatOptionsBitMask: bitMask)
+    }
+    
+    @objc class func openWaitingRoom(for chatId: ChatIdEntity, chatLink: String) {
         guard let scheduledMeeting = MEGAChatSdk.shared.scheduledMeetings(byChat: chatId).first?.toScheduledMeetingEntity() else { return }
-        WaitingRoomViewRouter(presenter: UIApplication.mnz_visibleViewController(), scheduledMeeting: scheduledMeeting).start()
+        WaitingRoomViewRouter(
+            presenter: UIApplication.mnz_visibleViewController(),
+            scheduledMeeting: scheduledMeeting,
+            chatLink: chatLink
+        ).start()
     }
 }

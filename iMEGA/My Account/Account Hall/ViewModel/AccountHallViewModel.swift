@@ -3,6 +3,7 @@ import Foundation
 import MEGADomain
 import MEGAPresentation
 import MEGASDKRepo
+import MEGASwift
 
 enum AccountHallLoadTarget {
     case planList, accountDetails, contentCounts
@@ -25,15 +26,16 @@ final class AccountHallViewModel: ViewModelType, ObservableObject {
         case setUserAvatar
         case setName
     }
-    
+
+    @Atomic var relevantUnseenUserAlertsCount: UInt = 0
+    @Atomic var isNewUpgradeAccountPlanEnabled: Bool = false
+    @Atomic var accountDetails: AccountDetailsEntity?
+
     var invokeCommand: ((Command) -> Void)?
     var incomingContactRequestsCount = 0
-    var relevantUnseenUserAlertsCount: UInt = 0
     var setupABTestVariantTask: Task<Void, Never>?
-    var isNewUpgradeAccountPlanEnabled: Bool = false
-    
+
     private(set) var planList: [AccountPlanEntity] = []
-    private(set) var accountDetails: AccountDetailsEntity?
     private var featureFlagProvider: any FeatureFlagProviderProtocol
     private var abTestProvider: any ABTestProviderProtocol
     private let accountHallUsecase: any AccountHallUseCaseProtocol
@@ -74,7 +76,10 @@ final class AccountHallViewModel: ViewModelType, ObservableObject {
     func setupABTestVariant() {
         setupABTestVariantTask = Task { [weak self] in
             guard let self else { return }
-            isNewUpgradeAccountPlanEnabled = await abTestProvider.abTestVariant(for: .upgradePlanRevamp) == .variantA
+            let isNewUpgradeAccountPlanEnabled = await abTestProvider.abTestVariant(for: .upgradePlanRevamp) == .variantA
+            $isNewUpgradeAccountPlanEnabled.mutate { currentValue in
+                currentValue = isNewUpgradeAccountPlanEnabled
+            }
         }
     }
 
@@ -121,7 +126,9 @@ final class AccountHallViewModel: ViewModelType, ObservableObject {
     
     // MARK: - Private
     private func setAccountDetails(_ details: AccountDetailsEntity?) {
-        accountDetails = details
+        $accountDetails.mutate { currentValue in
+            currentValue = details
+        }
         Task { @MainActor in
             currentPlanName = details?.proLevel.toAccountTypeDisplayName() ?? ""
         }
@@ -160,7 +167,10 @@ final class AccountHallViewModel: ViewModelType, ObservableObject {
     
     private func fetchCounts() async {
         incomingContactRequestsCount = await accountHallUsecase.incomingContactsRequestsCount()
-        relevantUnseenUserAlertsCount = await accountHallUsecase.relevantUnseenUserAlertsCount()
+        let relevantUnseenUserAlertsCount = await accountHallUsecase.relevantUnseenUserAlertsCount()
+        $relevantUnseenUserAlertsCount.mutate { currentValue in
+            currentValue = relevantUnseenUserAlertsCount
+        }
         
         await reloadNotificationCounts()
     }
@@ -223,7 +233,9 @@ final class AccountHallViewModel: ViewModelType, ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] newCount in
                 guard let self else { return }
-                relevantUnseenUserAlertsCount = newCount
+                $relevantUnseenUserAlertsCount.mutate { currentValue in
+                    currentValue = newCount
+                }
                 invokeCommand?(.reloadCounts)
             }
             .store(in: &subscriptions)
@@ -231,17 +243,25 @@ final class AccountHallViewModel: ViewModelType, ObservableObject {
         NotificationCenter
             .default
             .publisher(for: .refreshAccountDetails)
-            .sink { [weak self] _ in
+            .map({ $0.object as? AccountDetailsEntity })
+            .sink { [weak self] account in
                 guard let self else { return }
                 Task { [weak self] in
                     guard let self else { return }
-                    await fetchAccountDetails(showActivityIndicator: true)
+                    
+                    guard let account else {
+                        await fetchAccountDetails(showActivityIndicator: true)
+                        return
+                    }
+                    
+                    setAccountDetails(account)
+                    await configPlanDisplay()
                 }
             }
             .store(in: &subscriptions)
     }
     
-    private func handleRequestResult(_ result: Result<AccountRequestEntity, Error>) {
+    private func handleRequestResult(_ result: Result<AccountRequestEntity, any Error>) {
         if case .success(let request) = result {
             switch request.type {
             case .accountDetails:

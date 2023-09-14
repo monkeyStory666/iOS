@@ -1,5 +1,5 @@
-
 import Foundation
+import MEGAL10n
 
 extension TimeInterval {
     var dndFormattedString: String? {

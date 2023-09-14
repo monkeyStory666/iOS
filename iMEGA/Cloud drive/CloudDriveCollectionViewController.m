@@ -1,4 +1,3 @@
-
 #import "CloudDriveCollectionViewController.h"
 
 #import "NSString+MNZCategory.h"
@@ -13,6 +12,7 @@
 #import "MEGA-Swift.h"
 #import "NSArray+MNZCategory.h"
 
+@import MEGAL10nObjc;
 @import MEGAUIKit;
 
 @interface CloudDriveCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, CHTCollectionViewDelegateWaterfallLayout, NodeCollectionViewCellDelegate>
@@ -182,7 +182,7 @@
             return nil;
         }
     } actionProvider:^UIMenu * _Nullable(NSArray<UIMenuElement *> * _Nonnull suggestedActions) {
-        UIAction *selectAction = [UIAction actionWithTitle:NSLocalizedString(@"select", nil)
+        UIAction *selectAction = [UIAction actionWithTitle:LocalizedString(@"select", @"")
                                                      image:[UIImage imageNamed:@"select"]
                                                 identifier:nil
                                                    handler:^(__kindof UIAction * _Nonnull action) {

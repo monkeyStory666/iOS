@@ -1,4 +1,6 @@
 import MEGADomain
+import MEGASwiftUI
+import MEGAL10n
 import SwiftUI
 
 struct ChatRoomView: View {
@@ -108,11 +110,8 @@ private struct ChatRoomContentView: View {
         .onTapGesture {
             viewModel.showDetails()
         }
-        .onAppear {
-            viewModel.onViewAppear()
-        }
-        .onDisappear {
-            viewModel.cancelLoading()
+        .taskForiOS14 {
+            await viewModel.loadChatRoomInfo()
         }
     }
 }

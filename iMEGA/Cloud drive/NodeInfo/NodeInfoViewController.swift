@@ -1,5 +1,5 @@
-
 import MEGADomain
+import MEGAL10n
 import MEGASDKRepo
 import MEGASwiftUI
 import UIKit

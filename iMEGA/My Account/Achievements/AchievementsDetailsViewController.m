@@ -1,8 +1,9 @@
-
 #import "AchievementsDetailsViewController.h"
 #import "Helper.h"
 #import "MEGA-Swift.h"
 #import "NSString+MNZCategory.h"
+
+@import MEGAL10nObjc;
 
 @interface AchievementsDetailsViewController ()
 
@@ -48,19 +49,19 @@
     UIImage *achievementImage;
     switch (self.achievementClass) {
         case MEGAAchievementWelcome: {
-            self.navigationItem.title = NSLocalizedString(@"account.achievement.registration.title", nil);
+            self.navigationItem.title = LocalizedString(@"account.achievement.registration.title", @"");
             achievementImage = [UIImage imageNamed:@"achievementsRegistration"];
             break;
         }
             
         case MEGAAchievementDesktopInstall: {
-            self.navigationItem.title = NSLocalizedString(@"account.achievement.desktopApp.title", nil);
+            self.navigationItem.title = LocalizedString(@"account.achievement.desktopApp.title", @"");
             achievementImage = [UIImage imageNamed:@"achievementsInstallMega"];
             break;
         }
             
         case MEGAAchievementMobileInstall: {
-            self.navigationItem.title = NSLocalizedString(@"account.achievement.mobileApp.title", nil);
+            self.navigationItem.title = LocalizedString(@"account.achievement.mobileApp.title", @"");
             achievementImage = [UIImage imageNamed:@"achievementsInstallMobile"];
             break;
         }

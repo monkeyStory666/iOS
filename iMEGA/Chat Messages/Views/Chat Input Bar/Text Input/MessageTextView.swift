@@ -1,3 +1,4 @@
+import MEGAL10n
 
 class MessageTextView: UITextView {
     

@@ -1,5 +1,6 @@
 import Foundation
 import MEGADomain
+import MEGAL10n
 import MEGAPermissions
 import MEGAPresentation
 import MEGASDKRepo
@@ -139,5 +140,13 @@ extension FolderLinkViewController {
                     .alertPhotosPermission()
             }
         }
+    }
+    
+    @objc func selectedCountTitle() -> String {
+        guard let selectedCount = selectedNodesArray?.count,
+              selectedCount > 0 else {
+            return Strings.Localizable.selectTitle
+        }
+        return Strings.Localizable.General.Format.itemsSelected(selectedCount)
     }
 }

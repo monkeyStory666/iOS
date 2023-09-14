@@ -1,9 +1,10 @@
 import MEGADomain
+import MEGAL10n
 
 extension ContactDetailsViewController {
     @objc func joinMeeting(withChatRoom chatRoom: MEGAChatRoom) {
-        guard let call = MEGASdkManager.sharedMEGAChatSdk().chatCall(forChatId: chatRoom.chatId) else { return }
-        let isSpeakerEnabled = AVAudioSession.sharedInstance().mnz_isOutputEqual(toPortType: .builtInSpeaker)
+        guard let call = MEGAChatSdk.shared.chatCall(forChatId: chatRoom.chatId) else { return }
+        let isSpeakerEnabled = AVAudioSession.sharedInstance().isOutputEqualToPortType(.builtInSpeaker)
         MeetingContainerRouter(presenter: self,
                                chatRoom: chatRoom.toChatRoomEntity(),
                                call: call.toCallEntity(),

@@ -1,4 +1,4 @@
-
+import ChatRepo
 import Foundation
 import MEGADomain
 
@@ -27,7 +27,7 @@ final class ManageChatHistoryViewRouter: NSObject, ManageChatHistoryProtocol {
     }
     
     func build() -> UIViewController {
-        let repository = ManageChatHistoryRepository(chatSdk: MEGASdkManager.sharedMEGAChatSdk())
+        let repository = ManageChatHistoryRepository(chatSdk: .shared)
         let manageChatHistoryUseCase = ManageChatHistoryUseCase(retentionValueUseCase: HistoryRetentionUseCase(repository: repository), historyRetentionUseCase: HistoryRetentionUseCase(repository: repository), clearChatHistoryUseCase: ClearChatHistoryUseCase(repository: repository))
         let viewModel = ManageChatHistoryViewModel(router: self,
                                                    manageChatHistoryUseCase: manageChatHistoryUseCase,

@@ -1,3 +1,4 @@
+import MEGAL10n
 
 enum SortOrderType: String, CaseIterable {
     case none
@@ -49,7 +50,7 @@ enum SortOrderType: String, CaseIterable {
             key = ""
         }
         
-        return NSLocalizedString(key, comment: "")
+        return Strings.localized(key, comment: "")
     }
     
     var image: UIImage? {

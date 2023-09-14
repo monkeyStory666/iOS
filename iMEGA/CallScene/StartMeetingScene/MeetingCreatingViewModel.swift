@@ -1,5 +1,6 @@
 import Combine
 import MEGADomain
+import MEGAL10n
 import MEGAPermissions
 import MEGAPresentation
 
@@ -368,7 +369,7 @@ final class MeetingCreatingViewModel: ViewModelType {
     
     private func selectFrontCameraIfNeeded() {
         if isBackCameraSelected() {
-            guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(postion: .front) else {
+            guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(position: .front) else {
                 return
             }
             localVideoUseCase.selectCamera(withLocalizedName: selectCameraLocalizedString) { _ in }
@@ -376,7 +377,7 @@ final class MeetingCreatingViewModel: ViewModelType {
     }
     
     private func isBackCameraSelected() -> Bool {
-        guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(postion: .back),
+        guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(position: .back),
               localVideoUseCase.videoDeviceSelected() == selectCameraLocalizedString else {
             return false
         }
@@ -385,7 +386,7 @@ final class MeetingCreatingViewModel: ViewModelType {
     }
     
     private func switchCamera() {
-        guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(postion: isBackCameraSelected() ? .front : .back),
+        guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(position: isBackCameraSelected() ? .front : .back),
               localVideoUseCase.videoDeviceSelected() != selectCameraLocalizedString else {
             return
         }

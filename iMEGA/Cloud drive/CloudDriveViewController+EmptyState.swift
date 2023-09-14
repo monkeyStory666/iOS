@@ -1,3 +1,4 @@
+import MEGAL10n
 
 extension CloudDriveViewController: DZNEmptyDataSetSource {
     public func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
@@ -78,7 +79,7 @@ extension CloudDriveViewController: DZNEmptyDataSetSource {
             return nil
         }
         
-        let parentShareType = MEGASdkManager.sharedMEGASdk().accessLevel(for: parentNode)
+        let parentShareType = MEGASdk.shared.accessLevel(for: parentNode)
         
         if parentShareType == .accessRead {
             return nil

@@ -1,4 +1,3 @@
-
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 #import "MEGASdkManager.h"
@@ -13,6 +12,7 @@
 @property (nonatomic, strong) NSMutableArray<id<MEGARestoreDelegate>> *restoreDelegateMutableArray;
 @property (nonatomic, strong) NSMutableArray<id<MEGAPurchasePricingDelegate>> *pricingsDelegateMutableArray;
 @property (nonatomic, strong) MEGAPricing *pricing;
+@property (nonatomic, readonly, getter=isPurchasingPromotedPlan) BOOL purchasingPromotedPlan;
 
 + (MEGAPurchase *)sharedInstance;
 - (instancetype)initWithProducts:(NSArray<SKProduct *>*)products;
@@ -22,6 +22,9 @@
 - (void)restorePurchase;
 - (NSUInteger)pricingProductIndexForProduct:(SKProduct *)product;
 - (void)removeAllProducts;
+- (SKProduct *)pendingPromotedProductForPayment;
+- (void)savePendingPromotedProduct:(SKProduct *)product;
+- (void)setIsPurchasingPromotedPlan:(BOOL)isPurchasing;
 
 @end
 

@@ -1,3 +1,4 @@
+import MEGAL10n
 
 @objc final class MeetingAlreadyExistsAlert: NSObject {
     @objc static func show(presenter: UIViewController) {

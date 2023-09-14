@@ -4,15 +4,20 @@ import MEGADomain
 final class MockCallUseCase: CallUseCaseProtocol {
     var startListeningForCall_CalledTimes = 0
     var stopListeningForCall_CalledTimes = 0
-    var callCompletion: Result<CallEntity, CallErrorEntity> = .failure(.generic)
     var createActiveSessions_calledTimes = 0
     var hangCall_CalledTimes = 0
     var endCall_CalledTimes = 0
     var addPeer_CalledTimes = 0
     var removePeer_CalledTimes = 0
+    var allowUsersJoinCall_CalledTimes = 0
+    var kickUsersFromCall_CalledTimes = 0
+    var pushUsersIntoWaitingRoom_CalledTimes = 0
     var makePeerAsModerator_CalledTimes = 0
     var removePeerAsModerator_CalledTimes = 0
-    var call: CallEntity
+    
+    var call: CallEntity?
+    var callCompletion: Result<CallEntity, CallErrorEntity>
+    var answerCallCompletion: Result<CallEntity, CallErrorEntity>
     
     var callbacksDelegate: (any CallCallbacksUseCaseProtocol)?
     var networkQuality: NetworkQuality = .bad
@@ -22,10 +27,14 @@ final class MockCallUseCase: CallUseCaseProtocol {
     var chatSession: ChatSessionEntity?
     var participantHandle: HandleEntity = .invalid
     
-    init(call: CallEntity = CallEntity()) {
+    init(call: CallEntity? = CallEntity(),
+         callCompletion: Result<CallEntity, CallErrorEntity> = .failure(.generic),
+         answerCallCompletion: Result<CallEntity, CallErrorEntity> = .failure(.generic)) {
         self.call = call
+        self.callCompletion = callCompletion
+        self.answerCallCompletion = answerCallCompletion
     }
-
+    
     func startListeningForCallInChat<T: CallCallbacksUseCaseProtocol>(_ chatId: HandleEntity, callbacksDelegate: T) {
         startListeningForCall_CalledTimes += 1
     }
@@ -39,7 +48,7 @@ final class MockCallUseCase: CallUseCaseProtocol {
     }
     
     func answerCall(for chatId: HandleEntity, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
-        completion(callCompletion)
+        completion(answerCallCompletion)
     }
     
     func startCall(for chatId: HandleEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
@@ -60,6 +69,19 @@ final class MockCallUseCase: CallUseCaseProtocol {
     }
     
     func startCallNoRinging(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity {
+        switch callCompletion {
+        case .success(let callEntity):
+            return callEntity
+        case .failure(let failure):
+            throw failure
+        }
+    }
+    
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
+        completion(callCompletion)
+    }
+    
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity {
         switch callCompletion {
         case .success(let callEntity):
             return callEntity
@@ -92,6 +114,18 @@ final class MockCallUseCase: CallUseCaseProtocol {
         removePeer_CalledTimes += 1
     }
     
+    func allowUsersJoinCall(_ call: CallEntity, users: [HandleEntity]) {
+        allowUsersJoinCall_CalledTimes += 1
+    }
+    
+    func kickUsersFromCall(_ call: CallEntity, users: [HandleEntity]) {
+        kickUsersFromCall_CalledTimes += 1
+    }
+    
+    func pushUsersIntoWaitingRoom(for scheduledMeeting: ScheduledMeetingEntity, users: [HandleEntity]) {
+        pushUsersIntoWaitingRoom_CalledTimes += 1
+    }
+    
     func makePeerAModerator(inCall call: CallEntity, peerId: UInt64) {
         makePeerAsModerator_CalledTimes += 1
     }
@@ -102,7 +136,7 @@ final class MockCallUseCase: CallUseCaseProtocol {
 }
 
 extension MockCallUseCase: CallCallbacksRepositoryProtocol {
-
+    
     func createdSession(_ session: ChatSessionEntity, in chatId: HandleEntity) {
         guard let chatSession = chatSession, let chatRoom = chatRoom else {
             MEGALogDebug("Error getting mock properties")
@@ -136,7 +170,7 @@ extension MockCallUseCase: CallCallbacksRepositoryProtocol {
     }
     
     func callTerminated(_ call: CallEntity) {
-        callbacksDelegate?.callTerminated(self.call)
+        callbacksDelegate?.callTerminated(call)
     }
     
     func ownPrivilegeChanged(to privilege: ChatRoomPrivilegeEntity, in chatRoom: ChatRoomEntity) {
@@ -193,5 +227,13 @@ extension MockCallUseCase: CallCallbacksRepositoryProtocol {
     
     func outgoingRingingStopReceived() {
         callbacksDelegate?.outgoingRingingStopReceived()
+    }
+    
+    func waitingRoomUsersEntered(with handles: [HandleEntity]) {
+        callbacksDelegate?.waitingRoomUsersEntered(with: handles)
+    }
+    
+    func waitingRoomUsersLeave(with handles: [HandleEntity]) {
+        callbacksDelegate?.waitingRoomUsersLeave(with: handles)
     }
 }

@@ -1,8 +1,9 @@
-
 #import "SendToChatActivity.h"
 
 #import "MEGANavigationController.h"
 #import "SendToViewController.h"
+
+@import MEGAL10nObjc;
 
 @interface SendToChatActivity () <SendToChatActivityDelegate>
 
@@ -36,7 +37,7 @@
 }
 
 - (NSString *)activityTitle {
-    return NSLocalizedString(@"general.sendToChat", @"");
+    return LocalizedString(@"general.sendToChat", @"");
 }
 
 - (UIImage *)activityImage {

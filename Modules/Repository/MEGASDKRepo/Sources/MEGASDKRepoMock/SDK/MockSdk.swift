@@ -38,6 +38,7 @@ public final class MockSdk: MEGASdk {
     private let file: String?
     private let copiedNodeHandles: [MEGAHandle: MEGAHandle]
     private let abTestValues: [String: Int]
+    private let requestResult: Result<MEGARequest, MEGAError>
     
     public private(set) var sendEvent_Calls = [(
         eventType: Int,
@@ -61,6 +62,7 @@ public final class MockSdk: MEGASdk {
     public var disablepkp: Bool?
     public var shareAccessLevel: MEGAShareType = .accessUnknown
     public var stopPublicSetPreviewCalled = 0
+    public var authorizeNodeCalled = 0
     
     public init(nodes: [MEGANode] = [],
                 rubbishNodes: [MEGANode] = [],
@@ -97,7 +99,8 @@ public final class MockSdk: MEGASdk {
                 devices: [String: String] = [:],
                 file: String? = nil,
                 copiedNodeHandles: [MEGAHandle: MEGAHandle] = [:],
-                abTestValues: [String: Int] = [:]
+                abTestValues: [String: Int] = [:],
+                requestResult: Result<MEGARequest, MEGAError> = .failure(MockError.failingError)
     ) {
         self.nodes = nodes
         self.rubbishNodes = rubbishNodes
@@ -135,6 +138,7 @@ public final class MockSdk: MEGASdk {
         self.file = file
         self.copiedNodeHandles = copiedNodeHandles
         self.abTestValues = abTestValues
+        self.requestResult = requestResult
         super.init()
     }
     
@@ -488,7 +492,35 @@ public final class MockSdk: MEGASdk {
     }
     
     public override func authorizeNode(_ node: MEGANode) -> MEGANode? {
-        node
+        authorizeNodeCalled += 1
+        return node
+    }
+    
+    public override func startDownloadNode(_ node: MEGANode, localPath: String, fileName: String?, appData: String?, startFirst: Bool, cancelToken: MEGACancelToken?, collisionCheck: CollisionCheck, collisionResolution: CollisionResolution, delegate: any MEGATransferDelegate) {
+        delegate.onTransferFinish?(
+            self,
+            transfer: MockTransfer(type: .download, nodeHandle: node.handle, parentHandle: node.parentHandle),
+            error: MockError(errorType: .apiOk))
+    }
+    
+    // MARK: - ADS
+    
+    public override func fetchAds(_ adFlags: AdsFlag, adUnits: MEGAStringList, publicHandle: MEGAHandle, delegate: any MEGARequestDelegate) {
+        switch requestResult {
+        case .success(let request):
+            delegate.onRequestFinish?(self, request: request, error: MEGAError())
+        case .failure(let error):
+            delegate.onRequestFinish?(self, request: MockRequest(handle: 1), error: error)
+        }
+    }
+    
+    public override func queryAds(_ adFlags: AdsFlag, publicHandle: MEGAHandle, delegate: any MEGARequestDelegate) {
+        switch requestResult {
+        case .success(let request):
+            delegate.onRequestFinish?(self, request: request, error: MEGAError())
+        case .failure(let error):
+            delegate.onRequestFinish?(self, request: MockRequest(handle: 1), error: error)
+        }
     }
 }
 

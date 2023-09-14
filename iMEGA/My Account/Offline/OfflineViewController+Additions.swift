@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGASDKRepo
 
 extension OfflineViewController {
@@ -41,6 +42,14 @@ extension OfflineViewController {
     
     @objc func removeSubscriptions() {
         viewModel.dispatch(.removeSubscriptions)
+    }
+    
+    @objc func selectedCountTitle() -> String {
+        guard let selectedCount = selectedItems?.count,
+              selectedCount > 0 else {
+            return Strings.Localizable.selectTitle
+        }
+        return Strings.Localizable.General.Format.itemsSelected(selectedCount)
     }
     
     // MARK: - Private

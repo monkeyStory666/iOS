@@ -1,7 +1,10 @@
 import Combine
 @testable import MEGA
+import MEGAAnalyticsiOS
 import MEGADomain
 import MEGADomainMock
+import MEGAL10n
+import MEGAPresentation
 import XCTest
 
 @MainActor
@@ -9,9 +12,9 @@ final class AlbumListViewModelTests: XCTestCase {
     private var subscriptions = Set<AnyCancellable>()
     
     func testLoadAlbums_onAlbumsLoaded_systemAlbumsTitlesAreUpdatedAndAlbumsAreSortedCorrectly() async throws {
-        let favouriteAlbum = AlbumEntity(id: 1, name: "", coverNode: NodeEntity(handle: 1), count: 1, type: .favourite)
-        let gifAlbum = AlbumEntity(id: 2, name: "", coverNode: NodeEntity(handle: 1), count: 1, type: .gif)
-        let rawAlbum = AlbumEntity(id: 3, name: "", coverNode: NodeEntity(handle: 2), count: 1, type: .raw)
+        var favouriteAlbum = AlbumEntity(id: 1, name: "", coverNode: NodeEntity(handle: 1), count: 1, type: .favourite)
+        var gifAlbum = AlbumEntity(id: 2, name: "", coverNode: NodeEntity(handle: 1), count: 1, type: .gif)
+        var rawAlbum = AlbumEntity(id: 3, name: "", coverNode: NodeEntity(handle: 2), count: 1, type: .raw)
         let userAlbum1 = AlbumEntity(id: 4, name: "Album 1", coverNode: NodeEntity(handle: 3),
                                      count: 1, type: .user, creationTime: try "2022-12-31T22:01:04Z".date)
         let userAlbum2 = AlbumEntity(id: 5, name: "Album 2", coverNode: NodeEntity(handle: 4),
@@ -24,15 +27,19 @@ final class AlbumListViewModelTests: XCTestCase {
                                      count: 1, type: .user, creationTime: try "2022-12-31T22:05:04Z".date)
         let useCase = MockAlbumListUseCase(albums: [favouriteAlbum, gifAlbum, rawAlbum,
                                                     userAlbum1, userAlbum2, userAlbum3, userAlbum4, userAlbum5])
-
+        // Update titles to expected
+        favouriteAlbum.name = Strings.Localizable.CameraUploads.Albums.Favourites.title
+        gifAlbum.name = Strings.Localizable.CameraUploads.Albums.Gif.title
+        rawAlbum.name = Strings.Localizable.CameraUploads.Albums.Raw.title
         let sut = albumListViewModel(usecase: useCase)
         
         sut.loadAlbums()
         await sut.albumLoadingTask?.value
+        
         XCTAssertEqual(sut.albums, [
-            favouriteAlbum.update(name: Strings.Localizable.CameraUploads.Albums.Favourites.title),
-            gifAlbum.update(name: Strings.Localizable.CameraUploads.Albums.Gif.title),
-            rawAlbum.update(name: Strings.Localizable.CameraUploads.Albums.Raw.title),
+            favouriteAlbum,
+            gifAlbum,
+            rawAlbum,
             userAlbum5,
             userAlbum4,
             userAlbum3,
@@ -41,7 +48,7 @@ final class AlbumListViewModelTests: XCTestCase {
         ])
     }
     
-    func testLoadAlbums_onAlbumsLoadedFinsihed_shouldLoadSetToFalse() async throws {
+    func testLoadAlbums_onAlbumsLoadedFinished_shouldLoadSetToFalse() async throws {
         let sut = albumListViewModel()
         let exp = expectation(description: "should load set after album load")
         
@@ -287,12 +294,37 @@ final class AlbumListViewModelTests: XCTestCase {
     }
     
     func testOnAlbumTap_whenUserTap_shouldSetCorrectValues() {
-        let sut = albumListViewModel()
+        let tracker = MockTracker()
+        let sut = albumListViewModel(tracker: tracker)
+        
         let gifAlbum = AlbumEntity(id: 2, name: "", coverNode: NodeEntity(handle: 1), count: 1, type: .gif)
         
         sut.onAlbumTap(gifAlbum)
         XCTAssertNil(sut.albumCreationAlertMsg)
         XCTAssertEqual(sut.album, gifAlbum)
+        
+        tracker.assertTrackAnalyticsEventCalled(
+            with: [
+                gifAlbum.makeAlbumSelectedEvent(selectionType: .single)
+            ]
+        )
+    }
+    
+    func testOnAlbumTap_notInEditMode_shouldSendSelectedEvent() {
+        let userAlbum = AlbumEntity(id: 5, type: .user,
+                                    metaData: AlbumMetaDataEntity(
+                                        imageCount: 6,
+                                        videoCount: 8))
+        let tracker = MockTracker()
+        let sut = albumListViewModel(tracker: tracker)
+        
+        sut.onAlbumTap(userAlbum)
+        
+        tracker.assertTrackAnalyticsEventCalled(
+            with: [
+                userAlbum.makeAlbumSelectedEvent(selectionType: .single)
+            ]
+        )
     }
     
     func testOnCreateAlbum_whenIsEditModeActive_shouldReturnFalseForShowCreateAlbumAlert() {
@@ -324,7 +356,7 @@ final class AlbumListViewModelTests: XCTestCase {
         XCTAssertEqual(sut.albumNames.sorted(), ["Hey there", "", "Favourites"].sorted())
     }
     
-    func testReloadUpdates_onAlbumsUpdateEmiited_shouldRealodAlbums() {
+    func testReloadUpdates_onAlbumsUpdateEmitted_shouldReloadAlbums() {
         let albums = [AlbumEntity(id: 4, name: "Album 1", coverNode: NodeEntity(handle: 3),
                                   count: 1, type: .user)]
         let albumsUpdatedPublisher = PassthroughSubject<Void, Never>()
@@ -509,7 +541,9 @@ final class AlbumListViewModelTests: XCTestCase {
         let photoAlbumContainerViewModel = PhotoAlbumContainerViewModel()
         let sut = albumListViewModel(photoAlbumContainerViewModel: photoAlbumContainerViewModel)
         XCTAssertFalse(sut.showShareAlbumLinks)
+        
         photoAlbumContainerViewModel.showShareAlbumLinks = true
+        
         XCTAssertTrue(sut.showShareAlbumLinks)
     }
     
@@ -549,7 +583,7 @@ final class AlbumListViewModelTests: XCTestCase {
         XCTAssertNotNil(sut.albumLoadingTask, "Expect to initialize albumLoadingTask, but not initialized instead.")
     }
     
-    func testOnViewDissappeared_whenCalled_releasesAlbumsUpdatedSubscription() {
+    func testOnViewDisappeared_whenCalled_releasesAlbumsUpdatedSubscription() {
         let sut = albumListViewModel()
         var isViewVisible = false
         let exp = expectation(description: "Wait for subscription")
@@ -560,14 +594,14 @@ final class AlbumListViewModelTests: XCTestCase {
             }
             .store(in: &subscriptions)
         
-        sut.onViewDissappeared()
+        sut.onViewDisappeared()
         wait(for: [exp], timeout: 0.1)
 
         XCTAssertFalse(isViewVisible, "Expect view is not visible.")
         XCTAssertNil(sut.albumLoadingTask, "Expect to deallocate albumLoadingTask, but initialized instead.")
     }
     
-    func testOnViewAppearedDissappeared_whenCalled_subscribeAndCancelLoadAlbumTasks() async throws {
+    func testOnViewAppearedDisappeared_whenCalled_subscribeAndCancelLoadAlbumTasks() async throws {
         let sut = albumListViewModel()
         var isViewVisible = false
         let exp = expectation(description: "Wait for subscription emitted value")
@@ -585,7 +619,7 @@ final class AlbumListViewModelTests: XCTestCase {
         XCTAssertTrue(isViewVisible, "Expect view is visible.")
         XCTAssertNotNil(sut.albumLoadingTask, "Expect to initialize albumLoadingTask, but not initialized instead.")
         
-        sut.onViewDissappeared()
+        sut.onViewDisappeared()
         await sut.albumLoadingTask?.value
         await fulfillment(of: [exp], timeout: 0.1)
         
@@ -604,15 +638,17 @@ final class AlbumListViewModelTests: XCTestCase {
     }
     
     private func albumListViewModel(
-        usecase: MockAlbumListUseCase = MockAlbumListUseCase(),
-        albumModificationUseCase: MockAlbumModificationUseCase = MockAlbumModificationUseCase(),
-        shareAlbumUseCase: MockShareAlbumUseCase = MockShareAlbumUseCase(),
+        usecase: some AlbumListUseCaseProtocol = MockAlbumListUseCase(),
+        albumModificationUseCase: some AlbumModificationUseCaseProtocol = MockAlbumModificationUseCase(),
+        shareAlbumUseCase: some ShareAlbumUseCaseProtocol = MockShareAlbumUseCase(),
+        tracker: some AnalyticsTracking = MockTracker(),
         photoAlbumContainerViewModel: PhotoAlbumContainerViewModel? = nil
     ) -> AlbumListViewModel {
         AlbumListViewModel(
             usecase: usecase,
             albumModificationUseCase: albumModificationUseCase,
             shareAlbumUseCase: shareAlbumUseCase,
+            tracker: tracker,
             alertViewModel: alertViewModel(),
             photoAlbumContainerViewModel: photoAlbumContainerViewModel
         )

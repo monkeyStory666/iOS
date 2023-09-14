@@ -1,5 +1,5 @@
-
 import Foundation
+import MEGAL10n
 
 extension CustomModalAlertViewController {
     
@@ -36,7 +36,7 @@ extension CustomModalAlertViewController {
         
         firstCompletion = { [weak self] in
             let inviteContactRequestDelegate = MEGAInviteContactRequestDelegate(numberOfRequests: 1)
-            MEGASdkManager.sharedMEGASdk().inviteContact(withEmail: email, message: "", action: .add, delegate: inviteContactRequestDelegate)
+            MEGASdk.shared.inviteContact(withEmail: email, message: "", action: .add, delegate: inviteContactRequestDelegate)
             
             self?.dismiss(animated: true, completion: nil)
         }

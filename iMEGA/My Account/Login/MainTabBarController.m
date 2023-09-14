@@ -1,4 +1,3 @@
-
 #import "MainTabBarController.h"
 
 #import "CloudDriveViewController.h"
@@ -12,6 +11,8 @@
 #import "MEGA-Swift.h"
 
 #import "NSObject+Debounce.h"
+
+@import MEGAL10nObjc;
 @import PureLayout;
 
 @interface MainTabBarController () <UITabBarControllerDelegate, MEGANavigationControllerDelegate, MEGAGlobalDelegate>
@@ -34,7 +35,7 @@
     
     [defaultViewControllersMutableArray addObject:[self cloudDriveViewController]];
     [defaultViewControllersMutableArray addObject:[self photosViewController]];
-    [defaultViewControllersMutableArray addObject:[self homeViewController]];
+    [defaultViewControllersMutableArray addObject:[self makeHomeViewController]];
     [defaultViewControllersMutableArray addObject:[self chatViewController]];
     [defaultViewControllersMutableArray addObject:[self SharedItemsViewController]];
     
@@ -190,12 +191,11 @@
 - (void)showAddContact {
     InviteContactViewController *inviteContactVC = [[UIStoryboard storyboardWithName:@"InviteContact" bundle:nil] instantiateViewControllerWithIdentifier:@"InviteContactViewControllerID"];
     MEGANavigationController *navigation = [MEGANavigationController.alloc initWithRootViewController:inviteContactVC];
-    [navigation addLeftDismissButtonWithText:NSLocalizedString(@"close", @"A button label. The button allows the user to close the conversation.")];
+    [navigation addLeftDismissButtonWithText:LocalizedString(@"close", @"A button label. The button allows the user to close the conversation.")];
     [self presentViewController:navigation animated:YES completion:nil];
 }
 
 - (void)configProgressView {
-    [TransfersWidgetViewController.sharedTransferViewController configProgressIndicator];
     [TransfersWidgetViewController.sharedTransferViewController setProgressViewInKeyWindow];
 }
 
@@ -272,10 +272,6 @@
 
 - (UIViewController *)photosViewController {
     return [self photoAlbumViewController];
-}
-
-- (UIViewController *)homeViewController {
-    return [HomeScreenFactory.new createHomeScreenFrom:self];
 }
 
 - (UIViewController *)SharedItemsViewController {

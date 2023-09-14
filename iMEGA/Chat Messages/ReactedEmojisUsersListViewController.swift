@@ -1,4 +1,4 @@
-
+import MEGAL10n
 import PanModal
 
 protocol ReactedEmojisUsersListViewControllerDelegate: AnyObject {
@@ -107,8 +107,7 @@ class ReactedEmojisUsersListViewController: UIViewController {
     }
     
     private func userhandleList(forEmoji emoji: String, chatId: UInt64, messageId: UInt64) -> [UInt64] {
-        guard let userHandleList = MEGASdkManager
-            .sharedMEGAChatSdk()
+        guard let userHandleList = MEGAChatSdk.shared
             .reactionUsers(forChat: chatId, messageId: messageId, reaction: emoji) else {
                 MEGALogDebug("user handle list for emoji \(emoji) is empty")
             return []
@@ -161,7 +160,7 @@ extension ReactedEmojisUsersListViewController: ReactedUsersListPageViewControll
     
     func userName(forHandle handle: UInt64) -> String? {
         guard let myHandle = MEGASdk.currentUserHandle()?.uint64Value, myHandle != handle else {
-            if let myFullName = MEGASdkManager.sharedMEGAChatSdk().myFullname {
+            if let myFullName = MEGAChatSdk.shared.myFullname {
                 return String(format: "%@ (%@)", myFullName, Strings.Localizable.me)
             }
 

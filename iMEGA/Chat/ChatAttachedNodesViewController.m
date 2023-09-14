@@ -1,4 +1,3 @@
-
 #import "ChatAttachedNodesViewController.h"
 
 #import "SVProgressHUD.h"
@@ -18,6 +17,8 @@
 #import "MEGAGetThumbnailRequestDelegate.h"
 #import "UIImageView+MNZCategory.h"
 #import "MEGA-Swift.h"
+
+@import MEGAL10nObjc;
 
 @interface ChatAttachedNodesViewController ()
 
@@ -66,12 +67,12 @@
     
     self.backBarButtonItem.image = self.backBarButtonItem.image.imageFlippedForRightToLeftLayoutDirection;
     self.navigationItem.leftBarButtonItem = self.backBarButtonItem;
-    self.editBarButtonItem.title = NSLocalizedString(@"select", @"Caption of a button to select files");
+    self.editBarButtonItem.title = LocalizedString(@"select", @"Caption of a button to select files");
     self.navigationItem.rightBarButtonItems = @[self.editBarButtonItem];
     
-    self.downloadBarButtonItem.title = NSLocalizedString(@"downloadToOffline", @"List option shown on the details of a file or folder");
+    self.downloadBarButtonItem.title = LocalizedString(@"downloadToOffline", @"List option shown on the details of a file or folder");
     [self.downloadBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody], NSForegroundColorAttributeName:[UIColor mnz_redForTraitCollection:self.traitCollection]} forState:UIControlStateNormal];
-    self.importBarButtonItem.title = NSLocalizedString(@"Import to Cloud Drive", @"Button title that triggers the importing link action");
+    self.importBarButtonItem.title = LocalizedString(@"Import to Cloud Drive", @"Button title that triggers the importing link action");
     [self.importBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont mnz_preferredFontWithStyle:UIFontTextStyleBody weight:UIFontWeightMedium], NSForegroundColorAttributeName:[UIColor mnz_redForTraitCollection:self.traitCollection]} forState:UIControlStateNormal];
     UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
@@ -105,43 +106,27 @@
 - (void)setNavigationBarTitle {
     [self updatePromptTitle];
     
-    NSString *navigationTitle = NSLocalizedString(@"attachedXFiles", @"A summary message when a user has attached many files at once into the chat. Please keep %s as it will be replaced at runtime with the number of files.");
+    NSString *navigationTitle = LocalizedString(@"attachedXFiles", @"A summary message when a user has attached many files at once into the chat. Please keep %s as it will be replaced at runtime with the number of files.");
     navigationTitle = [navigationTitle stringByReplacingOccurrencesOfString:@"%s" withString:self.message.nodeList.size.stringValue];
     self.navigationItem.title = navigationTitle;
 }
 
 - (void)updatePromptTitle {
     if (self.tableView.isEditing) {
-        NSNumber *selectedNodesCount = [NSNumber numberWithUnsignedInteger:self.selectedNodesMutableArray.count];
-        self.navigationItem.prompt = [self titleForPromptWithCountOfNodes:selectedNodesCount];
+        self.navigationItem.prompt = [self nodeCountTitle:self.selectedNodesMutableArray.count];
     } else {
         self.navigationItem.prompt = nil;
     }
-}
-
-- (NSString *)titleForPromptWithCountOfNodes:(NSNumber *)count {
-    NSString *promptString;
-    if (count.unsignedIntegerValue == 0) {
-        promptString = NSLocalizedString(@"select", @"Button that allows you to select a given folder");
-    } else if (count.unsignedIntegerValue == 1) {
-        promptString = NSLocalizedString(@"oneItemSelected", @"Title shown on the Camera Uploads section when the edit mode is enabled and you have selected one photo");
-        promptString = [promptString stringByReplacingOccurrencesOfString:@"%lu" withString:count.stringValue];
-    } else {
-        promptString = NSLocalizedString(@"itemsSelected", @"Title shown on the Camera Uploads section when the edit mode is enabled and you have selected more than one photo");
-        promptString = [promptString stringByReplacingOccurrencesOfString:@"%lu" withString:count.stringValue];
-    }
-    
-    return promptString;
 }
 
 - (void)setTableViewEditing:(BOOL)editing animated:(BOOL)animated {
     [self.tableView setEditing:editing animated:animated];
     
     if (editing) {
-        self.editBarButtonItem.title = NSLocalizedString(@"cancel", @"Button title to cancel something");
+        self.editBarButtonItem.title = LocalizedString(@"cancel", @"Button title to cancel something");
         [self setToolbarItemsEnabled:NO];
     } else {
-        self.editBarButtonItem.title = NSLocalizedString(@"select", @"Caption of a button to select files");
+        self.editBarButtonItem.title = LocalizedString(@"select", @"Caption of a button to select files");
         [self setToolbarItemsEnabled:YES];
         
         [self.selectedNodesMutableArray removeAllObjects];

@@ -1,4 +1,3 @@
-
 #import <UIKit/UIKit.h>
 
 #import "DisplayMode.h"
@@ -32,8 +31,10 @@ typedef NS_ENUM(NSUInteger, MEGAPhotoMode) {
 @property (nonatomic) NSArray *messagesIds;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *centerToolbarItem;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @property (strong, nonatomic) PhotoBrowserDataProvider *dataProvider;
+@property (nonatomic, strong, nullable) UIView *snackBarContainer;
 
 - (void)reloadUI;
 - (void)configureNodeIntoImage:(MEGANode *) node nodeIndex:(NSUInteger) index;

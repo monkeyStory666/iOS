@@ -3,6 +3,10 @@ import MEGADomain
 
 final class CallRepository: NSObject, CallRepositoryProtocol {
 
+    static var newRepo: CallRepository {
+        CallRepository(chatSdk: .shared, callActionManager: .shared)
+    }
+    
     private let chatSdk: MEGAChatSdk
     private let callActionManager: CallActionManager
     private var callbacksDelegate: (any CallCallbacksRepositoryProtocol)?
@@ -105,6 +109,25 @@ final class CallRepository: NSObject, CallRepositoryProtocol {
         }
     }
     
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
+        let delegate = createStartMeetingRequestDelegate(for: scheduledMeeting.chatId, completion: completion)
+        callActionManager.startMeetingInWaitingRoomChat(chatId: scheduledMeeting.chatId, scheduledId: scheduledMeeting.scheduledId, enableVideo: enableVideo, enableAudio: enableAudio, delegate: delegate)
+    }
+    
+    @MainActor
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity {
+        try await withCheckedThrowingContinuation { continuation in
+            startMeetingInWaitingRoomChat(for: scheduledMeeting, enableVideo: enableVideo, enableAudio: enableAudio) { result in
+                switch result {
+                case .success(let callEntity):
+                    continuation.resume(returning: callEntity)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
+    
     func joinCall(for chatId: HandleEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
         guard let activeCall = chatSdk.chatCall(forChatId: chatId) else {
             completion(.failure(.generic))
@@ -142,6 +165,18 @@ final class CallRepository: NSObject, CallRepositoryProtocol {
     
     func removePeer(fromCall call: CallEntity, peerId: UInt64) {
         chatSdk.remove(fromChat: call.chatId, userHandle: peerId)
+    }
+    
+    func allowUsersJoinCall(_ call: CallEntity, users: [UInt64]) {
+        chatSdk.allowUsersJoinCall(call.chatId, usersHandles: users.map(NSNumber.init(value:)))
+    }
+    
+    func kickUsersFromCall(_ call: CallEntity, users: [UInt64]) {
+        chatSdk.kickUsers(fromCall: call.callId, usersHandles: users.map(NSNumber.init(value:)))
+    }
+    
+    func pushUsersIntoWaitingRoom(for scheduledMeeting: ScheduledMeetingEntity, users: [UInt64]) {
+        chatSdk.pushUsers(intoWaitingRoom: scheduledMeeting.chatId, usersHandles: users.map(NSNumber.init(value:)))
     }
     
     func makePeerAModerator(inCall call: CallEntity, peerId: UInt64) {
@@ -316,6 +351,16 @@ extension CallRepository: MEGAChatCallDelegate {
                 default:
                     break
                 }
+            }
+            
+            if call.hasChanged(for: .waitingRoomUsersEntered) {
+                guard let usersHandle = call.waitingRoomHandleList.toHandleEntityArray() else { return }
+                callbacksDelegate?.waitingRoomUsersEntered(with: usersHandle)
+            }
+            
+            if call.hasChanged(for: .waitingRoomUsersLeave) {
+                guard let usersHandle = call.waitingRoomHandleList.toHandleEntityArray() else { return }
+                callbacksDelegate?.waitingRoomUsersLeave(with: usersHandle)
             }
         case .terminatingUserParticipation, .destroyed:
             callbacksDelegate?.callTerminated(call.toCallEntity())

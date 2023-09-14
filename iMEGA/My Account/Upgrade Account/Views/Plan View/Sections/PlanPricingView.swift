@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import SwiftUI
 
 struct PlanPricingView: View {
@@ -18,7 +19,7 @@ struct PlanPricingView: View {
     }
     
     private var currencyPerTermString: String {
-        switch plan.term {
+        switch plan.subscriptionCycle {
         case .monthly:
             return Strings.Localizable.UpgradeAccountPlan.Plan.Details.Pricing.localCurrencyPerMonth(plan.currency)
         case .yearly:

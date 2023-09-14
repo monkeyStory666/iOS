@@ -1,5 +1,6 @@
 import Combine
 import MEGADomain
+import MEGAL10n
 import MEGAPresentation
 
 final class FutureMeetingRoomViewModel: ObservableObject, Identifiable, CallInProgressTimeReporting {
@@ -248,7 +249,7 @@ final class FutureMeetingRoomViewModel: ObservableObject, Identifiable, CallInPr
                 scheduledMeeting.cancelled = true
                 _ = try await scheduledMeetingUseCase.updateScheduleMeeting(scheduledMeeting)
                 if !chatHasMessages {
-                    archiveChatRoom()
+                    archiveChatRoom(afterCancelMeeting: true)
                 } else {
                     router.showSuccessMessage(Strings.Localizable.Meetings.Scheduled.CancelAlert.Success.withMessages)
                 }
@@ -259,12 +260,15 @@ final class FutureMeetingRoomViewModel: ObservableObject, Identifiable, CallInPr
         }
     }
     
-    private func archiveChatRoom() {
+    private func archiveChatRoom(afterCancelMeeting: Bool) {
         Task {
             do {
                 guard let chatRoom = self.chatRoomUseCase.chatRoom(forChatId: self.scheduledMeeting.chatId) else { return }
+                try await Task.sleep(nanoseconds: 2_000_000_000) // This is a temporal workaround until API fixes that some management messages (like this one, cancelled meeting) don't unarchive chats MEET-2928
                 _ = try await chatRoomUseCase.archive(true, chatRoom: chatRoom)
-                router.showSuccessMessage(Strings.Localizable.Meetings.Scheduled.CancelAlert.Success.withoutMessages)
+                if afterCancelMeeting {
+                    router.showSuccessMessage(Strings.Localizable.Meetings.Scheduled.CancelAlert.Success.withoutMessages)
+                }
             } catch {
                 router.showErrorMessage(Strings.Localizable.somethingWentWrong)
                 MEGALogError("Failed to archive chat")
@@ -291,8 +295,17 @@ final class FutureMeetingRoomViewModel: ObservableObject, Identifiable, CallInPr
                 return
             }
             
-            startOrJoinCall()
+            if chatRoomUseCase.shouldOpenWaitingRoom(forChatId: scheduledMeeting.chatId)
+                && DIContainer.featureFlagProvider.isFeatureFlagEnabled(for: .waitingRoom) {
+                openWaitingRoom()
+            } else {
+                startOrJoinCall()
+            }
         }
+    }
+    
+    private func openWaitingRoom() {
+        router.presentWaitingRoom(for: scheduledMeeting)
     }
     
     func startOrJoinCall() {
@@ -304,7 +317,11 @@ final class FutureMeetingRoomViewModel: ObservableObject, Identifiable, CallInPr
         if existsInProgressCallInChatRoom {
             joinCall(in: chatRoom)
         } else {
-            startMeetingCallNoRinging(in: chatRoom)
+            if chatRoom.isWaitingRoomEnabled {
+                startMeetingInWaitingRoomChat(in: chatRoom)
+            } else {
+                startMeetingCallNoRinging(in: chatRoom)
+            }
         }
     }
     
@@ -341,6 +358,24 @@ final class FutureMeetingRoomViewModel: ObservableObject, Identifiable, CallInPr
                     self?.router.showErrorMessage(Strings.Localizable.Error.noMoreParticipantsAreAllowedInThisGroupCall)
                 default:
                     self?.router.showErrorMessage(Strings.Localizable.somethingWentWrong)
+                    MEGALogError("Not able to start scheduled meeting call")
+                }
+            }
+        }
+    }
+    
+    private func startMeetingInWaitingRoomChat(in chatRoom: ChatRoomEntity) {
+        callUseCase.startMeetingInWaitingRoomChat(for: scheduledMeeting, enableVideo: false, enableAudio: true) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let call):
+                prepareAndShowCallUI(for: call, in: chatRoom)
+            case .failure(let error):
+                switch error {
+                case .tooManyParticipants:
+                    router.showErrorMessage(Strings.Localizable.Error.noMoreParticipantsAreAllowedInThisGroupCall)
+                default:
+                    router.showErrorMessage(Strings.Localizable.somethingWentWrong)
                     MEGALogError("Not able to start scheduled meeting call")
                 }
             }
@@ -445,7 +480,7 @@ extension FutureMeetingRoomViewModel {
             imageName: Asset.Images.Chat.ContextualMenu.archiveChatMenu.name
         ) { [weak self] in
             guard let self else { return }
-            archiveChatRoom()
+            archiveChatRoom(afterCancelMeeting: false)
         }
     }
     

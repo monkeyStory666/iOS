@@ -1,3 +1,4 @@
+import MEGAL10n
 import MessageKit
 
 class ChatUnreadMessagesLabelCollectionCell: UICollectionViewCell {
@@ -21,7 +22,7 @@ class ChatUnreadMessagesLabelCollectionCellSizeCalculator: MessageSizeCalculator
         return titleLabel
     }()
     
-    override func messageContainerSize(for message: MessageType) -> CGSize {
+    override func messageContainerSize(for message: any MessageType) -> CGSize {
         guard let notificationMessage = message as? ChatNotificationMessage, case .unreadMessage(let count) = notificationMessage.type, count > 0 else {
             return .zero
         }

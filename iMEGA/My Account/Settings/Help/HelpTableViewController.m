@@ -1,4 +1,3 @@
-
 #import "HelpTableViewController.h"
 
 #import <MessageUI/MFMailComposeViewController.h>
@@ -10,6 +9,8 @@
 #import "MEGASDK+MNZCategory.h"
 #import "MEGA-Swift.h"
 #import "NSURL+MNZCategory.h"
+
+@import MEGAL10nObjc;
 
 @interface HelpTableViewController () <MFMailComposeViewControllerDelegate>
 
@@ -28,15 +29,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = NSLocalizedString(@"help", @"Menu item");
+    self.navigationItem.title = LocalizedString(@"help", @"Menu item");
     
-    self.sendFeedbackLabel.text = NSLocalizedString(@"sendFeedbackLabel", @"Title of one of the Settings sections where you can 'Send Feedback' to MEGA");
-    self.helpCentreLabel.text = NSLocalizedString(@"helpCentreLabel", @"Title of the section to access MEGA's help centre");
-    self.joinBetaLabel.text = NSLocalizedString(@"Join Beta", @"Section title that links you to the webpage that let you join and test the beta versions");
-    self.rateUsLabel.text = NSLocalizedString(@"rateUsLabel", @"Title to rate the app");
+    self.sendFeedbackLabel.text = LocalizedString(@"sendFeedbackLabel", @"Title of one of the Settings sections where you can 'Send Feedback' to MEGA");
+    self.helpCentreLabel.text = LocalizedString(@"helpCentreLabel", @"Title of the section to access MEGA's help centre");
+    self.joinBetaLabel.text = LocalizedString(@"Join Beta", @"Section title that links you to the webpage that let you join and test the beta versions");
+    self.rateUsLabel.text = LocalizedString(@"rateUsLabel", @"Title to rate the app");
     
     [self updateAppearance];
-        self.reportIssueLabel.text = NSLocalizedString(@"help.reportIssue.title", nil);
+        self.reportIssueLabel.text = LocalizedString(@"help.reportIssue.title", @"");
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {

@@ -1,8 +1,8 @@
+import MEGAL10n
 import MessageKit
 
 extension ChatViewController: MessagesDataSource {
-
-    public func currentSender() -> SenderType {
+    public func currentSender() -> any SenderType {
         return myUser
     }
 
@@ -11,11 +11,11 @@ extension ChatViewController: MessagesDataSource {
     }
 
     public func messageForItem(at indexPath: IndexPath,
-                               in messagesCollectionView: MessagesCollectionView) -> MessageType {
+                               in messagesCollectionView: MessagesCollectionView) -> any MessageType {
         return messages[safe: indexPath.section] ?? ConcreteMessageType(sender: User(senderId: "", displayName: ""), messageId: "", sentDate: Date(), kind: .text(""))
     }
     
-    func messageTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+    func messageTopLabelAttributedText(for message: any MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         guard let message = messages[safe: indexPath.section],
               let chatMessage = message as? ChatMessage else {
             return nil
@@ -37,7 +37,7 @@ extension ChatViewController: MessagesDataSource {
         return nil
     }
 
-    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+    func cellTopLabelAttributedText(for message: any MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         if isDateLabelVisible(for: indexPath) {
             return NSAttributedString(
                 string: NSCalendar.current.isDateInToday(message.sentDate) ? Strings.Localizable.today : message.sentDate.string(withDateFormat: "E dd MMM"),
@@ -51,7 +51,7 @@ extension ChatViewController: MessagesDataSource {
     
     func messageHeaderView(for indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageReusableView {
         
-        guard MEGASdkManager.sharedMEGAChatSdk().isFullHistoryLoaded(forChat: chatRoom.chatId) else {
+        guard MEGAChatSdk.shared.isFullHistoryLoaded(forChat: chatRoom.chatId) else {
             let loadingMessagesHeaderView = messagesCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LoadingMessageReusableView.reuseIdentifier, for: indexPath)  as! LoadingMessageReusableView
             loadingMessagesHeaderView.loadingView.mnz_startShimmering()
             return loadingMessagesHeaderView
@@ -76,7 +76,7 @@ extension ChatViewController: MessagesDataSource {
         return chatMessageReactionView
     }
     
-    func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+    func messageBottomLabelAttributedText(for message: any MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         guard let message = message as? ChatMessage, let transfer = message.transfer, transfer.state == .failed else {
            return nil
         }
@@ -122,9 +122,7 @@ extension ChatViewController: MessageReactionReusableViewDelegate {
         guard chatRoom.canAddReactions else {
             return
         }
-        guard let emojisStringList = MEGASdkManager
-            .sharedMEGAChatSdk()
-            .messageReactions(forChat: chatRoom.chatId,
+        guard let emojisStringList = MEGAChatSdk.shared.messageReactions(forChat: chatRoom.chatId,
                                  messageId: chatMessage.message.messageId) else {
                                     MEGALogDebug("Could not fetch the emoji list for a message")
                                     return

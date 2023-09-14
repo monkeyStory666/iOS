@@ -9,12 +9,17 @@ protocol CallUseCaseProtocol {
     func startCall(for chatId: HandleEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity
     func startCallNoRinging(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void)
     func startCallNoRinging(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void)
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity
     func joinCall(for chatId: HandleEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void)
     func createActiveSessions()
     func hangCall(for callId: HandleEntity)
     func endCall(for callId: HandleEntity)
     func addPeer(toCall call: CallEntity, peerId: HandleEntity)
     func removePeer(fromCall call: CallEntity, peerId: HandleEntity)
+    func allowUsersJoinCall(_ call: CallEntity, users: [HandleEntity])
+    func kickUsersFromCall(_ call: CallEntity, users: [HandleEntity])
+    func pushUsersIntoWaitingRoom(for scheduledMeeting: ScheduledMeetingEntity, users: [HandleEntity])
     func makePeerAModerator(inCall call: CallEntity, peerId: HandleEntity)
     func removePeerAsModerator(inCall call: CallEntity, peerId: HandleEntity)
 }
@@ -22,6 +27,8 @@ protocol CallUseCaseProtocol {
 protocol CallCallbacksUseCaseProtocol: AnyObject {
     func participantJoined(participant: CallParticipantEntity)
     func participantLeft(participant: CallParticipantEntity)
+    func waitingRoomUsersEntered(with handles: [HandleEntity])
+    func waitingRoomUsersLeave(with handles: [HandleEntity])
     func updateParticipant(_ participant: CallParticipantEntity)
     func remoteVideoResolutionChanged(for participant: CallParticipantEntity)
     func highResolutionChanged(for participant: CallParticipantEntity)
@@ -99,6 +106,14 @@ final class CallUseCase<T: CallRepositoryProtocol>: NSObject, CallUseCaseProtoco
         try await repository.startCallNoRinging(for: scheduledMeeting, enableVideo: enableVideo, enableAudio: enableAudio)
     }
     
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
+        repository.startMeetingInWaitingRoomChat(for: scheduledMeeting, enableVideo: enableVideo, enableAudio: enableAudio, completion: completion)
+    }
+    
+    func startMeetingInWaitingRoomChat(for scheduledMeeting: ScheduledMeetingEntity, enableVideo: Bool, enableAudio: Bool) async throws -> CallEntity {
+        try await repository.startMeetingInWaitingRoomChat(for: scheduledMeeting, enableVideo: enableVideo, enableAudio: enableAudio)
+    }
+    
     func joinCall(for chatId: HandleEntity, enableVideo: Bool, enableAudio: Bool, completion: @escaping (Result<CallEntity, CallErrorEntity>) -> Void) {
         repository.joinCall(for: chatId, enableVideo: enableVideo, enableAudio: true, completion: completion)
     }
@@ -121,6 +136,18 @@ final class CallUseCase<T: CallRepositoryProtocol>: NSObject, CallUseCaseProtoco
     
     func removePeer(fromCall call: CallEntity, peerId: HandleEntity) {
         repository.removePeer(fromCall: call, peerId: peerId)
+    }
+    
+    func allowUsersJoinCall(_ call: CallEntity, users: [HandleEntity]) {
+        repository.allowUsersJoinCall(call, users: users)
+    }
+    
+    func kickUsersFromCall(_ call: CallEntity, users: [HandleEntity]) {
+        repository.kickUsersFromCall(call, users: users)
+    }
+    
+    func pushUsersIntoWaitingRoom(for scheduledMeeting: ScheduledMeetingEntity, users: [HandleEntity]) {
+        repository.pushUsersIntoWaitingRoom(for: scheduledMeeting, users: users)
     }
     
     func makePeerAModerator(inCall call: CallEntity, peerId: HandleEntity) {
@@ -196,5 +223,13 @@ extension CallUseCase: CallCallbacksRepositoryProtocol {
     
     func outgoingRingingStopReceived() {
         callbacksDelegate?.outgoingRingingStopReceived()
+    }
+    
+    func waitingRoomUsersEntered(with handles: [HandleEntity]) {
+        callbacksDelegate?.waitingRoomUsersEntered(with: handles)
+    }
+    
+    func waitingRoomUsersLeave(with handles: [HandleEntity]) {
+        callbacksDelegate?.waitingRoomUsersLeave(with: handles)
     }
 }

@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import SwiftUI
 
 final class QASettingsViewModel {
@@ -64,7 +65,7 @@ final class QASettingsViewModel {
         )
     }
     
-    private func show(error: Error) {
+    private func show(error: some Error) {
         router.showAlert(withError: error)
     }
     

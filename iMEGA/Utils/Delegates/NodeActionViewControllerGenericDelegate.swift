@@ -2,14 +2,14 @@ import Foundation
 import MEGADomain
 import MEGASDKRepo
 
-final class NodeActionViewControllerGenericDelegate:
+class NodeActionViewControllerGenericDelegate:
     NodeActionViewControllerDelegate {
     private weak var viewController: UIViewController?
     private(set) var isNodeFromFolderLink: Bool
     private(set) var messageId: HandleEntity?
     private(set) var chatId: HandleEntity?
     
-    private let saveMediaToPhotosUseCase = SaveMediaToPhotosUseCase(downloadFileRepository: DownloadFileRepository(sdk: MEGASdkManager.sharedMEGASdk()), fileCacheRepository: FileCacheRepository.newRepo, nodeRepository: NodeRepository.newRepo)
+    private let saveMediaToPhotosUseCase = SaveMediaToPhotosUseCase(downloadFileRepository: DownloadFileRepository(sdk: MEGASdk.shared), fileCacheRepository: FileCacheRepository.newRepo, nodeRepository: NodeRepository.newRepo)
 
     init(viewController: UIViewController, isNodeFromFolderLink: Bool = false, messageId: HandleEntity? = nil, chatId: HandleEntity? = nil) {
         self.viewController = viewController
@@ -233,16 +233,14 @@ final class NodeActionViewControllerGenericDelegate:
     }
     
     private func favourite(_ node: MEGANode) {
-        let nodefavouriteActionUseCase =  NodeFavouriteActionUseCase(nodeFavouriteRepository: NodeFavouriteActionRepository(sdk: MEGASdkManager.sharedMEGASdk()))
+        let nodefavouriteActionUseCase =  NodeFavouriteActionUseCase(nodeFavouriteRepository: NodeFavouriteActionRepository.newRepo)
         if node.isFavourite {
             Task {
                 try await nodefavouriteActionUseCase.unFavourite(node: node.toNodeEntity())
-                QuickAccessWidgetManager().deleteFavouriteItem(for: node)
             }
         } else {
             Task {
                 try await nodefavouriteActionUseCase.favourite(node: node.toNodeEntity())
-                QuickAccessWidgetManager().insertFavouriteItem(for: node)
             }
         }
     }

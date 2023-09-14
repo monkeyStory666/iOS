@@ -1,6 +1,8 @@
 import Combine
 import MEGADomain
+import MEGAL10n
 import MEGAPresentation
+import MEGASDKRepo
 import MEGAUIKit
 import SwiftUI
 import UIKit
@@ -282,7 +284,7 @@ final class PhotoAlbumContainerViewController: UIViewController, TraitEnvironmen
     }
     
     @objc private func shareLinksButtonPressed() {
-        viewModel.showShareAlbumLinks = true
+        viewModel.shareLinksTapped()
     }
     
     @objc private func removeLinksButtonPressed() {

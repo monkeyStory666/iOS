@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGAPermissions
 import MEGASDKRepo
 import MEGASwiftUI
@@ -47,7 +48,7 @@ extension MEGAPhotoBrowserViewController {
         }
         
         if node.mnz_isPlayable() {
-            guard !MEGASdkManager.sharedMEGAChatSdk().mnz_existsActiveCall else {
+            guard !MEGAChatSdk.sharedChatSdk.mnz_existsActiveCall else {
                 Helper.cannotPlayContentDuringACallAlert()
                 return
             }
@@ -90,7 +91,8 @@ extension MEGAPhotoBrowserViewController {
         permissionHandler.photosPermissionWithCompletionHandler {[weak self] granted in
             guard let self else { return }
             if granted {
-                let saveMediaUseCase = SaveMediaToPhotosUseCase(downloadFileRepository: DownloadFileRepository(sdk: MEGASdkManager.sharedMEGASdk(), sharedFolderSdk: self.displayMode == .nodeInsideFolderLink ? self.api : nil), fileCacheRepository: FileCacheRepository.newRepo, nodeRepository: NodeRepository.newRepo)
+                let saveMediaUseCase = dataProvider.makeSaveMediaToPhotosUseCase(for: displayMode)
+                
                 let completionBlock: (Result<Void, SaveMediaToPhotosErrorEntity>) -> Void = { result in
                     if case let .failure(error) = result, error != .cancelled {
                         SVProgressHUD.dismiss()
@@ -100,8 +102,6 @@ extension MEGAPhotoBrowserViewController {
                         )
                     }
                 }
-                
-                TransfersWidgetViewController.sharedTransfer().bringProgressToFrontKeyWindowIfNeeded()
                 
                 switch self.displayMode {
                 case .chatAttachment, .chatSharedFiles:
@@ -113,15 +113,19 @@ extension MEGAPhotoBrowserViewController {
                 default:
                     Task { @MainActor in
                         do {
+                            SnackBarRouter.shared.present(snackBar: SnackBar(message: Strings.Localizable.General.SaveToPhotos.started(1)))
                             try await saveMediaUseCase.saveToPhotos(nodes: [node.toNodeEntity()])
+                        } catch let error as SaveMediaToPhotosErrorEntity where error == .fileDownloadInProgress {
+                            SnackBarRouter.shared.dismissSnackBar(immediate: true)
+                            SnackBarRouter.shared.present(snackBar: SnackBar(message: error.localizedDescription))
+                        } catch let error as SaveMediaToPhotosErrorEntity where error != .cancelled {
+                            await SVProgressHUD.dismiss()
+                            SVProgressHUD.show(
+                                Asset.Images.NodeActions.saveToPhotos.image,
+                                status: error.localizedDescription
+                            )
                         } catch {
-                            if let errorEntity = error as? SaveMediaToPhotosErrorEntity, errorEntity != .cancelled {
-                                await SVProgressHUD.dismiss()
-                                SVProgressHUD.show(
-                                    Asset.Images.NodeActions.saveToPhotos.image,
-                                    status: error.localizedDescription
-                                )
-                            }
+                            MEGALogError("[MEGAPhotoBrowserViewController] Error saving media nodes: \(error)")
                         }
                     }
                 }
@@ -176,7 +180,7 @@ extension MEGAPhotoBrowserViewController {
     }
     
     @objc func viewNodeInFolder(_ node: MEGANode) {
-        guard let parentNode = MEGASdkManager.sharedMEGASdk().node(forHandle: node.parentHandle),
+        guard let parentNode = MEGASdk.sharedSdk.node(forHandle: node.parentHandle),
               parentNode.isFolder() else {
             return
         }

@@ -1,3 +1,4 @@
+import MEGAL10n
 
 struct ScheduleMeetingPushNotifications {
     static let startsNowCategoryIdentifier = "nz.mega.startsNowScheduledMeeting.message"

@@ -48,9 +48,10 @@
 #import <SDWebImage/SDWebImage.h>
 #import "MEGASdkManager+CleanUp.h"
 @import Firebase;
-@import SDWebImageWebPCoder;
+@import MEGAL10nObjc;
 @import MEGASDKRepo;
-
+@import SDWebImageWebPCoder;
+@import MEGAFoundation;
 #import "MEGA-Swift.h"
 
 @interface AppDelegate () <PKPushRegistryDelegate, UIApplicationDelegate, UNUserNotificationCenterDelegate, LTHPasscodeViewControllerDelegate, LaunchViewControllerDelegate, MEGAChatDelegate, MEGAChatRequestDelegate, MEGAGlobalDelegate, MEGAPurchasePricingDelegate, MEGARequestDelegate, MEGATransferDelegate> {
@@ -203,8 +204,8 @@
         if (chatInit == MEGAChatInitError) {
             MEGALogError(@"Init Karere with session failed");
             NSString *message = [NSString stringWithFormat:@"Error (%ld) initializing the chat", (long)chatInit];
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"error", nil) message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"ok", nil) style:UIAlertActionStyleCancel handler:nil]];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:LocalizedString(@"error", @"nil") message:message preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"ok", @"") style:UIAlertActionStyleCancel handler:nil]];
             [[MEGASdkManager sharedMEGAChatSdk] logout];
             [UIApplication.mnz_presentingViewController presentViewController:alertController animated:YES completion:nil];
         } else if (chatInit == MEGAChatInitOnlineSession || chatInit == MEGAChatInitOfflineSession) {
@@ -222,7 +223,7 @@
                 
                 [[LTHPasscodeViewController sharedUser] showLockScreenWithAnimation:NO
                                                                          withLogout:YES
-                                                                     andLogoutTitle:NSLocalizedString(@"logoutLabel", nil)];
+                                                                     andLogoutTitle:LocalizedString(@"logoutLabel", @"")];
                 [self.window setRootViewController:[LTHPasscodeViewController sharedUser]];
             } else {
                 _mainTBC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarControllerID"];
@@ -247,6 +248,8 @@
             }];
             createAccountRequestDelegate.resumeCreateAccount = YES;
             [[MEGASdkManager sharedMEGASdk] resumeCreateAccountWithSessionId:sessionId delegate:createAccountRequestDelegate];
+        } else {
+            [self listenToStorePaymentTransactions];
         }
     }
     
@@ -430,7 +433,7 @@
                         MEGAChatCall *call = [[MEGASdkManager sharedMEGAChatSdk] chatCallForChatId:self.chatRoom.chatId];
                         if (call.status == MEGAChatCallStatusInProgress) {
                             MEGALogDebug(@"There is a call in progress for this chat %@", call);
-                            BOOL isSpeakerEnabled = [AVAudioSession.sharedInstance mnz_isOutputEqualToPortType:AVAudioSessionPortBuiltInSpeaker];
+                            BOOL isSpeakerEnabled = [AVAudioSession.sharedInstance isOutputEqualToPortType:AVAudioSessionPortBuiltInSpeaker];
                             [self performCallWithPresenter:UIApplication.mnz_presentingViewController
                                                   chatRoom:self.chatRoom
                                           isSpeakerEnabled:isSpeakerEnabled];
@@ -463,7 +466,7 @@
                     self.chatRoom = [[MEGASdkManager sharedMEGAChatSdk] chatRoomForChatId:call.chatId];
                     MEGALogDebug(@"call id %llu", call.callId);
                     MEGALogDebug(@"There is a call in progress for this chat %@", call);
-                    BOOL isSpeakerEnabled = [AVAudioSession.sharedInstance mnz_isOutputEqualToPortType:AVAudioSessionPortBuiltInSpeaker];
+                    BOOL isSpeakerEnabled = [AVAudioSession.sharedInstance isOutputEqualToPortType:AVAudioSessionPortBuiltInSpeaker];
                     [self performCallWithPresenter:UIApplication.mnz_presentingViewController chatRoom:self.chatRoom isSpeakerEnabled:isSpeakerEnabled];
                     self.chatRoom = nil;
                 } else {
@@ -636,29 +639,6 @@
     return quickActionManaged;
 }
 
-- (void)requestUserName {
-    NSNumber *handle = MEGASdk.currentUserHandle;
-    if (handle == nil) {
-        return;
-    }
-    
-    if (![[MEGAStore shareInstance] fetchUserWithUserHandle:[handle unsignedLongLongValue]]) {
-        [[MEGASdkManager sharedMEGASdk] getUserAttributeType:MEGAUserAttributeFirstname];
-        [[MEGASdkManager sharedMEGASdk] getUserAttributeType:MEGAUserAttributeLastname];
-    }
-}
-
-- (void)requestContactsFullname {
-    MEGAUserList *userList = [[MEGASdkManager sharedMEGASdk] contacts];
-    for (NSInteger i = 0; i < userList.size.integerValue; i++) {
-        MEGAUser *user = [userList userAtIndex:i];
-        if (![[MEGAStore shareInstance] fetchUserWithUserHandle:user.handle] && user.visibility == MEGAUserVisibilityVisible) {
-            [[MEGASdkManager sharedMEGASdk] getUserAttributeForUser:user type:MEGAUserAttributeFirstname];
-            [[MEGASdkManager sharedMEGASdk] getUserAttributeForUser:user type:MEGAUserAttributeLastname];
-        }
-    }
-}
-
 - (void)showMainTabBar {
     if (![self.window.rootViewController isKindOfClass:[LTHPasscodeViewController class]]) {
         
@@ -672,7 +652,7 @@
                 if (![[NSUserDefaults standardUserDefaults] boolForKey:@"presentPasscodeLater"]) {
                     [[LTHPasscodeViewController sharedUser] showLockScreenWithAnimation:NO
                                                                              withLogout:YES
-                                                                         andLogoutTitle:NSLocalizedString(@"logoutLabel", nil)];
+                                                                         andLogoutTitle:LocalizedString(@"logoutLabel", @"")];
                 }
             }
         }
@@ -884,7 +864,7 @@
 - (void)presentInviteContactCustomAlertViewController {
     BOOL isInOutgoingContactRequest = NO;
     MEGAContactRequestList *outgoingContactRequestList = [[MEGASdkManager sharedMEGASdk] outgoingContactRequests];
-    for (NSInteger i = 0; i < [[outgoingContactRequestList size] integerValue]; i++) {
+    for (NSInteger i = 0; i < outgoingContactRequestList.size; i++) {
         MEGAContactRequest *contactRequest = [outgoingContactRequestList contactRequestAtIndex:i];
         if ([self.email isEqualToString:contactRequest.targetEmail]) {
             isInOutgoingContactRequest = YES;
@@ -998,7 +978,7 @@
         NSString *alertMessage = [self expiredAccountMessage];
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:alertTitle message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"dismiss", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"dismiss", @"") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             self.accountExpiredPresented = NO;
         }]];
         
@@ -1027,8 +1007,8 @@
 }
 
 - (void)presentLogoutFromOtherClientAlert {
-    self.API_ESIDAlertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"loggedOut_alertTitle", nil) message:NSLocalizedString(@"loggedOutFromAnotherLocation", nil) preferredStyle:UIAlertControllerStyleAlert];
-    [self.API_ESIDAlertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"ok", nil) style:UIAlertActionStyleCancel handler:nil]];
+    self.API_ESIDAlertController = [UIAlertController alertControllerWithTitle:LocalizedString(@"loggedOut_alertTitle", @"") message:LocalizedString(@"loggedOutFromAnotherLocation", @"") preferredStyle:UIAlertControllerStyleAlert];
+    [self.API_ESIDAlertController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"ok", @"") style:UIAlertActionStyleCancel handler:nil]];
     [UIApplication.mnz_presentingViewController presentViewController:self.API_ESIDAlertController animated:YES completion:nil];
 }
 
@@ -1166,6 +1146,7 @@
         return;
     }
     [self showMainTabBar];
+    [[MEGAPurchase sharedInstance] processAnyPendingPromotedPlanPayment];
 }
 
 - (void)readyToShowRecommendations {
@@ -1261,7 +1242,8 @@
 - (void)onNodesUpdate:(MEGASdk *)api nodeList:(MEGANodeList *)nodeList {
     if (nodeList) {
         [self.quickAccessWidgetManager createQuickAccessWidgetItemsDataIfNeededFor:nodeList];
-        
+        [self.quickAccessWidgetManager updateFavouritesWidgetFor:nodeList];
+
         [self postNodeUpdatesNotificationsFor:nodeList];
     } else {
         [Helper startPendingUploadTransferIfNeeded];
@@ -1357,7 +1339,7 @@
             }
             
             if (request.paramType != MEGAErrorTypeApiESSL && request.flag) {
-                [SVProgressHUD showImage:[UIImage imageNamed:@"hudLogOut"] status:NSLocalizedString(@"loggingOut", @"String shown when you are logging out of your account.")];
+                [SVProgressHUD showImage:[UIImage imageNamed:@"hudLogOut"] status:LocalizedString(@"loggingOut", @"String shown when you are logging out of your account.")];
             }
             break;
         }
@@ -1384,8 +1366,8 @@
                     
                     [self showOnboardingWithCompletion:^{
                         if (MEGALinkManager.urlType == URLTypeCancelAccountLink) {
-                            UIAlertController *accountCanceledSuccessfullyAlertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"accountCanceledSuccessfully", @"During account cancellation (deletion)") message:nil preferredStyle:UIAlertControllerStyleAlert];
-                            [accountCanceledSuccessfullyAlertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"ok", @"Button title to accept something") style:UIAlertActionStyleCancel handler:nil]];
+                            UIAlertController *accountCanceledSuccessfullyAlertController = [UIAlertController alertControllerWithTitle:LocalizedString(@"accountCanceledSuccessfully", @"During account cancellation (deletion)") message:nil preferredStyle:UIAlertControllerStyleAlert];
+                            [accountCanceledSuccessfullyAlertController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"ok", @"Button title to accept something") style:UIAlertActionStyleCancel handler:nil]];
                             [UIApplication.mnz_presentingViewController presentViewController:accountCanceledSuccessfullyAlertController animated:YES completion:^{
                                 [MEGALinkManager resetLinkAndURLType];
                             }];
@@ -1410,8 +1392,8 @@
                 
                 if ([api isForeignNode:request.parentHandle]) {
                     if (![UIApplication.mnz_presentingViewController isKindOfClass:UIAlertController.class]) {
-                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"dialog.shareOwnerStorageQuota.message", nil) preferredStyle:UIAlertControllerStyleAlert];
-                        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"ok", nil) style:UIAlertActionStyleDefault handler:nil]];
+                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:LocalizedString(@"dialog.shareOwnerStorageQuota.message", @"") preferredStyle:UIAlertControllerStyleAlert];
+                        [alertController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"ok", @"") style:UIAlertActionStyleDefault handler:nil]];
                         [UIApplication.mnz_presentingViewController presentViewController:alertController animated:YES completion:nil];
                     }
                 } else {
@@ -1434,19 +1416,19 @@
             case MEGAErrorTypeApiEIncomplete: {
                 if (request.type == MEGARequestTypeLogout && request.paramType == MEGAErrorTypeApiESSL && !self.sslKeyPinningController) {
                     [SVProgressHUD dismiss];
-                    _sslKeyPinningController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"sslUnverified_alertTitle", nil) message:nil preferredStyle:UIAlertControllerStyleAlert];
-                    [self.sslKeyPinningController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"ignore", @"Button title to allow the user ignore something") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                    _sslKeyPinningController = [UIAlertController alertControllerWithTitle:LocalizedString(@"sslUnverified_alertTitle", @"") message:nil preferredStyle:UIAlertControllerStyleAlert];
+                    [self.sslKeyPinningController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"ignore", @"Button title to allow the user ignore something") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
                         self.sslKeyPinningController = nil;
                         [api setPublicKeyPinning:NO];
                         [api reconnect];
                     }]];
                     
-                    [self.sslKeyPinningController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"retry", @"Button which allows to retry send message in chat conversation.") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    [self.sslKeyPinningController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"retry", @"Button which allows to retry send message in chat conversation.") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                         self.sslKeyPinningController = nil;
                         [api retryPendingConnections];
                     }]];
                     
-                    [self.sslKeyPinningController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"openBrowser", @"Button title to allow the user open the default browser") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    [self.sslKeyPinningController addAction:[UIAlertAction actionWithTitle:LocalizedString(@"openBrowser", @"Button title to allow the user open the default browser") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                         self.sslKeyPinningController = nil;
                         NSURL *url = [NSURL URLWithString:@"https://mega.nz"];
                         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:NULL];
@@ -1510,6 +1492,7 @@
             
         case MEGARequestTypeFetchNodes: {
             [self postDidFinishFetchNodesNotification];
+            [self listenToStorePaymentTransactions];
             [[SKPaymentQueue defaultQueue] addTransactionObserver:[MEGAPurchase sharedInstance]];
             
             if ([[NSUserDefaults standardUserDefaults] boolForKey:@"TransfersPaused"]) {
@@ -1522,8 +1505,6 @@
             
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
             
-            [self requestUserName];
-            [self requestContactsFullname];
             [self updateContactsNickname];
             
             MEGAChatNotificationDelegate *chatNotificationDelegate = MEGAChatNotificationDelegate.new;
@@ -1796,9 +1777,9 @@
                 break;
             default: {
                 if (error.type != MEGAErrorTypeApiESid && error.type != MEGAErrorTypeApiESSL && error.type != MEGAErrorTypeApiEExist && error.type != MEGAErrorTypeApiEIncomplete) {
-                    NSString *transferFailed = NSLocalizedString(@"Transfer failed:", @"Notification message shown when a transfer failed. Keep colon.");
+                    NSString *transferFailed = LocalizedString(@"Transfer failed:", @"Notification message shown when a transfer failed. Keep colon.");
                     NSString *errorString = [MEGAError errorStringWithErrorCode:error.type context:(transfer.type == MEGATransferTypeUpload) ? MEGAErrorContextUpload : MEGAErrorContextDownload];
-                    MEGALogError(@"%@\n%@ %@", transfer.fileName, transferFailed, NSLocalizedString(errorString, nil));
+                    MEGALogError(@"%@\n%@ %@", transfer.fileName, transferFailed, LocalizedString(errorString, @""));
                 }
                 break;
             }

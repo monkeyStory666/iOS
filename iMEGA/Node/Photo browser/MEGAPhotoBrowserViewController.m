@@ -1,4 +1,3 @@
-
 #import "MEGAPhotoBrowserViewController.h"
 
 #import "PieChartView.h"
@@ -26,6 +25,7 @@
 #import "MEGA-Swift.h"
 #import "NSArray+MNZCategory.h"
 
+@import MEGAL10nObjc;
 @import MEGAUIKit;
 @import MEGASDKRepo;
 
@@ -41,7 +41,6 @@ static const long long MinSizeToRequestThePreview = 1 * 1024 * 1024; // 1 MB. Do
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *closeBarButtonItem;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 @property (weak, nonatomic) IBOutlet UIView *statusBarBackground;
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet PieChartView *pieChartView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *customActionsButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *leftToolbarItem;
@@ -139,7 +138,7 @@ static const long long MinSizeToRequestThePreview = 1 * 1024 * 1024; // 1 MB. Do
             {
                 UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
                 [self.toolbar setItems:@[self.exportFileToolbarItem, flexibleItem, self.importToolbarItem, flexibleItem,  self.forwardToolbarItem, flexibleItem, self.customActionsButton]];
-                self.allMediaToolBarItem.title = NSLocalizedString(@"All Media", @"");
+                self.allMediaToolBarItem.title = LocalizedString(@"All Media", @"");
                 self.navigationItem.rightBarButtonItem = self.allMediaToolBarItem;
             }
             break;
@@ -153,7 +152,7 @@ static const long long MinSizeToRequestThePreview = 1 * 1024 * 1024; // 1 MB. Do
     
     [self.toolbar setBackgroundColor:[UIColor mnz_mainBarsForTraitCollection:self.traitCollection]];
     
-    self.closeBarButtonItem.title = NSLocalizedString(@"close", @"A button label.");
+    self.closeBarButtonItem.title = LocalizedString(@"close", @"A button label.");
     
     [self updateAppearance];
 }
@@ -162,7 +161,11 @@ static const long long MinSizeToRequestThePreview = 1 * 1024 * 1024; // 1 MB. Do
     [super viewWillAppear:animated];
     
     [[MEGASdkManager sharedMEGASdk] addMEGADelegate:self];
+    [self configureSnackBarPresenter];
+    [TransfersWidgetViewController.sharedTransferViewController setProgressViewInKeyWindow];
     [TransfersWidgetViewController.sharedTransferViewController bringProgressToFrontKeyWindowIfNeeded];
+    [TransfersWidgetViewController.sharedTransferViewController updateProgressViewWithBottomConstant:-120];
+    [TransfersWidgetViewController.sharedTransferViewController showWidgetIfNeeded];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -233,7 +236,7 @@ static const long long MinSizeToRequestThePreview = 1 * 1024 * 1024; // 1 MB. Do
     [self airplayClear];
     self.secondWindow.hidden = YES;
     self.secondWindow = nil;
-    
+    [self removeSnackBarPresenter];
     [[MEGASdkManager sharedMEGASdk] removeMEGADelegateAsync:self];
 }
 
@@ -1095,16 +1098,7 @@ static const long long MinSizeToRequestThePreview = 1 * 1024 * 1024; // 1 MB. Do
         }
             
         case MegaNodeActionTypeFavourite: {
-            MEGAGenericRequestDelegate *delegate = [MEGAGenericRequestDelegate.alloc initWithCompletion:^(MEGARequest * _Nonnull request, MEGAError * _Nonnull error) {
-                if (error.type == MEGAErrorTypeApiOk) {
-                    if (request.numDetails == 1) {
-                        [[QuickAccessWidgetManager.alloc init] insertFavouriteItemFor:node];
-                    } else {
-                        [[QuickAccessWidgetManager.alloc init] deleteFavouriteItemFor:node];
-                    }
-                }
-            }];
-            [MEGASdkManager.sharedMEGASdk setNodeFavourite:node favourite:!node.isFavourite delegate:delegate];
+            [MEGASdk.shared setNodeFavourite:node favourite:!node.isFavourite];
             break;
         }
             

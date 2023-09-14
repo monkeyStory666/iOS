@@ -1,4 +1,3 @@
-
 #import "NSURL+MNZCategory.h"
 
 #import <SafariServices/SafariServices.h>
@@ -10,6 +9,8 @@
 #import "MEGAGenericRequestDelegate.h"
 #import "MEGASdkManager.h"
 
+@import MEGAL10nObjc;
+
 @implementation NSURL (MNZCategory)
 
 - (void)mnz_presentSafariViewController {
@@ -19,7 +20,7 @@
                 MEGALogInfo(@"URL opened on other app");
             } else {
                 MEGALogInfo(@"URL NOT opened");
-                [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"linkNotValid", @"Message shown when the user clicks on an link that is not valid")];
+                [SVProgressHUD showErrorWithStatus:LocalizedString(@"linkNotValid", @"Message shown when the user clicks on an link that is not valid")];
             }
         }];
         return;

@@ -1,3 +1,4 @@
+import MEGAL10n
 import MEGASwiftUI
 
 @objc enum MyAccountSection: Int, CaseIterable {
@@ -22,7 +23,7 @@ extension MyAccountHallViewController: UITableViewDataSource {
     
     // MARK: - Storage row setup data for Business and Pro Flexi accounts
     private func storageBusinessAccountSetupData() -> MyAccountHallCellData {
-        let accountDetails = MEGASdkManager.sharedMEGASdk().mnz_accountDetails
+        let accountDetails = MEGASdk.shared.mnz_accountDetails
         return MyAccountHallCellData(sectionText: Strings.Localizable.storage,
                                      storageText: Strings.Localizable.storage,
                                      transferText: Strings.Localizable.transfer,
@@ -32,7 +33,7 @@ extension MyAccountHallViewController: UITableViewDataSource {
     
     // MARK: - Storage row setup data
     private func storageSetupData() -> MyAccountHallCellData {
-        let accountDetails = MEGASdkManager.sharedMEGASdk().mnz_accountDetails
+        let accountDetails = MEGASdk.shared.mnz_accountDetails
         let detailText = String(format: "%@ / %@",
                                 NSString.mnz_formatString(fromByteCountFormatter: String.memoryStyleString(fromByteCount: accountDetails?.storageUsed.int64Value ?? 0)),
                                 NSString.mnz_formatString(fromByteCountFormatter: String.memoryStyleString(fromByteCount: accountDetails?.storageMax.int64Value ?? 0)))
@@ -114,8 +115,8 @@ extension MyAccountHallViewController: UITableViewDataSource {
     // MARK: - Rubbish Bin row setup data
     private func rubbishBinSetupData() -> MyAccountHallCellData {
         var rubbishBinSize = ""
-        if let rubbishBinNode = MEGASdkManager.sharedMEGASdk().rubbishNode {
-            rubbishBinSize = NSString.mnz_formatString(fromByteCountFormatter: Helper.size(for: rubbishBinNode, api: MEGASdkManager.sharedMEGASdk()))
+        if let rubbishBinNode = MEGASdk.shared.rubbishNode {
+            rubbishBinSize = NSString.mnz_formatString(fromByteCountFormatter: Helper.size(for: rubbishBinNode, api: MEGASdk.shared))
         }
         
         return MyAccountHallCellData(sectionText: Strings.Localizable.rubbishBinLabel,

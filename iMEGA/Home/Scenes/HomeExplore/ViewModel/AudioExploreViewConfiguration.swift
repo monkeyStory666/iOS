@@ -1,3 +1,4 @@
+import MEGAL10n
 
 struct AudioExploreViewConfiguration: FilesExplorerViewConfiguration {
     

@@ -1,3 +1,4 @@
+import MEGAL10n
 
 class ChatViewAttachmentCellViewModel {
     // MARK: - Private properties.

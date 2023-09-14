@@ -1,3 +1,4 @@
+import MEGAL10n
 
 extension CameraUploadsTableViewController {
     @objc func showAccountExpiredAlert() {

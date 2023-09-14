@@ -1,5 +1,6 @@
 import Combine
 import MEGADomain
+import MEGAL10n
 import MEGASDKRepo
 import UIKit
 
@@ -108,25 +109,11 @@ extension ChatViewController {
             guard let self else { return }
             if granted {
                 timer?.invalidate()
-                if shouldOpenWaitingRoom() {
-                    openWaitingRoom()
-                } else {
-                    openCallViewWithVideo(videoCall: false, shouldRing: false)
-                }
+                openCallViewWithVideo(videoCall: false, shouldRing: false)
             } else {
                 permissionRouter.alertAudioPermission(incomingCall: false)
             }
         }
-    }
-    
-    private func shouldOpenWaitingRoom() -> Bool {
-        let isModerator = chatRoom.ownPrivilege.toOwnPrivilegeEntity() == .moderator
-        return !isModerator && chatRoom.isWaitingRoomEnabled && chatContentViewModel.isWaitingRoomFeatureEnabled
-    }
-    
-    private func openWaitingRoom() {
-        guard let scheduledMeeting = scheduledMeetingUseCase.scheduledMeetingsByChat(chatId: chatRoom.chatId).first else { return }
-        WaitingRoomViewRouter(presenter: self, scheduledMeeting: scheduledMeeting).start()
     }
 
     func subscribeToNoUserJoinedNotification() {
@@ -149,11 +136,11 @@ extension ChatViewController {
     
     func showCallEndTimerIfNeeded(call: CallEntity) {
         guard MeetingContainerRouter.isAlreadyPresented == false,
-              call.changeTye == .callComposition,
+              call.changeType == .callComposition,
               call.numberOfParticipants == 1,
               call.participants.first == chatContentViewModel.userHandle else {
             
-            if call.changeTye == .callComposition, call.numberOfParticipants > 1 {
+            if call.changeType == .callComposition, call.numberOfParticipants > 1 {
                 removeEndCallDialogIfNeeded()
                 cancelEndCallSubscription()
             }

@@ -1,3 +1,4 @@
+import MEGAL10n
 
 extension NotificationService {
     func processStartScheduledMeetingNotification(withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void, request: UNNotificationRequest) {
@@ -36,7 +37,7 @@ extension NotificationService {
     }
 
     private func bodyForStartScheduledMeetingNotification(withInfo notificationInfo: ScheduleMeetingNotificationInfo) -> String {
-        NSLocalizedString(
+        Strings.localized(
             notificationInfo.startTime == .now
             ? "meetings.scheduleMeeting.notification.meetingStartsNow.message"
             : "meetings.scheduleMeeting.notification.meetingStartsInFifteenMins.message",

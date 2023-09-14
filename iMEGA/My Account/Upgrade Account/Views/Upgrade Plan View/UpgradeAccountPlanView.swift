@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGASwiftUI
 import Settings
 import SwiftUI
@@ -32,7 +33,7 @@ struct UpgradeAccountPlanView: View, DismissibleContentView {
             ScrollView {
                 LazyVStack(pinnedViews: .sectionFooters) {
                     UpgradeSectionHeaderView(currentPlanName: viewModel.currentPlanName,
-                                             selectedTermTab: $viewModel.selectedTermTab)
+                                             selectedCycleTab: $viewModel.selectedCycleTab)
                     
                     Section {
                         ForEach(viewModel.filteredPlanList, id: \.self) { plan in

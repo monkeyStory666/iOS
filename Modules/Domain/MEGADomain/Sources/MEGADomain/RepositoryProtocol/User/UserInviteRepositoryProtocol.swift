@@ -1,5 +1,3 @@
-
-public protocol UserInviteRepositoryProtocol {
-    func sendInvite(forEmail email: String,
-                    completion: @escaping (Result<Void, InviteErrorEntity>) -> Void)
+public protocol UserInviteRepositoryProtocol: RepositoryProtocol {
+    func sendInvite(forEmail email: String) async throws
 }

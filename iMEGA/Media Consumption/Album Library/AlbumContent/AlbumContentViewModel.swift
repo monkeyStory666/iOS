@@ -1,6 +1,8 @@
 import Combine
 import Foundation
+import MEGAAnalyticsiOS
 import MEGADomain
+import MEGAL10n
 import MEGAPresentation
 
 enum AlbumContentAction: ActionType {
@@ -39,6 +41,7 @@ final class AlbumContentViewModel: ViewModelType {
     private let router: any AlbumContentRouting
     private let featureFlagProvider: any FeatureFlagProviderProtocol
     private let shareAlbumUseCase: any ShareAlbumUseCaseProtocol
+    private let tracker: any AnalyticsTracking
     
     private var loadingTask: Task<Void, Never>?
     private var photos = [AlbumPhotoEntity]()
@@ -73,7 +76,8 @@ final class AlbumContentViewModel: ViewModelType {
         router: some AlbumContentRouting,
         newAlbumPhotosToAdd: [NodeEntity]? = nil,
         alertViewModel: TextFieldAlertViewModel,
-        featureFlagProvider: some FeatureFlagProviderProtocol = DIContainer.featureFlagProvider
+        featureFlagProvider: some FeatureFlagProviderProtocol = DIContainer.featureFlagProvider,
+        tracker: some AnalyticsTracking = DIContainer.tracker
     ) {
         self.album = album
         self.newAlbumPhotosToAdd = newAlbumPhotosToAdd
@@ -84,6 +88,7 @@ final class AlbumContentViewModel: ViewModelType {
         self.router = router
         self.alertViewModel = alertViewModel
         self.featureFlagProvider = featureFlagProvider
+        self.tracker = tracker
         
         setupSubscription()
         setupAlbumModification()
@@ -94,6 +99,7 @@ final class AlbumContentViewModel: ViewModelType {
     func dispatch(_ action: AlbumContentAction) {
         switch action {
         case .onViewReady:
+            tracker.trackAnalyticsEvent(with: AlbumContentScreenEvent())
             loadingTask = Task {
                 await addNewAlbumPhotosIfNeeded()
                 await loadNodes()
@@ -116,6 +122,7 @@ final class AlbumContentViewModel: ViewModelType {
             isPhotoSelectionHidden = isSelectHidden
             invokeCommand?(.rebuildContextMenu)
         case .shareLink:
+            tracker.trackAnalyticsEvent(with: AlbumContentShareLinkMenuToolbarEvent())
             router.showShareLink(album: album)
         case .removeLink:
             removeSharedLink()
@@ -331,7 +338,7 @@ final class AlbumContentViewModel: ViewModelType {
     
     @MainActor
     private func onAlbumRenameSuccess(with newName: String) {
-        album = album.update(name: newName)
+        album.name = newName
         invokeCommand?(.updateNavigationTitle)
     }
     
@@ -397,7 +404,7 @@ final class AlbumContentViewModel: ViewModelType {
             return
         }
         if setEntity.changeTypes.contains(.name) && albumName != setEntity.name {
-            album = album.update(name: setEntity.name)
+            album.name = setEntity.name
             invokeCommand?(.updateNavigationTitle)
         }
         if setEntity.changeTypes.contains(.cover) {

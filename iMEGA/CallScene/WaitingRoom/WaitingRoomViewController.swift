@@ -1,3 +1,4 @@
+import MEGAL10n
 import MEGAUIKit
 import SwiftUI
 
@@ -43,10 +44,12 @@ final class WaitingRoomViewController: UIViewController {
     // MARK: - Private
     
     private func configureNavBarTitle() {
-        navigationItem.titleView = UILabel().customNavBarLabel(title: viewModel.meetingTitle,
-                                                               titleFont: UIFont.preferredFont(style: .subheadline, weight: .bold),
-                                                               subtitle: viewModel.meetingDate,
-                                                               subtitleFont: UIFont.preferredFont(style: .caption1, weight: .regular))
+        navigationItem.titleView = UILabel().customNavBarLabel(
+            title: viewModel.meetingTitle,
+            titleFont: UIFont.preferredFont(style: .subheadline, weight: .bold),
+            subtitle: viewModel.createMeetingDate(),
+            subtitleFont: UIFont.preferredFont(style: .caption1, weight: .regular)
+        )
         navigationItem.titleView?.sizeToFit()
     }
     

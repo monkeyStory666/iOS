@@ -1,4 +1,3 @@
-
 public protocol SaveMediaToPhotosUseCaseProtocol {
     func saveToPhotos(nodes: [NodeEntity]) async throws
     func saveToPhotosChatNode(handle: HandleEntity, messageId: HandleEntity, chatId: HandleEntity, completion: @escaping (Result<Void, SaveMediaToPhotosErrorEntity>) -> Void)
@@ -21,31 +20,15 @@ public struct SaveMediaToPhotosUseCase<T: DownloadFileRepositoryProtocol, U: Fil
     }
     
     private func saveToPhotos(node: NodeEntity) async throws {
-        return try await withCheckedThrowingContinuation { continuation in
-            guard Task.isCancelled == false else {
-                continuation.resume(throwing: CancellationError())
-                return
-            }
-            
+        do {
             let tempUrl = fileCacheRepository.tempFileURL(for: node)
-            
-            downloadFileRepository.download(nodeHandle: node.handle, to: tempUrl, metaData: .saveInPhotos) { result in
-                guard Task.isCancelled == false else {
-                    continuation.resume(throwing: CancellationError())
-                    return
-                }
-                
-                if case let .failure(error) = result {
-                    guard error == .download else {
-                        continuation.resume(throwing: error == TransferErrorEntity.cancelled ? SaveMediaToPhotosErrorEntity.cancelled : SaveMediaToPhotosErrorEntity.downloadFailed)
-                        return 
-                    }
-                    continuation.resume(throwing: SaveMediaToPhotosErrorEntity.fileDownloadInProgress)
-                    return
-                }
-                
-                continuation.resume(with: .success)
-            }
+            try _ = await downloadFileRepository.download(nodeHandle: node.handle, to: tempUrl, metaData: .saveInPhotos)
+        } catch TransferErrorEntity.download {
+            throw SaveMediaToPhotosErrorEntity.fileDownloadInProgress
+        } catch TransferErrorEntity.cancelled {
+            throw SaveMediaToPhotosErrorEntity.cancelled
+        } catch {
+            throw SaveMediaToPhotosErrorEntity.downloadFailed
         }
     }
     

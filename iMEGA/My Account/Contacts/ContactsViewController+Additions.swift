@@ -1,3 +1,6 @@
+import Contacts
+import MEGADomain
+import MEGAL10n
 import MEGAPresentation
 import SwiftUI
 
@@ -82,5 +85,11 @@ extension ContactsViewController {
         self.viewModel = ContactsViewModel(
             sdk: MEGASdk.shared
         )
+    }
+
+    @objc
+    func extractEmails(_ contacts: [CNContact]) -> [NSString] {
+        let emails = contacts.extractEmails()
+        return emails.map { NSString(string: $0) }
     }
 }

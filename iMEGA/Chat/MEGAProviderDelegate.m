@@ -1,4 +1,3 @@
-
 #import "MEGAProviderDelegate.h"
 
 #import <AVFoundation/AVFoundation.h>
@@ -12,6 +11,8 @@
 
 #import "MEGANavigationController.h"
 #import "MEGA-Swift.h"
+
+@import MEGAL10nObjc;
 
 @interface MEGAProviderDelegate () <MEGAChatCallDelegate, MEGAChatDelegate>
 
@@ -108,7 +109,7 @@
                                       completion:completion];
         } else {
             [self reportNewIncomingCallWithValue:[MEGASdk base64HandleForUserHandle:chatId]
-                                      callerName:NSLocalizedString(@"connecting", nil)
+                                      callerName:LocalizedString(@"connecting", @"")
                                         hasVideo:NO
                                             uuid:uuid
                                           callId:callId

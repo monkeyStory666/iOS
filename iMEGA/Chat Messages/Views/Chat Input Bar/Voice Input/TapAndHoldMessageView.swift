@@ -1,5 +1,5 @@
-
 import Foundation
+import MEGAL10n
 
 class TapAndHoldMessageView: UIView {
     

@@ -1,6 +1,7 @@
 @testable import MEGA
 import MEGADomain
 import MEGADomainMock
+import MEGAL10n
 import XCTest
 
 final class FutureMeetingRoomViewModelTests: XCTestCase {
@@ -114,7 +115,7 @@ final class FutureMeetingRoomViewModelTests: XCTestCase {
     
     func testStartOrJoinCallActionTapped_startCall() {
         chatUseCase.isCallActive = false
-        callUseCase.callCompletion = .success(callUseCase.call)
+        callUseCase.callCompletion = .success(callUseCase.call ?? CallEntity())
         
         let viewModel = FutureMeetingRoomViewModel(router: router, chatRoomUseCase: chatRoomUseCase, chatUseCase: chatUseCase, callUseCase: callUseCase)
 
@@ -147,7 +148,7 @@ final class FutureMeetingRoomViewModelTests: XCTestCase {
     
     func testStartOrJoinCallActionTapped_joinCall() {
         chatUseCase.isCallActive = true
-        callUseCase.callCompletion = .success(callUseCase.call)
+        callUseCase.callCompletion = .success(callUseCase.call ?? CallEntity())
         
         let viewModel = FutureMeetingRoomViewModel(router: router, chatRoomUseCase: chatRoomUseCase, chatUseCase: chatUseCase, callUseCase: callUseCase)
 

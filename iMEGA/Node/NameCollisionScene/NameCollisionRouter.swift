@@ -1,4 +1,5 @@
 import MEGADomain
+import MEGAL10n
 import MEGARepo
 import MEGASDKRepo
 import SwiftUI
@@ -48,7 +49,7 @@ final class NameCollisionViewRouter: NameCollisionViewRouting {
         baseViewController = viewController
         viewModel?.checkNameCollisions()
     }
-    
+
     func dismiss() {
         SVProgressHUD.setDefaultMaskType(.none)
         SVProgressHUD.dismiss()
@@ -75,13 +76,15 @@ final class NameCollisionViewRouter: NameCollisionViewRouting {
 #endif
         }
     }
-    
-    func showCopyOrMoveSuccess() {
+
+    @MainActor
+    func showCopyOrMoveSuccess() async {
         dismiss()
         SVProgressHUD.showSuccess(withStatus: Strings.Localizable.completed)
     }
-    
-    func showCopyOrMoveError() {
+
+    @MainActor
+    func showCopyOrMoveError() async {
         dismiss()
         SVProgressHUD.showError(withStatus: Strings.Localizable.somethingWentWrong)
     }

@@ -1,7 +1,8 @@
-
 #import "MEGACopyRequestDelegate.h"
 
 #import "SVProgressHUD.h"
+
+@import MEGAL10nObjc;
 
 @interface MEGACopyRequestDelegate ()
 
@@ -27,7 +28,7 @@
 - (void)onRequestFinish:(MEGASdk *)api request:(MEGARequest *)request error:(MEGAError *)error {    
     if (error.type) {
         [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
-        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@ %@", request.requestString, NSLocalizedString(error.name, nil)]];
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@ %@", request.requestString, LocalizedString(error.name, @"")]];
         return;
     }
     

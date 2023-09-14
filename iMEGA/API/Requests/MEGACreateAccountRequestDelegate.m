@@ -1,10 +1,11 @@
-
 #import "MEGACreateAccountRequestDelegate.h"
 #import "MEGALoginRequestDelegate.h"
 
 #import "SVProgressHUD.h"
 
 #import "UIApplication+MNZCategory.h"
+
+@import MEGAL10nObjc;
 @import SAMKeychain;
 
 @interface MEGACreateAccountRequestDelegate ()
@@ -41,13 +42,13 @@
             
             switch (error.type) {
                 case MEGAErrorTypeApiEExist: {
-                    NSString *message = NSLocalizedString(@"emailAlreadyRegistered", @"Error text shown when the users tries to create an account with an email already in use");
+                    NSString *message = LocalizedString(@"emailAlreadyRegistered", @"Error text shown when the users tries to create an account with an email already in use");
                     [SVProgressHUD showErrorWithStatus:message];
                     break;
                 }
                     
                 default: {
-                    NSString *message = [NSString stringWithFormat:@"%@ %@", request.requestString, NSLocalizedString(error.name, nil)];
+                    NSString *message = [NSString stringWithFormat:@"%@ %@", request.requestString, LocalizedString(error.name, @"")];
                     [SVProgressHUD showErrorWithStatus:message];
                     break;
                 }

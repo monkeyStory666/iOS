@@ -1,4 +1,3 @@
-
 protocol SnackBarPresenting where Self: UIViewController {
     func snackBarContainerView() -> UIView?
     func layout(snackBarView: UIView?)
@@ -13,14 +12,21 @@ extension SnackBarPresenting {
         showSnackBar()
     }
     
-    func dismissSnackBar() {
+    func dismissSnackBar(immediate: Bool = false) {
         guard let containerView = snackBarContainerView() else { return }
+        
+        let completion = { [weak self] in
+            self?.layout(snackBarView: nil)
+        }
+        
+        guard !immediate else {
+            completion()
+            return
+        }
         
         UIView.animate(withDuration: 0.5, animations: {
             containerView.alpha = 0.0
-        }, completion: { _ in
-            self.layout(snackBarView: nil)
-        })
+        }, completion: { _ in completion() })
     }
     
     @MainActor

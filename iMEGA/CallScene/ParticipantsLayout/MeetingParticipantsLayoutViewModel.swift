@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 import MEGADomain
+import MEGAL10n
 import MEGAPresentation
 
 enum CallViewAction: ActionType {
@@ -315,7 +316,7 @@ final class MeetingParticipantsLayoutViewModel: NSObject, ViewModelType {
     }
     
     private func isBackCameraSelected() -> Bool {
-        guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(postion: .back),
+        guard let selectCameraLocalizedString = captureDeviceUseCase.wideAngleCameraLocalizedName(position: .back),
               localVideoUseCase.videoDeviceSelected() == selectCameraLocalizedString else {
             return false
         }
@@ -798,6 +799,14 @@ extension MeetingParticipantsLayoutViewModel: CallCallbacksUseCaseProtocol {
         } else {
             MEGALogError("Error removing participant from call")
         }
+    }
+    
+    func waitingRoomUsersEntered(with handles: [HandleEntity]) {
+        // Next ticket: Logic for waitingRoomUsersEntered
+    }
+    
+    func waitingRoomUsersLeave(with handles: [HandleEntity]) {
+        // Next ticket: Logic for waitingRoomUsersLeave
     }
     
     func updateParticipant(_ participant: CallParticipantEntity) {

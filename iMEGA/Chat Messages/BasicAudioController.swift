@@ -27,7 +27,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
     open weak var playingCell: AudioMessageCell?
 
     /// The `MessageType` that is currently playing sound
-    open var playingMessage: MessageType?
+    open var playingMessage: (any MessageType)?
 
     /// Specify if current audio controller state: playing, in pause or none
     open private(set) var state: PlayerState = .stopped
@@ -66,7 +66,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
     
     @objc func proximityChanged() {
         DispatchQueue.main.async {
-            guard !AVAudioSession.sharedInstance().mnz_isBluetoothAudioRouteAvailable else {
+            guard !AVAudioSession.sharedInstance().isBluetoothAudioRouteAvailable else {
                 return
             }
             let audioSessionUC = AudioSessionUseCase.default
@@ -91,7 +91,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
     ///
     /// - Note:
     ///   This protocol method is called by MessageKit every time an audio cell needs to be configure
-    open func configureAudioCell(_ cell: AudioMessageCell, message: MessageType) {
+    open func configureAudioCell(_ cell: AudioMessageCell, message: any MessageType) {
         
         if isPlayingSameMessage(message),
            let collectionView = messageCollectionView,
@@ -113,7 +113,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
     /// - Parameters:
     ///   - message: The `MessageType` that contain the audio item to be played.
     ///   - audioCell: The `AudioMessageCell` that needs to be updated while audio is playing.
-    open func playSound(for message: MessageType, in audioCell: AudioMessageCell) {
+    open func playSound(for message: any MessageType, in audioCell: AudioMessageCell) {
         
         if AudioPlayerManager.shared.isPlayerAlive() {
             AudioPlayerManager.shared.audioInterruptionDidStart()
@@ -164,7 +164,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
     /// - Parameters:
     ///   - message: The `MessageType` that contain the audio item to be pause.
     ///   - audioCell: The `AudioMessageCell` that needs to be updated by the pause action.
-    open func pauseSound(for message: MessageType, in audioCell: AudioMessageCell) {
+    open func pauseSound(for message: any MessageType, in audioCell: AudioMessageCell) {
         guard let audioCell = audioCell as? ChatVoiceClipCollectionViewCell else {
             return
         }
@@ -179,7 +179,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
         }
         
         if AudioPlayerManager.shared.isPlayerAlive() {
-            let activeCall = MEGASdkManager.sharedMEGAChatSdk().mnz_existsActiveCall
+            let activeCall = MEGAChatSdk.shared.mnz_existsActiveCall
             AudioPlayerManager.shared.audioInterruptionDidEndNeedToResume(!activeCall)
         }
     }
@@ -211,7 +211,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
         setProximitySensorEnabled(false)
         
         if AudioPlayerManager.shared.isPlayerAlive() {
-            let activeCall = MEGASdkManager.sharedMEGAChatSdk().mnz_existsActiveCall
+            let activeCall = MEGAChatSdk.shared.mnz_existsActiveCall
             AudioPlayerManager.shared.audioInterruptionDidEndNeedToResume(!activeCall)
         }
     }
@@ -261,7 +261,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
         }
     }
     
-    func isPlayingSameMessage(_ message: MessageType) -> Bool {
+    func isPlayingSameMessage(_ message: any MessageType) -> Bool {
         if let playingMessage = playingMessage as? ChatMessage,
            let currentMessage = message as? ChatMessage,
            (playingMessage.messageId == currentMessage.messageId || currentMessage.message.nodeList?.node(at: 0)?.name == playingMessage.transfer?.fileName) {
@@ -283,7 +283,7 @@ open class BasicAudioController: NSObject, AVAudioPlayerDelegate {
         stopAnyOngoingPlaying()
     }
     
-    open func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+    open func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: (any Error)?) {
         stopAnyOngoingPlaying()
     }
     

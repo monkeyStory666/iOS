@@ -1,4 +1,3 @@
-
 #import "ShareDestinationTableViewController.h"
 
 #import "BrowserViewController.h"
@@ -8,6 +7,8 @@
 #import "ShareAttachment.h"
 #import "ShareViewController.h"
 #import "UIImageView+MNZCategory.h"
+
+@import MEGAL10nObjc;
 
 @interface ShareDestinationTableViewController () <UITextFieldDelegate, MEGAChatDelegate>
 
@@ -30,7 +31,7 @@
     self.shareViewController = (ShareViewController *)self.navigationController.parentViewController;
     self.sharedUserDefaults = [NSUserDefaults.alloc initWithSuiteName:MEGAGroupIdentifier];
 
-    self.cancelBarButtonItem.title = NSLocalizedString(@"cancel", nil);
+    self.cancelBarButtonItem.title = LocalizedString(@"cancel", @"");
     
     // Add observers to get notified when the extension goes to background and comes back to foreground:
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBecomeActive)

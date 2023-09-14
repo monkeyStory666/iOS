@@ -1,3 +1,4 @@
+import MEGAL10n
 
 extension ShareViewController {
     @objc func successSendToChatMessage(attachments: [ShareAttachment], receiverCount: Int) -> String {

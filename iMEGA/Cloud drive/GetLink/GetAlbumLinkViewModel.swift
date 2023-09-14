@@ -1,5 +1,7 @@
 import Foundation
+import MEGAAnalyticsiOS
 import MEGADomain
+import MEGAL10n
 import MEGAPresentation
 
 final class GetAlbumLinkViewModel: GetLinkViewModelType {
@@ -7,6 +9,7 @@ final class GetAlbumLinkViewModel: GetLinkViewModelType {
     
     private let album: AlbumEntity
     private let shareAlbumUseCase: any ShareAlbumUseCaseProtocol
+    private let tracker: any AnalyticsTracking
     private var sectionViewModels = [GetLinkSectionViewModel]()
     private var shareLink: String?
     
@@ -24,11 +27,14 @@ final class GetAlbumLinkViewModel: GetLinkViewModelType {
         return decryptCellViewModel.isSwitchOn
     }
     
-    init(album: AlbumEntity, shareAlbumUseCase: any ShareAlbumUseCaseProtocol,
-         sectionViewModels: [GetLinkSectionViewModel]) {
+    init(album: AlbumEntity,
+         shareAlbumUseCase: some ShareAlbumUseCaseProtocol,
+         sectionViewModels: [GetLinkSectionViewModel],
+         tracker: some AnalyticsTracking) {
         self.album = album
         self.shareAlbumUseCase = shareAlbumUseCase
         self.sectionViewModels = sectionViewModels
+        self.tracker = tracker
     }
     
     // MARK: - Dispatch action
@@ -36,6 +42,7 @@ final class GetAlbumLinkViewModel: GetLinkViewModelType {
     func dispatch(_ action: GetLinkAction) {
         switch action {
         case .onViewReady:
+            tracker.trackAnalyticsEvent(with: SingleAlbumLinkScreenEvent())
             updateViewConfiguration()
             loadAlbumLink()
         case .onViewWillDisappear:

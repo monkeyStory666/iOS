@@ -1,3 +1,4 @@
+import MEGAL10n
 
 extension EmptyStateView {
     static func create(for type: EmptyStateType) -> EmptyStateView {

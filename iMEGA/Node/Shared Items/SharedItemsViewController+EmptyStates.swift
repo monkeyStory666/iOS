@@ -1,3 +1,4 @@
+import MEGAL10n
 
 extension SharedItemsViewController: DZNEmptyDataSetSource {
     public func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
