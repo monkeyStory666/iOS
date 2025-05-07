@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="Prénom";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="Nom de famille";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="Mettre à jour";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="Le nom a été mis à jour";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="Saisissez un prénom";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="Saisissez un nom de famille";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="Nouveau mot de passe";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="Changer le mot de passe";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="Le mot de passe a été mis à jour";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="De préférence :";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="Confirmez le mot de passe";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="Confirmez le mot de passe";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="Doit comporter au moins 8 caractères";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="Vous avez saisi votre mot de passe actuel. Saisissez un nouveau mot de passe.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="Au moins un chiffre ou caractère spécial.";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="Mot de passe";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="Les mots de passe ne correspondent pas. Vérifiez-les et réessayez.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="Des lettres majuscules et minuscules.";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="Votre mot de passe est facile à deviner. Nous vous suggérons d’essayer une combinaison de caractères plus robuste.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="Votre mot de passe est trop facile à deviner. Essayez une combinaison de caractères plus robuste.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="Votre lien de confirmation n'est plus valide";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="Votre compte est peut-être déjà activé ou vous avez peut-être annulé votre inscription";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="Échec de confirmation du compte";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="Vous êtes déjà connecté à un compte MEGA sur cette application. Déconnectez-vous d'abord de ce compte, puis revenez à votre courriel et utilisez à nouveau le même lien de confirmation.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="Votre compte a été activé. Veuillez vous connecter.";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="Avant de partir, peux-tu nous dire pourquoi ?";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="Si une fonction spécifique est manquante, sélectionnez Autre et parlez-nous-en";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="Aidez-nous à nous améliorer en partageant plus de commentaires";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="Je suis heureuse d'être contacté pour un bref suivi";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="Autre (veuillez préciser)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="Ignorer";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="Ne pas annuler";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="Saisissez votre nouvelle adresse courriel, nous enverrons le courriel de confirmation à cette nouvelle adresse courriel.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="Mettre à jour";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="Adresse courriel";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="L’adresse courriel a été mise à jour";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="Saisissez une autre adresse courriel";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="Cette adresse courriel est déjà utilisée";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="Cette adresse e-mail est déjà inscrite pour un compte avec MEGA";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="Saisissez une adresse courriel valide";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="Saisissez un prénom";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="Saisissez un nom de famille";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="Confirmez le mot de passe";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="Adresse courriel";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="Prénom";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="Nom de famille";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="Mot de passe";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="Inscrivez-vous pour un compte MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="M’inscrire";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="Avez-vous déjà un compte MEGA ? [L]Connectez-vous[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="J’ai lu et accepte les [L]Conditions générales d’utilisation de MEGA.[/L]";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="Vous devez accepter nos Conditions générales d’utilisation";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="Journaux de débugage";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="Activer la journalisation du débogage";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="Les journaux sont stockés sur votre appareil à moins que vous ne les envoyiez au centre dassistance pour le débogage";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="Les journaux peuvent inclure des renseignements personnels recueillis dans le cadre de notre [L]Politique de protection des renseignements personnels et des données (clause 8)[/L]. S'ils sont partagés avec MEGA, ils ne seront utilisés qu'à des fins de débogage.";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="Activer la journalisation du débogage ?";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="L'activation de la journalisation peut créer des journaux contenant des renseignements personnels, stockés localement sur votre appareil. Ces journaux ne sont pas partagés avec MEGA à moins que vous ne choisissiez de les envoyer au centre dqu`assistance pour le débogage. Veuillez lire attentivement les journaux avant de les partager afin de vous assurer que vous êtes à l'aise avec les renseignements qu'ils contiennent.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="Désactiver la journalisation du débogage ?";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="L'application cessera de générer les journaux utilisés pour le débogage et tous les journaux générés précédemment seront supprimés de votre appareil. Ces journaux ne sont jamais automatiquement partagés avec MEGA.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="Désactiver";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="Contacter l’assistance";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="Joindre des journaux de débogage";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="Voulez-vous attacher des journaux de débogage ?";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="Afficher les journaux";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="Exporter les journaux";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="La journalisation est activée";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="La journalisation est désactivée";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="Votre départ nous attriste, mais voici ce qui va se passer";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="De plus, ce qui suit sera supprimé :";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="Vos fichiers et dossiers sur MEGA";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="Tous les fichiers et dossiers stockés sur MEGA seront supprimés. Tout lien partagé deviendra inaccessible.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="Vos photos et albums sur MEGA";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="Toutes vos photos et tous vos albums stockés sur MEGA seront supprimés. Tout lien partagé deviendra inaccessible.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="Vos contacts sur MEGA";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="Tous les contacts de votre compte MEGA seront supprimés.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="Par ailleurs, vous ne pourrez plus :";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="Dialoguer en utilisant ce compte";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="Pour les conversations de groupe, un hôte devra vous envoyer un lien de conversation pour participer à la conversation de groupe avec un compte différent.";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="Participer à des réunions avec ce compte";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="Un hôte devra vous envoyer un lien de conversation pour accéder à la réunion avec un compte différent.";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="Note";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="Poursuivre";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="Ne pas le supprimer";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="Vous détenez actuellement un abonnement payant auprès d’Apple. Vous devez accéder à votre compte Apple et y annuler votre abonnement à MEGA.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="Vous détenez actuellement un abonnement payant auprès d’Apple. Vous devez accéder à votre compte Google et y annuler votre abonnement à MEGA.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="La suppression de votre compte annulera aussi votre abonnement payant.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="Nous avons envoyé un courriel";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="Nous avons envoyé un courriel à %@ avec un lien pour confirmer la suppression de votre compte.";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="Renvoyer";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="Le courriel a été renvoyé";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="Changer l’adresse courriel";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="Changer l’adresse courriel";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="Nous avons envoyé un courriel à %@ avec un lien. Touchez le lien pour confirmer votre adresse courriel et activer votre compte.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="Si vous ne recevez pas le courriel, vérifiez votre dossier Pourriel ou Indésirables, ou réessayez. Pour tout autre problème, contactez support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="Le processus d’inscription sera annulé.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="Annuler la création du compte ?";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="Oui, annuler";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="Ne pas annuler";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="Confirmation par courriel";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="Le courriel a été envoyé";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="Vous seul connaissez votre mot de passe et avez accès à votre clé de récupération MEGA. Si vous perdez l’accès à votre mot de passe ou à votre appli d’authentification, votre clé de récupération sera nécessaire pour recouvrer l’accès à votre compte.\n\nConservez-la en lieu sûr. [L]En apprendre davantage[/L] sur votre clé de récupération.";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="Copier la clé de récupération";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="Ou";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="Enregistrer sur l’appareil";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="La clé de récupération a été copiée";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="La clé de récupération a été enregistrée";
+/* Alert action - OK */
+"generalAction.actionOK"="Valider";
+/* General action - OK, got it */
+"generalAction.okGotIt"="D’accord, j’ai compris";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="Saisissez votre mot de passe";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="Saisissez une adresse courriel valide";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="Veuillez réessayer";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="L’adresse courriel ou le mot de passe est invalide.";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="Mot de passe oublié ?";
+/* Header text for the Login screen */
+"login.headerTitle"="Connectez-vous à votre compte MEGA";
+/* Email field in the login screen */
+"login.email"="Adresse courriel";
+/* Password field in the login screen */
+"login.password"="Mot de passe";
+/* Sign up text in the login screen. */
+"login.signup"="M’inscrire";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="N’avez-vous pas de compte MEGA ? [L]Inscrivez-vous[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="Me connecter";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="L'inscription à votre compte est incomplète ou a été annulée. Vérifiez votre boîte de réception des courriels.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="Aucune connexion à Internet";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="Connectez-vous avec votre compte MEGA";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="M’inscrire";
+/* Test Password - Information */
+"testPassword.information"="Vous êtes sur le point de vous déconnecter. Veuillez essayer votre mot de passe pour vous assurer que vous en souvenez. Si vous perdez votre mot de passe, vous perdrez l’accès à vos données MEGA.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="Mot de passe";
+/* Test Password - Button */
+"testPassword.buttonTitle"="Tester le mot de passe";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="Mot de passe oublié ?";
+/* Test Password - Password is correct */
+"testPassword.correct"="Le mot de passe est bon";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="Ce n’est pas le bon mot de passe";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="Saisissez le code à 6 chiffres généré par votre appli d’authentification.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="Avez-vous perdu votre appareil d’authentification ?";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="Le code de vérification est erroné";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="Authentification à deux facteurs";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="Connexion impossible";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="Vérifiez votre boîte de réception";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="Votre compte MEGA a été désactivé en raison d’allégations répétées de violation des droits d’auteur. Cela signifie que vous ne pouvez ni accéder à votre compte ni à ses données. Pour de plus amples renseignements sur la manière de déposer un contre-avis, vérifiez votre boîte de réception des courriels.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="Votre compte a été résilié en raison du non-respect des Conditions générales d’utilisation de MEGA. Vous ne pourrez pas accéder à vos données stockées de nouveau ni être autorisé à créer un nouveau compte MEGA.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="Votre compte a été désactivé par la personne qui l’administre. Contactez l’administrateur de votre compte Pour entreprise pour obtenir plus de précisions.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="Votre compte a été supprimé par votre administrateur. Veuillez contacter l’administrateur de votre compte Pour entreprise pour plus de précisions.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="Une connexion malveillante a été détectée. Afin de vous protéger, votre compte a été verrouillé. Nous vous demandons donc de réinitialiser votre mot de passe.\nNous vous avons envoyé un courriel avec des instructions pour déverrouiller votre compte, ainsi que des conseils pour éviter que cela ne se reproduise.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="Renvoyer le courriel";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="Le courriel a été envoyé";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="D’accord, j’ai compris";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="Vous avez tenté de vous connecter trop de fois. Veuillez attendre et réessayer.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="Changer le mot de passe";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="Mon compte";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="Modifier le nom";
+/* Help section - contact support */
+"settings.help.contactSupport"="Contacter l’assistance";
+/* About section - App version */
+"settings.about.version(%@)"="Version %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="Clé de récupération";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="Exporter la clé de récupération";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="Les notifications sont activées";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="Les notifications sont désactivées";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="Activer le mode de débogage";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="Un fichier journal sera créé. Les journaux peuvent contenir des renseignements relatifs à votre compte.";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="Désactiver le mode de débogage";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="Le fichier journal sera supprimé.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="Partager les journaux";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="Annuler";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="Confirmer";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="Poursuivre";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="Me déconnecter";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="Mémorisation du mot de passe";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="Vous souvenez-vous de votre mot de passe ?";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="Avant de vous déconnecter, nous vous recommandons d’exporter votre clé de récupération en lieu sûr. Sans elle, vous ne pourrez pas réinitialiser votre mot de passe. [L]En apprendre davantage[/L].";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="Exporter la clé de récupération";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="Clé de récupération";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="Tester le mot de passe";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="Ne plus afficher";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="Vous déconnecter";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="Aucune connexion à Internet";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="Supprimer le compte MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="Une connexion à Internet est nécessaire pour supprimer votre compte";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="Vous avez plusieurs abonnements. Pour éviter d'être débité plusieurs fois, annulez tout abonnement dont vous n'avez pas besoin.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="Visualiser les abonnements";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="Expiré";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="Détails de l’abonnement";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="Votre abonnement comprend";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass Gestionnaire de mots de passe";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="Davantage d’espace de stockage et de transferts";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="Appels et réunions sans restrictions";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="Liens protégés par mot de passe";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="Retour en arrière des fichiers et dossiers";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="Fichiers et dossiers cachés";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="Gérez cet abonnement dans l’appli MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="Gérez cet abonnement sur le site Web de MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="M’abonner";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="Commencez l'essai gratuit";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="Annuler l’essai";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="Annuler l’abonnement";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="Gérer l'essai";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="Gérer l’abonnement";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@ essai gratuit";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="%@ abonnement";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="Se termine le %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="Se renouvelle le %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="Se renouvelle le %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="Votre abonnement n’est pas géré par Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="En effet, vous vous êtes abonné à MEGA avec Google Play. Pour annuler votre abonnement, vous devez :";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="Votre essai gratuit n'est pas géré par Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="Cela est dû au fait que vous vous êtes abonné à MEGA via Google Play. Pour annuler votre essai gratuit, vous devez :";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="Dans un navigateur Web";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="Accédez à [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Connectez-vous à votre compte Google Play.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="Cliquez sur votre avatar.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="Cliquez sur [B]Paiements et abonnements[/B].";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="Cliquez sur [B]Abonnements[/B].";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="Sous votre abonnement MEGA, cliquez sur [B]Annuler l’abonnement[/B].";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="Sur un appareil Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Ouvrez l’appli Play Store.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Connectez-vous à votre compte Google Play (si nécessaire).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="Touchez votre avatar.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="Touchez [B]Paiements et abonnements[/B].";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="Touchez [B]Abonnements[/B].";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="Sous votre abonnement MEGA, cliquez sur [B]Annuler l’abonnement[/B].";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="Vous devez annuler votre abonnement en utilisant un navigateur Web";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="En effet, vous vous êtes abonné à MEGA dans votre navigateur Web. Pour annuler votre abonnement, vous devez :";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="Vous devez gérer votre essai gratuit à l'aide d'un navigateur Web";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="Cela est dû au fait que vous vous êtes abonné à MEGA dans votre navigateur Web. Pour annuler votre essai gratuit, vous devez :";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="Sur un ordinateur";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="Accédez à [L]www.mega.nz[/L] dans votre navigateur Web.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="Connectez-vous à votre compte MEGA.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="Cliquez sur le menu principal.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="Cliquez sur [B]Paramètres[/B].";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="Cliquez sur [B]Abonnement[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="Cliquez sur [B]Annuler l’abonnement[/B].";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="Sur un appareil mobile";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="Touchez votre avatar.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="Touchez [B]Annuler l’abonnement[/B].";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="Gratuit";

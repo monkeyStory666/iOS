@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "CC4B8676-6D07-40E5-A7A2-BC629A2600E9",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGACancelSurveyTests",
+        "name" : "MEGACancelSurveyTests"
+      }
+    }
+  ],
+  "version" : 1
+}

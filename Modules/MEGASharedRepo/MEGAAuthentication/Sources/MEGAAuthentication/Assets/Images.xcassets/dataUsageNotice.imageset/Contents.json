@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "20230215_Mega_Secondary_Assets_00003.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "20230215_Mega_Secondary_Assets_00003@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "20230215_Mega_Secondary_Assets_00003@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

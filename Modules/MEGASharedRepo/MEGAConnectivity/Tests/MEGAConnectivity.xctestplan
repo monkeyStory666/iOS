@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "1FD96369-BA08-4E72-94A0-73F22C15A821",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGAConnectivityTests",
+        "name" : "MEGAConnectivityTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "43E6C535-D951-47A6-9DAC-39C58CC8079B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGAPreferenceTests",
+        "name" : "MEGAPreferenceTests"
+      }
+    }
+  ],
+  "version" : 1
+}

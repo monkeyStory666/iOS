@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="名";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="姓";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="更新";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="名前が更新されました";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="名を入力してください";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="姓を入力してください";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="新しいパスワード";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="パスワードの変更";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="パスワードが更新されました";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="以下を含めることをお勧めします：";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="パスワードを確認";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="パスワードを確認";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="少なくとも8文字が必要です";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="現在のパスワードを入力しました。新しいパスワードをご入力ください。";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="少なくとも数字または特殊文字が1つある";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="パスワード";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="パスワードが一致しません。確認して、再度お試しください。";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="大文字と小文字の使用";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="あなたのパスワードはとても簡単に推測されてしまいます。より強力な文字の組み合わせをお試しいただくことをお勧めいたします。";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="あなたのパスワードはとても簡単に推測されてしまいます。より強力な文字の組み合わせを試してください。";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="認証リンクは無効になりました";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="アカウントはすでに有効になっているか、サインアップをキャンセルしている可能性があります";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="アカウントの確認が失敗";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="このアプリですでにMEGAアカウントにログインしています。まずこのアカウントからログアウトしてから、メールに戻り、同じ認証リンクを再度使用してください。";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="あなたのアカウントは有効になっています。ログインしてください。";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="去られる前に、理由を教えていただけますか？";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="不足している特定の機能がある場合は、「その他」を選択し、それについて教えてください。";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="より多くのご意見をお伝えいただき、改善にご協力いただけますと幸いです。";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="簡単な追加意見提供用の連絡を、ぜひお待ちしています。";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="その他（詳細をご記入ください）";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="スキップ";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="キャンセルしない";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="新しいメールアドレスを入力してください。その新しいメールアドレスに確認メールを送信いたします。";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="更新";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="メールアドレス";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="メールアドレスが更新されました";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="別のメールアドレスを入力してください。";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="メールアドレスがすでに使用されています";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="このメールアドレスはすでにMEGAのアカウントにサインアップしています";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="正しいメールを入力してください";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="名を入力してください";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="姓を入力してください";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="パスワードを確認";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="メールアドレス";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="名";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="姓";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="パスワード";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="MEGAアカウントにサインアップ";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="サインアップ";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="すでにMEGAアカウントをお持ちですか？[L]ログイン[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="MEGAの[L]利用規約[/L]を読み、理解し、同意します。";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="当社のご利用規約に同​​意していただくご必要があります";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="デバッグログ";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="デバッグログを有効にする";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="ログは、デバッグ用にヘルプデスクに送信しない限り、デバイスに保存されます。";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="ログには、当社の[L]プライバシーおよびデータポリシー（条項8）[/L]に基づき、収集された個人情報が含まれる場合があります。MEGAと共有する場合、デバッグ目的でのみ使用されます。";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="デバッグログを有効にしますか？";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="ログを有効にすると、個人情報を含むログが作成され、お使いのデバイスにローカルに保存されます。これらのログは、デバッグ用にヘルプデスクに送信することを選択されない限り、MEGAと共有されることはありません。共有する前にログを注意深く確認し、含まれる情報に問題がないことをご確認ください。";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="デバッグログを無効にしますか？";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="本アプリはデバッグに使用されるログの生成を停止し、以前に生成されたログは、お使いのデバイスから削除されます。これらのログが、自動的にMEGAと共有されることはありません。";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="無効化";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="サポートへ連絡する";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="デバッグログの添付";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="デバッグログを添付しますか？";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="ログを表示";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="ログをエクスポート";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="ログが有効になっています";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="ログは無効になっています";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="去って行かれるのは悲しいです。一方で、その場合、以下のような状況となりますのでご了承ください";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="また、以下のものも削除されます：";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="MEGAファイルとフォルダ";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="MEGAに保管されているすべてのファイルとフォルダが削除されます。また、共有リンクはアクセスできなくなります。";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="MEGAの写真とアルバム";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="MEGAに保管されている写真とアルバムはすべて削除されます。また、共有アルバムにはアクセスできなくなります。";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="MEGAの連絡先";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="MEGAアカウント内のすべての連絡先が削除されます。";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="また、次のこともできなくなります：";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="このアカウントを使用してチャットする";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="グループチャットの場合、主催者はあなたに、別のアカウントを使用してグループチャットに参加するためのチャットリンクを送信する必要があります。";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="このアカウントを使用してミーティングに参加する";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="主催者はあなたに、別のアカウントを使用しミーティングにアクセスするためのミーティングリンクを送信する必要があります。";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="ご注意";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="続行";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="削除しない";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="あなたは現在、Appleの有料サブスクリプションをお持ちです。Appleアカウントにアクセスして、そちらからMEGAサブスクリプションをキャンセルしていただく必要があります。";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="あなたは現在、Googleの有料サブスクリプションをお持ちです。Googleアカウントにアクセスして、そちらからMEGAサブスクリプションをキャンセルしていただく必要があります。";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="アカウントを削除すると、有料サブスクリプションもキャンセルされます。";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="メールを送信いたしました";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="アカウントの削除を確認するためのリンクを記載したメールを%@に送信いたしました。";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="再送信";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="メールを再送信いたしました";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="メールアドレスを変更";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="メールアドレスを変更";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="リンクを含むメールアドレスを%@に送信しました。リンクをタップしてメールアドレスを認証し、アカウントを有効化してください。";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="そのメールが届かない場合は、迷惑メールフォルダをご確認いただくか、もう一度お試しください。その他の問題については、support@mega.nzまでご連絡ください。";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="これにより、サインアッププロセスがキャンセルされます。";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="ご登録をキャンセルしますか？";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="はい、キャンセル";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="キャンセルしない";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="メールのご確認";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="メールが送信されました";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="パスワードを知っているのはあなただけであり、MEGA回復キーにアクセスできるのはあなただけです。パスワードや認証アプリにアクセスできなくなった場合、アカウントに再度アクセスするには回復キーが必要になります。\n\n回復キーは安全な場所に保管してください。回復キーについて[L]詳細[/L]をご覧ください。";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="回復キーをコピー";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="または";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="デバイスに保存";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="コピーされた回復キー";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="回復キーを保存しました";
+/* Alert action - OK */
+"generalAction.actionOK"="OK";
+/* General action - OK, got it */
+"generalAction.okGotIt"="はい、わかりました。";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="パスワードを入力";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="正しいメールを入力してください";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="もう一度お試しください";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="メールアドレスまたはパスワードが無効です";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="パスワードをお忘れですか？";
+/* Header text for the Login screen */
+"login.headerTitle"="MEGAアカウントにログインしてください";
+/* Email field in the login screen */
+"login.email"="メール";
+/* Password field in the login screen */
+"login.password"="パスワード";
+/* Sign up text in the login screen. */
+"login.signup"="サインアップ";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="MEGAアカウントをお持ちではありませんか？[L]ご登録ください[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="ログイン";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="アカウントのサインアップが不完全であるか、キャンセルされました。メールの受信箱を確認してください。";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="インターネット接続がありません";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="MEGAアカウントでログイン";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="サインアップ";
+/* Test Password - Information */
+"testPassword.information"="ログアウトしようとしています。確実にパスワードを覚えるために、パスワードをテストしてください。パスワードを失った場合、MEGAのデータにアクセスできなくなります。";
+/* Test Password - Password */
+"testPassword.fieldTitle"="パスワード";
+/* Test Password - Button */
+"testPassword.buttonTitle"="パスワードのテスト";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="パスワードをお忘れですか？";
+/* Test Password - Password is correct */
+"testPassword.correct"="パスワードは正しいです";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="パスワードが正しくありません";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="認証アプリからの6桁のコードを入力してください。";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="オーセンティケータ端末を紛失されましたか？";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="認証コードが間違っています";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="二要素認証";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="ログインできません";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="受信トレイを確認してください";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="度重なる著作権侵害の申し立てにより、あなたのMEGAアカウントは停止されました。これは、アカウントまたはアカウント内のデータにアクセスできないことを意味します。異議申し立て通知を提出する方法の詳細については、メール受信箱を確認してください。";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="MEGAのご利用規約違反により、あなたのアカウントは停止されました。保存されたデータへのアクセスを回復したり、MEGAアカウントを新規サインアップしたりすることはできません。";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="あなたのアカウントはアカウント管理者様によって無効化されました。詳細については、ビジネスアカウント管理者様にお問い合わせください。";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="あなたのアカウントはあなたの管理者によって削除されました。詳細については、あなたのビジネスアカウント管理者にお問い合わせください。";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="悪意のあるログインを検出したため、お客様のアカウントは保護のため一時的にロックされました。\nアカウントのロックを解除する方法と、このような事態の再発防止策については、メール受信箱を確認してください。";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="メールを再送";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="メールが送信されました";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="はい、わかりました。";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="ログイン試行回数が多すぎます。しばらく待ってからもう一度お試しください。";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="パスワードの変更";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="私のアカウント";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="名前の変更";
+/* Help section - contact support */
+"settings.help.contactSupport"="サポートへ連絡する";
+/* About section - App version */
+"settings.about.version(%@)"="バージョン%@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="回復キー";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="回復キーをエクスポート";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="通知が有効になっています";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="通知が無効になっています";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="デバッグモードを有効にします";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="ログファイルが作成されます。ログには、お客様のアカウントに関連する情報が含まれる場合があります。";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="デバッグモードを無効にする";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="ログファイルは削除されます。";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="ログを共有する";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="キャンセル";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="確認";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="続行";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="ログアウト";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="パスワードリマインダー";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="パスワードを覚えていますか？";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="ログアウトする前に、回復キーを安全な場所にエクスポートすることをお勧めいたします。回復キーがないと、パスワードをリセットできません。[L]詳細はこちらをご覧ください[/L]。";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="回復キーをエクスポート";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="回復キー";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="パスワードのテスト";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="次回から表示しない";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="ログアウトに進みます";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="インターネット接続がありません";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="MEGAアカウントを削除する";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="アカウントを削除するにはインターネット接続が必要です";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="複数のサブスクリプションをお持ちです。何度も請求されないようにするには、ご不要なプランをキャンセルしてください。";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="プランを表示";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="期限切れ";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="プランの詳細";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="お客様のプランには次のものが含まれます";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Passパスワードマネージャー";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="より多くのストレージと転送";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="無制限の通話とミーティング";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="パスワードで保護されたリンク";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="ファイルとフォルダの巻き戻し";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="ファイルとフォルダを隠す";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="MEGAアプリでこのサブスクリプションを管理します";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="MEGAウェブサイトでこのサブスクリプションを管理します";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="サブスクリプション契約をする";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="無料トライアルを開始";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="トライアルをキャンセル";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="サブスクリプション契約をキャンセル";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="トライアルを管理";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="サブスクリプションの管理";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@無料トライアル";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="%@プラン";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="終了日 %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="更新日：%@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="有効期限：%@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="お客様のサブスクリプションはAppleによって管理されていません";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="これは、Google Play経由でMEGAのサブスクリプション契約をされたためです。サブスクリプションをキャンセルするには、次のことを行う必要があります：";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="お客様の無料トライアルはAppleによって管理されていません";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="これは、Google Play経由でMEGAのサブスクリプション契約をされたためです。無料トライアルをキャンセルするには、次のことを行う必要があります：";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="ウェブブラウザの場合";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="[L]play.google.com[/L]にアクセスする";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Google Playアカウントでサインインする。";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="アバターをクリックする。";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="「[B]お支払いと定期購入[/B]」をクリックする。";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="「[B]定期購入[/B]」をクリックする。";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="MEGAサブスクリプション（定期購入）の下で、「[B]定期購入をキャンセル[/B]」をクリックする。";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="Androidデバイスの場合";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Playストアアプリを開く。";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Google Playアカウントでサインインする（必要な場合）。";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="アバターをタップする。";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="「[B]お支払いと定期購入[/B]」をタップする。";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="「[B]定期購入[/B]」をタップする。";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="MEGAサブスクリプション（定期購入）の下で、「[B]定期購入をキャンセル[/B]」をクリックする。";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="ウェブブラウザを使用してサブスクリプションをキャンセルする必要があります";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="これは、ブラウザ経由でMEGAのサブスクリプション契約をされたためです。サブスクリプションをキャンセルするには、次のことを行う必要があります：";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="ウェブブラウザを使用して無料トライアルを管理する必要があります";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="これは、ブラウザ経由でMEGAのサブスクリプション契約をされたためです。無料トライアルをキャンセルするには、次のことを行う必要があります：";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="コンピューターの場合";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="ウェブブラウザで[L]www.mega.nz[/L]にアクセスする。";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="MEGAアカウントにログインする。";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="メインメニューをクリックする。";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="[B]設定[/B]をクリックする。";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="[B]プラン[/B]をクリックする。";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="[B]サブスクリプションをキャンセル[/B]をクリックする。";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="モバイルデバイスの場合";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="アバターをタップする。";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="[B]サブスクリプションをキャンセル[/B]をタップする。";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="無料";

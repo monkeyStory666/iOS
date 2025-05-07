@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "4A0F5AB5-A3B2-4F18-869D-411221B86340",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGASwiftTests",
+        "name" : "MEGASwiftTests"
+      }
+    }
+  ],
+  "version" : 1
+}

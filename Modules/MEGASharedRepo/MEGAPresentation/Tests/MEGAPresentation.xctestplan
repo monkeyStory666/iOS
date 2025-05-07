@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "64D744B8-6B6B-459D-B177-D87EDACE2CA9",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/MEGAPresentation",
+        "identifier" : "MEGAPresentationTests",
+        "name" : "MEGAPresentationTests"
+      }
+    }
+  ],
+  "version" : 1
+}

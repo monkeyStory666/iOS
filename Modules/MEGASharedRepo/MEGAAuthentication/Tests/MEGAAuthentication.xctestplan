@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "8BD26A91-D6B6-4D8E-9A98-C6D8B108195F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGAAuthenticationTests",
+        "name" : "MEGAAuthenticationTests"
+      }
+    }
+  ],
+  "version" : 1
+}

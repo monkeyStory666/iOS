@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="الاسم الأول";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="الاسم الأخير";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="تحديث";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="تم تحديث الاسم";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="ادخل الاسم الأول";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="ادخل اسم العائلة";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="كلمة مرور جديدة";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="تغيير كلمة المرور";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="تم تحديث كلمة المرور";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="من الأفضل أن يكون لديك:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="تأكيد كلمة المرور";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="تأكيد كلمة المرور";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="يجب أن يحتوي على 8 محرف على الأقل";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="لقد أدخلت كلمة المرور الحالية. أدخل كلمة مرور جديدة.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="رقم أو محرف خاص واحد على الأقل";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="كلمة المرور";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="كلمات المرور غير متطابقة. تحقق وحاول مرة أخرى.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="أحرف كبيرة وصغيرة";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="من السهل تخمين كلمة المرور الخاصة بك. نقترح تجربة مزيج أقوى من المحارف.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="من السهل جدًا تخمين كلمة المرور الخاصة بك. جرب مجموعة أقوى من المحارف.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="رابط التأكيد الخاص بك لم يعد صالحًا";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="ربما تم تفعيل حسابك بالفعل أو ربما قمت بإلغاء اشتراكك";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="فشل تأكيد الحساب";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="لقد قمت بالفعل بتسجيل الدخول إلى حساب ميغا MEGA على هذا التطبيق. قم بتسجيل الخروج من هذا الحساب أولاً ثم ارجع إلى بريدك الإلكتروني واستخدم رابط التأكيد نفسه مرة أخرى.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="تم تفعيل حسابك بالفعل. يُرجى تسجيل الدخول.";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="قبل أن تذهب، هل يمكنك إخبارنا بالسبب؟";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="إذا كانت هناك ميزة معينة مفقودة، فيرجى تحديد ميزة أخرى وإخبارنا عنها";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="ساعدنا على التحسن من خلال مشاركة المزيد من التعليقات";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="يسعدني أن يتم الاتصال بي لمتابعة موجزة";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="أخرى (يرجى التحديد)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="تخطى";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="لا تلغي";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="أدخل عنوان بريدك الإلكتروني الجديد، وسنرسل تأكيدًا بالبريد الإلكتروني إلى عنوان البريد الإلكتروني الجديد هذا.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="تحديث";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="البريد الإلكتروني";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="تم تحديث عنوان البريد الإلكتروني";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="يرجى إدخال عنوان بريد إلكتروني آخر.";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="عنوان البريد الإلكتروني قيد الاستخدام بالفعل";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="تم تسجيل عنوان البريد الإلكتروني هذا بالفعل للحصول على حساب مع ميغا MEGA";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="أدخل بريد إلكتروني صالح";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="ادخل الاسم الأول";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="ادخل اسم العائلة";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="تأكيد كلمة المرور";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="البريد الإلكتروني";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="الاسم الأول";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="الاسم الأخير";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="كلمة المرور";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="قم بالتسجيل للحصول على حساب ميغا MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="اشتراك";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="لديك بالفعل حساب ميغا MEGA؟ [L]تسجيل الدخول[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="لقد قرأت وأوافق على [L]شروط خدمة ميغا MEGA.[/L]";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="يجب عليك أن تقبل شروط الخدمة";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="سجلات اكتشاف الأخطاء";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="تمكين تسجيل التصحيح";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="يتم تخزين السجلات على جهازك ما لم ترسلها إلى مكتب المساعدة لاكتشاف الأخطاء";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="قد تتضمن السجلات المعلومات الشخصية التي تم جمعها بموجب [L]سياسة الخصوصية والبيانات (البند 8)[/L]. في حالة مشاركتها مع ميغا MEGA، سيتم استخدامها فقط لتصحيح الأخطاء.";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="تمكين تسجيل اكتشاف الأخطاء؟";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="قد يؤدي تمكين التسجيل إلى إنشاء سجلات تحتوي على معلومات شخصية مخزنة محليًا على جهازك. لا تتم مشاركة هذه السجلات مع ميغا MEGA إلا إذا اخترت إرسالها إلى مكتب المساعدة لاكتشاف الأخطاء. يرجى مراجعة السجلات بعناية قبل المشاركة للتأكد من أنك مرتاح للمعلومات المضمنة.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="تعطيل تسجيل اكتشاف الأخطاء؟";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="سيتوقف التطبيق عن إنشاء السجلات المستخدمة لاكتشاف الأخطاء وسيتم حذف أي سجلات تم إنشاؤها مسبقًا من جهازك. لا تتم مشاركة هذه السجلات تلقائيًا مع ميغا MEGA.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="تعطيل";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="الاتصال بالدعم";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="أرفق سجلات اكتشاف الأخطاء";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="هل تريد إرفاق سجلات اكتشاف الأخطاء؟";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="عرض السجلات";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="سجلات التصدير";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="تم تمكين التسجيل";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="تم تعطيل التسجيل";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="من المحزن رؤيتك تغادر ولكن إليك ما سيحدث";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="أيضًا، سيتم حذف ما يلي:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="ملفات ومجلدات ميغا MEGA الخاصة بك";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="سيتم حذف جميع الملفات والمجلدات المخزنة في ميغا MEGA. لن يتم الوصول إلى أي روابط مشاركة.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="صور وألبومات ميغا MEGA الخاصة بك";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="سيتم حذف جميع الصور والألبومات المخزنة في ميغا MEGA. لن يتم الوصول إلى أي ألبومات مشاركة.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="جهات الاتصال الخاصة بك في ميغا MEGA";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="سيتم حذف جميع جهات الاتصال في حساب ميغا MEGA الخاص بك.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="لن تتمكن أيضًا من القيام بما يلي:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="المحادثة باستخدام هذا الحساب";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="بالنسبة للمحادثات الجماعية سيحتاج المضيف إلى إرسال رابط محادثة للانضمام إلى المحادثة الجماعية باستخدام حساب مختلف. ";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="انضم إلى الاجتماعات باستخدام هذا الحساب";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="سيحتاج المضيف إلى إرسال رابط اجتماع إليك للوصول إلى الاجتماع باستخدام حساب مختلف.";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="ملاحظة";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="تابع";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="لا تقم بالحذف";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="لديك حاليًا اشتراك مدفوع مع آبل Apple. يجب عليك الانتقال إلى حساب آبل Apple الخاص بك وإلغاء اشتراك ميغا MEGA الخاص بك من هناك.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="لديك حاليًا اشتراك مدفوع مع غوغل Google. يجب عليك الانتقال إلى حساب غوغل Google الخاص بك وإلغاء اشتراك ميغا MEGA الخاص بك من هناك.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="سيؤدي حذف حسابك أيضًا إلى إلغاء اشتراكك المدفوع.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="لقد أرسلنا بريدًا إلكترونيًا";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="لقد أرسلنا بريدًا إلكترونيًا إلى %@ مع رابط لتأكيد حذف حسابك.";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="إعادة إرسال";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="تم إعادة إرسال البريد الإلكتروني";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="تغيير البريد الالكتروني";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="تغيير البريد الالكتروني";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="لقد أرسلنا بريدًا إلكترونيًا إلى %@ مع رابط. انقر فوق الرابط للتحقق من عنوان بريدك الإلكتروني وتفعيل حسابك.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="إذا لم تستلم البريد الإلكتروني فتحقق من مجلد الرسائل غير المرغوب فيها أو حاول مرة أخرى. لأية مشاكل أخرى، يرجى التواصل مع support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="سيؤدي هذا إلى إلغاء عملية تسجيل الحساب.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="إلغاء التسجيل؟";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="نعم، إلغاء";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="لا تلغي";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="تأكيد البريد الإلكتروني";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="تم إرسال البريد الالكتروني";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="أنت فقط تعرف كلمة المرور الخاصة بك ويمكنك فقط الوصول إلى مفتاح استعادة ميغا MEGA الخاص بك. إذا فقدت الوصول إلى كلمة المرور أو تطبيق المصادقة فستحتاج إلى مفتاح الاستعادة لاستعادة الوصول إلى حسابك.\n\nيرجى تخزينها في مكان آمن. [L]عرف المزيد[/L] حول مفتاح الاستعادة الخاص بك.";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="نسخ مفتاح الاستعادة";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="أو";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="حفظ على الجهاز";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="انسخ مفتاح الاستعادة";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="تم حفظ مفتاح الاستعادة";
+/* Alert action - OK */
+"generalAction.actionOK"="حسناً";
+/* General action - OK, got it */
+"generalAction.okGotIt"="حسنًا، فهمت ذلك";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="أدخل كلمة السر الخاصة بك";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="أدخل بريد إلكتروني صالح";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="يرجى المحاولة مرة أخرى";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="بريد إلكتروني أو كلمة مرور غير صالحين";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="نسيت كلمة المرور؟";
+/* Header text for the Login screen */
+"login.headerTitle"="تسجيل الدخول حساب ميغا MEGA الخاص بك";
+/* Email field in the login screen */
+"login.email"="البريد الإلكتروني";
+/* Password field in the login screen */
+"login.password"="كلمة المرور";
+/* Sign up text in the login screen. */
+"login.signup"="اشتراك";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="ليس لديك حساب ميغا MEGA؟ [L]قم بالتسجيل[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="تسجيل الدخول";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="تسجيل حسابك غير مكتمل أو تم إلغاؤه. تحقق من صندوق البريد الإلكتروني الخاص بك.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="لا يوجد اتصال بالإنترنت";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="قم بتسجيل الدخول باستخدام حساب ميغا MEGA الخاص بك";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="اشتراك";
+/* Test Password - Information */
+"testPassword.information"="أنت على وشك تسجيل الخروج، يرجى اختبار كلمة المرور الخاصة بك للتأكد من أنك تتذكرها. إذا فقدت كلمة المرور الخاصة بك فستفقد إمكانية الوصول إلى بيانات ميغا MEGA الخاصة بك.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="كلمة المرور";
+/* Test Password - Button */
+"testPassword.buttonTitle"="اختبار كلمة المرور";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="نسيت كلمة المرور؟";
+/* Test Password - Password is correct */
+"testPassword.correct"="كلمة المرور صحيحة";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="كلمة المرور غير صحيحة";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="أدخل الرمز المكون من 6 أرقام من تطبيق المصادقة الخاص بك.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="هل فقدت الجهاز الذي تستخدمه للمصادقة؟";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="رمز التحقق غير صحيح";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="المصادقة المزدوجة Two-Factor";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="غير قادر على تسجيل الدخول";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="تحقق من صندوق البريد الوارد ببريدك الالكتروني";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="تم تعليق حساب ميغا MEGA الخاص بك بسبب الادعاءات المتكررة بانتهاكات حقوق الطبع والنشر. هذا يعني أنه لا يمكنك الوصول إلى حسابك أو البيانات الموجودة فيه. تحقق من صندوق البريد الإلكتروني الخاص بك للحصول على مزيد من المعلومات حول كيفية تقديم إشعار مضاد.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="تم إنهاء حسابك بسبب خرق شروط الخدمة الخاصة بميغا MEGA. لن تتمكن من استعادة الوصول إلى بياناتك المخزنة أو السماح لك بالتسجيل للحصول على حساب ميغا MEGA جديد.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="تم إلغاء تفعيل حسابك من قبل مسؤول الحساب. اتصل بمسؤول حساب الأعمال Business للحصول على مزيد من التفاصيل.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="تمت إزالة حسابك من قبل مشرف الحساب الخاص بك. يرجى الاتصال بمشرف حساب الأعمال لمزيد من التفاصيل.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="تم قفل حسابك لحمايتك بعد اكتشاف تسجيل دخول ضار لذلك نطلب منك إعادة تعيين كلمة المرور الخاصة بك.\nتحقق من صندوق البريد الإلكتروني الخاص بك للحصول على إرشادات حول إلغاء قفل حسابك ونصائح حول كيفية منع حدوث ذلك مرة أخرى.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="إعادة إرسال البريد الإلكتروني";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="تم إرسال البريد الالكتروني";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="حسنًا، فهمت ذلك";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="لقد حاولت تسجيل الدخول عدة مرات. يرجى الانتظار والمحاولة مرة أخرى.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="تغيير كلمة المرور";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="حسابي";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="تغيير الاسم";
+/* Help section - contact support */
+"settings.help.contactSupport"="الاتصال بالدعم";
+/* About section - App version */
+"settings.about.version(%@)"="الإصدار %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="مفتاح الإستعادة";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="تصدير مفتاح الاستعادة";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="تم تمكين الإشعارات";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="تم تعطيل الإشعارات";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="تمكين وضع اكتشاف الأخطاء";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="سيتم إنشاء ملف سجل. يمكن أن تحتوي السجلات على معلومات متعلقة بحسابك.";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="تعطيل وضع اكتشاف الأخطاء";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="سيتم حذف ملف السجل.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="سجلات المشاركة";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="إلغاء";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="تأكيد";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="تابع";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="تسجيل خروج";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="تذكير كلمة المرور";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="هل تتذكر كلمة مرورك؟";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="قبل تسجيل الخروج نوصي بتصدير مفتاح الاستعادة إلى مكان آمن. بدون مفتاح الاستعادة لن تتمكن من إعادة تعيين كلمة المرور الخاصة بك. [L]اعرف المزيد[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="تصدير مفتاح الاستعادة";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="مفتاح الإستعادة";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="اختبار كلمة المرور";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="لا تُظهر هذا مرة أخرى";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="متابعة تسجيل الخروج";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="لا يوجد اتصال بالإنترنت";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="حذف حساب ميغا MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="يلزم اتصال بالإنترنت لحذف حسابك";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="لديك اشتراكات متعددة. لتجنب تحصيل الرسوم أكثر من مرة، قم بإلغاء أي باقات لا تحتاجها.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="عرض الباقات";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="منتهي الصلاحية";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="تفاصيل الاشتراك";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="تتضمن باقتك";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="مدير كلمات المرور ميغا باس MEGA Pass";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="ميغا في بي إن MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="المزيد من التخزين السحابي وتراسل المعطيات";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="مكالمات واجتماعات غير مقيدة";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="روابط محمية بكلمة مرور";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="ترجيع الملفات والمجلدات";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="الملفات والمجلدات المخفية";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="قم بإدارة هذا الاشتراك في تطبيق ميغا MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="قم بإدارة هذا الاشتراك على موقع ميغا MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="اشترك";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="ابدأ الفترة التجريبي المجاني";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="إلغاء الفترة التجريبية";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="إلغاء الاشتراك";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="إدارة الإصدار التجريبي";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="إدارة الاشتراك";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@ فترة تجريبية مجانية";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="باقة %@";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="ينتهي بتاريخ %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="يجدد بتاريخ %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="تنتهي الصلاحية بتاريخ %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="لا تتم إدارة اشتراكك من قبل آبل Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="هذا لأنك اشتركت في ميغا MEGA عبر غوغل بلاي Google Play. لإلغاء اشتراكك، ستحتاج إلى:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="النسخة التجريبية المجانية الخاصة بك لا تديرها آبل Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="هذا لأنك اشتركت في ميغا MEGA عبر غوغل بلاي Google Play. لإلغاء النسخة التجريبية المجانية، ستحتاج إلى:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="في متصفح الويب";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="قم بزيارة [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="قم بتسجيل الدخول باستخدام حساب غوغل بلاي Google Play الخاص بك.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="انقر فوق الصورة الرمزية avatar الخاصة بك.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="انقر على [B]الدفعات والاشتراكات[/B].";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="انقر على [B]الإشتراكات[/B].";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="ضمن اشتراك ميغا MEGA الخاص بك، انقر على [B]إلغاء الاشتراك[/B].";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="على جهاز أندرويد Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="افتح تطبيق متجر بلاي Play.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="قم بتسجيل الدخول باستخدام حساب غوغل بلاي Google Play الخاص بك (إذا لزم الأمر).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="انقر فوق الصورة الرمزية avatar الخاصة بك.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="انقر على [B]الدفعات والاشتراكات[/B].";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="انقر على [B]الإشتراكات[/B].";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="ضمن اشتراك ميغا MEGA الخاص بك، انقر على [B]إلغاء الاشتراك[/B].";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="تحتاج إلى إلغاء اشتراكك باستخدام متصفح الويب";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="هذا لأنك اشتركت في ميغا MEGA في متصفح الويب الخاص بك. لإلغاء اشتراكك، ستحتاج إلى:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="تحتاج إلى إدارة النسخة التجريبية المجانية باستخدام متصفح الويب";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="هذا لأنك اشتركت في ميغا MEGA في متصفح الويب الخاص بك. لإلغاء النسخة التجريبية المجانية، ستحتاج إلى:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="على الحاسوب";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="قم بزيارة [L]www.mega.nz[/L] في متصفح الويب الخاص بك.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="قم بتسجيل الدخول إلى حسابك على ميغا MEGA.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="انقر على القائمة الرئيسية.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="انقر على [B]الإعدادات[/B].";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="انقر على [B]الباقة[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="انقر على [B]إلغاء الاشتراك[/B].";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="على هاتف محمول";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="انقر على الصورة الرمزية avatar الخاصة بك.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="انقر على [B]إلغاء الاشتراك[/B].";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="مجاني";

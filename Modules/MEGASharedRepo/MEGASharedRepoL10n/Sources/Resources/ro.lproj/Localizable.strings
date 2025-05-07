@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="Prenume";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="Nume de familie";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="Actualizați";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="Numele a fost actualizat";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="Introduceți un prenume";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="Introduceți un nume de familie";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="Parolă nouă";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="Schimbați parola";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="Parola a fost actualizată";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="Este mai bine să aveți:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="Confirmă parola";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="Confirmă parola";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="Trebuie să aibă cel puțin 8 caractere";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="Ați introdus parola curentă. Introduceți o nouă parolă.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="Cel puțin un număr sau un caracter special";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="Parolă";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="Parolele nu se potrivesc. Verificați și încercați din nou.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="Litere mari și minuscule";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="Parola dvs. este ușor de ghicit. Vă sugerăm să încercați o combinație mai puternică de personaje.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="Parola dvs. este prea ușor de ghicit. Încercați o combinație mai puternică de caractere.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="Link-ul dvs. de confirmare nu mai este valabil";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="Este posibil ca contul dvs. să fie deja activat sau este posibil să vă fi anulat înscrierea";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="Confirmarea contului a eșuat";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="Sunteți deja conectat la un cont MEGA în această aplicație. Deconectați-vă mai întâi de la acest cont, apoi reveniți la căsuța de e-mail și utilizați din nou același link de confirmare.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="Contul dvs. a fost activat. Vă rugăm să vă autentificați.";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="Înainte să pleci, poți să ne spui de ce?";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="Dacă lipsește o anumită funcție, selectați Altele și spuneți-ne despre aceasta";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="Ajutați-ne să îmbunătățim partajând mai multe feedback";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="Sunt bucuros să fiu contactat pentru o scurtă urmărire";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="Altele (vă rugăm să precizați)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="Omite";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="Nu anulați";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="Introduceți noua adresă dvs. de e-mail, vom trimite confirmarea prin e-mail la această nouă adresă de e-mail.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="Actualizați";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="Adresa e-mail";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="Adresa de e-mail a fost actualizată";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="Introduceți o altă adresă de e-mail.";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="Adresa de e-mail deja în uz";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="Această adresă de e-mail s-a înscris deja pentru un cont la MEGA";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="Introdu un e-mail valid";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="Introduceți un prenume";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="Introduceți un nume de familie";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="Confirmă parola";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="Adresa e-mail";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="Prenume";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="Nume de familie";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="Parolă";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="Înscrieți-vă pentru un cont MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="Înscrieți-vă";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="Aveți deja un cont MEGA? [L]Conectați-vă[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="Am citit si sunt de acord [L]Termenii de utilizare a serviciului MEGA.[/L]";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="Trebuie să accepți Termenii de utilizare a serviciului nostru";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="Jurnalele de depanare";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="Activați înregistrarea în jurnal de depanare";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="Jurnalele sunt stocate pe dispozitivul dvs., cu excepția cazului în care le trimiteți la Serviciul de asistență pentru depanare";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="Logs may include personal information collected under our [L]Privacy and Data Policy (clause 8)[/L]. If shared with MEGA, they will be used solely for debugging.";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="Activați înregistrarea în jurnal de depanare?";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="Activarea înregistrării în jurnal poate crea jurnale cu informații personale, stocate local pe dispozitivul dvs. Aceste jurnale nu sunt partajate cu MEGA decât dacă alegeți să le trimiteți la Serviciul de asistență pentru depanare. Vă rugăm să examinați cu atenție jurnalele înainte de a partaja pentru a vă asigura că sunteți confortabil cu informațiile incluse.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="Dezactivați înregistrarea de depanare?";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="Aplicația va opri generarea de jurnale utilizate pentru depanare și orice jurnale generate anterior vor fi șterse de pe dispozitiv. Aceste jurnale nu sunt niciodată partajate automat cu MEGA.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="Dezactivați";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="Contactați asistența";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="Atașați jurnalele de depanare";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="Doriți să atașați jurnale de depanare?";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="Vizualizați jurnale";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="Exportați jurnalele";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="Jurnalele sunt acum activate";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="Jurnalele sunt acum dezactivate";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="E trist că plecați, dar iată ce se va întâmpla";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="De asemenea, vor fi șterse următoarele:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="Fișierele și folderele dvs. MEGA";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="Toate fișierele și folderele stocate în MEGA vor fi șterse. Orice link-uri partajate vor deveni inaccesibile.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="Fotografiile și albumele tale pe MEGA";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="Toate fotografiile și albumele dvs. stocate în MEGA vor fi șterse. Orice albume partajate vor deveni inaccesibile.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="Contactele dvs. MEGA";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="Toate contactele din contul dvs. MEGA vor fi șterse.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="De asemenea, nu veți mai putea:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="Discutați folosind acest cont";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="Pentru chat-urile de grup, o gazdă va trebui să vă trimită un link de chat pentru a vă alăturați chatului de grup folosind un cont diferit.";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="Participarea la întâlniri folosind acest cont";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="O gazdă va trebui să vă trimită un link de întâlnire pentru a accesa întâlnirea utilizând un cont diferit.";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="Notă";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="Continuați";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="Nu șterge";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="În prezent, aveți un abonament plătit la Apple. Trebuie să accesați contul dvs. Apple și să vă anulați abonamentul MEGA separat.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="În prezent, aveți un abonament plătit la Apple. Trebuie să accesați contul dvs. Apple și să vă anulați abonamentul MEGA separat.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="Ștergerea contului dvs. va anula și abonamentul plătit.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="Am trimis un e-mail";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="Am trimis un e-mail la %@ cu un link pentru a confirma ștergerea contului.";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="Retrimite";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="Email retrimis";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="Schimbați adresa de e-mail";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="Modifică adresa de e-mail";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="Am trimis un e-mail la %@ cu un link. Atingeți linkul pentru a vă confirma adresa de e-mail și pentru a vă activa contul.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="Dacă nu primiți e-mailul, verificați folderul de spam sau încercați din nou. Pentru orice alte probleme, contactați support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="Procesul de înregistrare va fi anulat.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="Anulați înregistrarea?";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="Da, anulează";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="Nu o anula";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="Confirmare prin e-mail";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="E-mail trimis";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="Numai dvs. vă cunoașteți parola și numai dvs. aveți acces la cheia de recuperare MEGA. Dacă pierdeți accesul la parolă sau la aplicația de autentificare, veți avea nevoie de cheia de recuperare pentru a vă recăpăta accesul la cont.\n\nVă rugăm să o păstrați într-un loc sigur. [L]Aflați mai multe[/L] despre cheia dvs. de recuperare.";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="Copiați cheia de recuperare";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="Sau";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="Salvați pe dispozitiv";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="Cheia de recuperare a fost copiată";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="Cheia de recuperare a fost salvată";
+/* Alert action - OK */
+"generalAction.actionOK"="Bine";
+/* General action - OK, got it */
+"generalAction.okGotIt"="Bine, am înțeles";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="Introduceți parola dvs.";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="Introdu un e-mail valid";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="Te rugăm să încerci din nou";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="Adresa de e-mail sau parola invalidă";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="Ați uitat parola?";
+/* Header text for the Login screen */
+"login.headerTitle"="Conectați-vă la contul MEGA";
+/* Email field in the login screen */
+"login.email"="Adresa e-mail";
+/* Password field in the login screen */
+"login.password"="Parolă";
+/* Sign up text in the login screen. */
+"login.signup"="Înscrieți-vă";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="Nu aveți un cont MEGA? [L]Înscrieți-vă[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="Conectați-vă";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="Înregistrarea contului dvs. este incompletă sau a fost anulată. Verificați căsuța de e-mail.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="Fără conexiune la internet";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="Log in with your MEGA account";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="Înscrieți-vă";
+/* Test Password - Information */
+"testPassword.information"="Sunteți pe cale să vă deconectați, vă rugăm să testați parola dvs. pentru a vă asigura că o amintiți. Dacă vă pierdeți parola, pierdeți accesul la datele MEGA.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="Parolă";
+/* Test Password - Button */
+"testPassword.buttonTitle"="Testați parola";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="Ați uitat parola?";
+/* Test Password - Password is correct */
+"testPassword.correct"="Parola este corectă";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="Parola nu este corectă";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="Introduceți codul din 6 cifre din aplicația dvs. de autentificare.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="Ați pierdut dispozitivul de autentificare?";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="Cod de verificare incorect";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="Autentificare cu doi factori";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="Imposibil de a se conecta";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="Verifică mesajele primite de pe e-mail";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="Contul dvs. MEGA a fost suspendat din cauza acuzațiilor repetate de încălcare a drepturilor de autor. Aceasta înseamnă că nu vă puteți accesa contul sau datele din acesta. Verificați-vă căsuța de e-mail dvs. pentru mai multe informații despre cum să depuneți o contranotificare.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="Contul dvs. a fost desființat din cauza unei încălcări a Termenii de utilizare a serviciului MEGA. Nu veți putea redobândi accesul la datele stocate sau nu veți putea fi autorizat să înscrieți pentru un nou cont MEGA.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="Contul dvs. a fost dezactivat de administratorul contului. Contactați administratorul contului dvs. Business pentru mai multe detalii.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="Contul tău a fost eliminat de către administrator. Te rugăm să contactezi administratorul contului tău business pentru detalii suplimentare.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="Contul dvs. a fost blocat pentru protecția dvs. după detectarea unei autentificări rău intenționate, așa că vă solicităm să vă resetați parola.\nVerificați căsuța de e-mail pentru instrucțiuni despre deblocarea contului și sfaturi despre cum să preveniți acest lucru să se întâmple din nou.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="Retrimite e-mailul";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="E-mail trimis";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="Bine, am înțeles";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="Ați încercat să vă conectați de prea multe ori. Așteptați și încercați din nou.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="Schimbați parola";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="Contul meu";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="Schimbați numele";
+/* Help section - contact support */
+"settings.help.contactSupport"="Contactați asistența";
+/* About section - App version */
+"settings.about.version(%@)"="Versiune %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="Cheie de recuperare";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="Exportați cheia de recuperare";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="Notificările sunt activate";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="Notificările sunt dezactivate";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="Activați modul de depanare";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="Se va crea un fișier jurnal. Jurnalele pot conține informații legate de contul dvs.";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="Dezactivați modul de depanare";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="Fișierul jurnal va fi șters.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="Partajați jurnale";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="Anulați";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="Confirmă";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="Continuați";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="Deconectați-vă";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="Memento privind parola";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="Îți mai aduci aminte parola?";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="Înainte de a vă deconecta, vă recomandăm să exportați cheia de recuperare într-un loc sigur. Fără cheia de recuperare, nu veți putea reseta parola. [L]Aflați mai multe[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="Exportați cheia de recuperare";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="Cheie de recuperare";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="Testați parola";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="Nu mai arăta asta";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="Continuați să vă deconectați";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="Fără conexiune la internet";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="Ștergeți contul MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="Este necesară o conexiune la internet pentru a vă ștergeți contul";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="Aveți mai multe abonamente. Pentru a evita taxarea de mai multe ori, anulați orice abonament de care nu aveți nevoie.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="Afișați abonamentele";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="Expirat";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="Detaliile abonamentului";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="Abonamentul dvs. include";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass manager de parole";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="Mai mult spațiu de stocare și transfer";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="Apeluri și întâlniri nerestricționate";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="Linkuri protejate prin parolă";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="Derulare înapoi a fișierelor și folderelor";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="Fișiere și foldere ascunse";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="Gestionați acest abonament în aplicația MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="Gestionați acest abonament pe site-ul MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="Abonați-vă";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="Începeți încercarea gratuită";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="Anulați încercarea";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="Anulați abonamentul";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="Gestionați perioada de încercare gratuită";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="Gestionați abonamentul";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@ încercare gratuită";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="%@ abonament";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="Se termină pe %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="Se reînnoiește pe %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="Expiră pe %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="Abonamentul dvs. nu este gestionat de Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="V-ați abonat la MEGA cu Google Play. Pentru a vă anula abonamentul, trebuie să:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="Perioada de încercare gratuită nu este gestionată de Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="Acest lucru se datorează faptului că v-ați abonat la MEGA prin Google Play. Pentru a anula perioada de încercare gratuită, va trebui să:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="Într-un browser web";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="Accesați [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Conectați-vă cu contul dvs. Google Play.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="Dați clic pe avatarul dvs.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="Dați clic pe [B]Plăți și abonamente[/B].";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="Dați clic pe [B]Abonamente[/B].";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="Sub abonamentul dvs. MEGA, dați clic pe [B]Anulați abonamentul[/B].";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="Pe un dispozitiv Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Deschideți aplicația Play Store.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Conectați-vă cu contul dvs. Google Play (dacă este necesar).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="Atingeți avatarul dvs.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="Atingeți [B]Plăți și abonamente[/B].";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="Atingeți [B]Abonamente[/B].";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="Sub abonamentul dvs. MEGA, dați clic pe [B]Anulați abonamentul[/B].";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="Trebuie să vă anulați abonamentul folosind un browser web";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="V-ați abonat la MEGA în browserul dvs. web. Pentru a vă anula abonamentul, va trebui să:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="Trebuie să gestionați perioada de încercare gratuită folosind un browser web";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="Acest lucru se datorează faptului că v-ați abonat la MEGA în browserul dvs. web. Pentru a anula perioada de încercare gratuită, va trebui să:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="Pe un calculator";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="Accesați [L]www.mega.nz[/L] în browserul web.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="Conectați-vă la contul MEGA.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="Dați clic pe meniul principal.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="Dați clic pe [B]Setări[/B].";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="Dați clic pe [B]Abonament[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="Dați clic pe [B]Anulați abonamentul[/B].";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="Pe un dispozitiv mobil";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="Atingeți avatarul dvs.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="Atingeți [B]Anulați abonamentul[/B].";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="Gratuit";

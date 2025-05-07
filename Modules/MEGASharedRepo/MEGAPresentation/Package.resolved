@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "devicekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devicekit/DeviceKit.git",
+      "state" : {
+        "revision" : "5757447e9f92c476ee2ca41ead7eb6db07936430",
+        "version" : "5.4.0"
+      }
+    },
+    {
+      "identity" : "libffi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/623637646/libffi.git",
+      "state" : {
+        "revision" : "bc1dac0c1b522539f21fc28fe1f7e07bb7c2fbd5",
+        "version" : "3.4.5"
+      }
+    },
+    {
+      "identity" : "swift-case-paths",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-case-paths.git",
+      "state" : {
+        "revision" : "fc45e7b2cfece9dd80b5a45e6469ffe67fe67984",
+        "version" : "0.14.1"
+      }
+    },
+    {
+      "identity" : "swifthook",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/623637646/SwiftHook.git",
+      "state" : {
+        "revision" : "474f80132a3a4e74b3f8a5b87b707d74de387769",
+        "version" : "3.5.2"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "50843cbb8551db836adec2290bb4bc6bac5c1865",
+        "version" : "0.9.0"
+      }
+    }
+  ],
+  "version" : 2
+}

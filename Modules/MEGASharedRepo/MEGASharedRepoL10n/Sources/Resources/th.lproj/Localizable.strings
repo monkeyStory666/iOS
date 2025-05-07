@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="ชื่อ";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="นามสกุล";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="อัปเดต";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="อัปเดตชื่อแล้ว";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="กรอกชื่อ";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="กรอกนามสกุล";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="รหัสผ่านใหม่";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="เปลี่ยนรหัสผ่าน";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="อัปเดตรหัสผ่านแล้ว";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="ควรจะประกอบไปด้วย:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="ยืนยันรหัสผ่าน";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="ยืนยันรหัสผ่าน";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="ต้องมีอย่างน้อย 8 ตัวอักษร";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="คุณกรอกรหัสผ่านเดิมที่เคยใช้มาแล้ว กรุณากรอกรหัสผ่านใหม่";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="รหัสผ่านต้องมีตัวเลขหรืออักขระพิเศษอย่างน้อย 1 ตัว";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="รหัสผ่าน";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="รหัสผ่านไม่ตรงกัน ตรวจสอบและลองใหม่อีกครั้ง";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="ตัวอักษรตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="รหัสผ่านของคุณคาดเดาง่ายเกินไป เราขอแนะนำให้ลองใช้อักขระที่ดูปลอดภัยมากกว่านี้";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="รหัสผ่านของคุณง่ายต่อการคาดเดา ลองใช้ชุดอักขระที่ยากต่อการคาดเดามากกว่านี้";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="ลิงก์ยืนยันของคุณหมดอายุแล้ว";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="บัญชีของคุณอาจถูกเปิดใช้งานแล้ว หรือคุณอาจยกเลิกการลงทะเบียนของคุณ";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="ยืนยันบัญชีไม่สำเร็จ";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="คุณได้เข้าสู่ระบบบัญชี MEGA ในแอปนี้แล้ว กรุณาออกจากบัญชีปัจจุบันก่อน จากนั้นให้กลับไปตรวจสอบอีเมลของคุณ แล้วคลิกลิงก์ยืนยันบัญชีอีกครั้ง";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="บัญชีของคุณถูกเปิดใช้งานเรียบร้อยแล้ว กรุณาเข้าสู่ระบบ";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="ก่อนดำเนินการต่อ แจ้งให้เราทราบถึงเหตุผลได้หรือไม่";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="หากมีฟีเจอร์ใดที่ขาดหายไป กรุณาเลือก อื่น ๆ และแจ้งรายละเอียดเพิ่มเติม";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="ช่วยเราปรับปรุงโดยการแชร์ข้อเสนอแนะเพิ่มเติม";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="ยินดีให้ติดต่อเพื่อสอบถามข้อมูลเพิ่มเติมสั้น ๆ ได้";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="อื่น ๆ (กรุณาระบุ)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="ข้าม";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="ไม่ต้องยกเลิก";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="กรอกอีเมลของคุณใหม่ แล้วเราจะส่งอีเมลยืนยันไปที่อีเมลใหม่นี้";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="อัปเดต";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="อีเมล";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="อัปเดตอีเมลแล้ว";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="กรุณากรอกอีเมลอื่น";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="อีเมลนี้มีการใช้งานแล้ว";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="ที่อยู่อีเมลนี้เคยลงทะเบียนกับ MEGA แล้ว";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="กรอกอีเมลให้ถูกต้อง";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="กรอกชื่อ";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="กรอกนามสกุล";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="ยืนยันรหัสผ่าน";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="อีเมล";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="ชื่อ";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="นามสกุล";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="รหัสผ่าน";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="ลงทะเบียน MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="ลงทะเบียน";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="มีบัญชี MEGA แล้วหรือยัง [L]เข้าสู่ระบบ[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="ฉันได้อ่านและยอมรับ[L]เงื่อนไขการให้บริการของ MEGA[/L] แล้ว";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="คุณต้องเห็นด้วยกับเงื่อนไขการให้บริการของเราก่อน";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="บันทึกการแก้ไขข้อบกพร่อง";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="เปิดใช้งานการบันทึกการแก้ไขข้อบกพร่อง";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="บันทึกจะถูกจัดเก็บไว้ในอุปกรณ์ของคุณ เว้นแต่คุณจะส่งไปยังฝ่ายช่วยเหลือเพื่อการแก้ไขข้อบกพร่อง";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="บันทึกอาจมีข้อมูลส่วนบุคคลที่รวบรวมภายใต้[L]นโยบายความเป็นส่วนตัวและข้อมูลส่วนบุคคลของเรา (ข้อ 8)[/L] หากแชร์กับ MEGA ข้อมูลดังกล่าวจะถูกใช้เพื่อการแก้ไขข้อบกพร่องเท่านั้น";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="เปิดใช้งานการบันทึกการแก้ไขข้อบกพร่องใช่หรือไม่";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="การเปิดใช้งานการบันทึกอาจสร้างบันทึกที่มีข้อมูลส่วนบุคคล ซึ่งจัดเก็บไว้ในอุปกรณ์ของคุณ บันทึกเหล่านี้จะไม่ถูกแชร์กับ MEGA โดยอัตโนมัติ เว้นแต่คุณเลือกที่จะส่งไปยังฝ่ายช่วยเหลือเพื่อการแก้ไขข้อบกพร่อง กรุณาตรวจสอบบันทึกอย่างละเอียดก่อนแชร์ เพื่อให้แน่ใจว่าคุณสบายใจกับข้อมูลที่รวมอยู่";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="ปิดใช้งานการบันทึกการแก้ไขข้อบกพร่องใช่หรือไม่";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="แอปจะหยุดสร้างบันทึกที่ใช้สำหรับการแก้ไขข้อบกพร่อง และบันทึกที่สร้างไว้ก่อนหน้านี้จะถูกลบออกจากอุปกรณ์ของคุณ บันทึกเหล่านี้จะไม่ถูกแชร์กับ MEGA โดยอัตโนมัติ";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="ปิดใช้งาน";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="ติดต่อฝ่ายสนับสนุน";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="แนบบันทึกการแก้ไขข้อบกพร่อง";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="คุณต้องการแนบบันทึกการแก้ไขข้อบกพร่องหรือไม่";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="ดูบันทึก";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="ส่งออกบันทึก";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="การบันทึกเปิดใช้งานอยู่";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="การบันทึกปิดใช้งานอยู่";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="เรารู้สึกเสียใจที่คุณกำลังจะจากไป แต่นี่คือสิ่งที่จะเกิดขึ้น";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="นอกจากนั้น สิ่งต่อไปนี้จะถูกลบ:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="ไฟล์และโฟลเดอร์ MEGA ของคุณ";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="ไฟล์และโฟลเดอร์ทั้งหมดที่เก็บไว้ใน MEGA จะถูกลบออก และลิงก์ที่แชร์ไว้จะไม่สามารถใช้งานได้";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="รูปภาพและอัลบั้มใน MEGA ของคุณ";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="รูปภาพและอัลบั้มทั้งหมดที่เก็บไว้ใน MEGA จะถูกลบออก นอกจากนี้ อัลบั้มที่คุณเคยแชร์ไว้ก็จะไม่สามารถเข้าถึงได้อีกต่อไป";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="รายชื่อผู้ติดต่อใน MEGA ของคุณ";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="รายชื่อผู้ติดต่อทั้งหมดในบัญชี MEGA ของคุณจะถูกลบ";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="นอกจากนี้ คุณจะไม่สามารถทำสิ่งต่อไปนี้ได้อีกต่อไป:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="แชทโดยใช้บัญชีนี้";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="หากต้องการเข้าร่วมกลุ่มแชทด้วยบัญชีอื่น ผู้ดูแลกลุ่มจะต้องส่งลิงก์กลุ่มแชทให้คุณ";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="เข้าร่วมการประชุมโดยใช้บัญชีนี้";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="หากต้องการเข้าร่วมการประชุมโดยใช้บัญชีอื่น ผู้จัดการประชุมจะต้องส่งลิงก์การประชุมให้คุณ";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="หมายเหตุ";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="ดำเนินการต่อ";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="ไม่ต้องลบออก";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="ปัจจุบัน คุณมีสมาชิกใช้งานแบบชำระเงินกับ Apple อยู่ คุณต้องไปที่บัญชี Apple ของคุณและยกเลิกสมาชิก MEGA จากตรงนั้น";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="ปัจจุบัน คุณมีสมาชิกใช้งานแบบชำระเงินกับ Google อยู่ คุณต้องไปที่บัญชี Google ของคุณและยกเลิกสมาชิก MEGA จากตรงนั้น";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="การลบบัญชีของคุณจะยกเลิกการสมัครใช้งานแบบชำระเงินของคุณด้วย";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="อีเมลยืนยันถูกส่งแล้ว";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="เราได้ส่งอีเมลถึง %@ โดยมีลิงก์สำหรับยืนยันการลบบัญชีของคุณ";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="ส่งใหม่";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="อีเมลส่งสำเร็จ";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="เปลี่ยนที่อยู่อีเมล";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="เปลี่ยนอีเมล";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="เราได้ส่งอีเมลพร้อมลิงก์ถึง %@ แล้ว แตะที่ลิงก์พื่อยืนยันที่อยู่อีเมลและเปิดใช้งานบัญชีของคุณ";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="หากคุณไม่ได้รับอีเมลฉบับนี้ ตรวจสอบในโฟลเดอร์สแปมหรือลองส่งอีกครั้ง หากคุณยังพบปัญหาด้านอื่น ๆ ให้ติดต่ออีเมล support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="หากยกเลิก กระบวนการลงทะเบียนจะไม่สำเร็จ";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="ยกเลิกการลงทะเบียนหรือไม่";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="ใช่ ยกเลิกเลย";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="ไม่ต้องยกเลิก";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="การยืนยันอีเมล";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="ส่งอีเมลแล้ว";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="เฉพาะคุณเท่านั้นที่รู้รหัสผ่านของคุณ และเฉพาะคุณเท่านั้นที่มีสิทธิ์เข้าถึงคีย์การกู้คืน MEGA ของคุณ หากคุณไม่สามารถเข้าถึงรหัสผ่านหรือแอปตัวรับรองความถูกต้องของคุณ คุณจะต้องต้องใช้คีย์การกู้คืนเพื่อเข้าถึงบัญชีของคุณอีกครั้ง\n\nกรุณาเก็บไว้ในที่ปลอดภัย [L]เรียนรู้เพิ่มเติม[/L]เกี่ยวกับคีย์การกู้คืนของคุณ";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="คัดลอกคีย์การกู้คืน";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="หรือ";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="บันทึกลงอุปกรณ์";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="คัดลอกคีย์การกู้คืนแล้ว";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="บันทึกคีย์การกู้คืนแล้ว";
+/* Alert action - OK */
+"generalAction.actionOK"="ตกลง";
+/* General action - OK, got it */
+"generalAction.okGotIt"="โอเค เข้าใจแล้ว";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="กรอกรหัสผ่านของคุณ";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="กรอกที่อยู่อีเมลให้ถูกต้อง";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="กรุณาลองอีกครั้ง";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="ที่อยู่อีเมลหรือรหัสผ่านไม่ถูกต้อง";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="ลืมรหัสผ่านหรือไม่";
+/* Header text for the Login screen */
+"login.headerTitle"="เข้าสู่ระบบบัญชี MEGA ของคุณ";
+/* Email field in the login screen */
+"login.email"="ที่อยู่อีเมล";
+/* Password field in the login screen */
+"login.password"="รหัสผ่าน";
+/* Sign up text in the login screen. */
+"login.signup"="ลงทะเบียน";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="ยังไม่มีบัญชี MEGA ใช่ไหม [L]ลงทะเบียน[/L]ได้เลย";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="เข้าสู่ระบบ";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="การลงทะเบียนบัญชีของคุณยังไม่สมบูรณ์ หรือถูกยกเลิก ตรวจสอบกล่องจดหมายอีเมลของคุณ";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="ไม่มีการเชื่อมต่ออินเทอร์เน็ต";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="เข้าสู่ระบบด้วยบัญชี MEGA ของคุณ";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="ลงทะเบียน";
+/* Test Password - Information */
+"testPassword.information"="คุณกำลังจะออกจากระบบ กรุณาทดสอบรหัสผ่านของคุณเพื่อให้แน่ใจว่าคุณยังจำได้ หากคุณลืมรหัสผ่าน คุณจะสูญเสียการเข้าถึงข้อมูล MEGA ของคุณ";
+/* Test Password - Password */
+"testPassword.fieldTitle"="รหัสผ่าน";
+/* Test Password - Button */
+"testPassword.buttonTitle"="ทดสอบรหัสผ่าน";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="ลืมรหัสผ่านหรือไม่";
+/* Test Password - Password is correct */
+"testPassword.correct"="รหัสผ่านถูกต้อง";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="รหัสผ่านไม่ถูกต้อง";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="กรอกรหัส 6 หลักจากแอปตัวรับรองความถูกต้องของคุณ";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="อุปกรณ์ตัวรับรองความถูกต้องของคุณสูญหายหรือไม่";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="รหัสยืนยันไม่ถูกต้อง";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="การรับรองความถูกต้องด้วยสองปัจจัย";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="ไม่สามารถเข้าสู่ระบบได้";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="ตรวจสอบกล่องจดหมายเข้าของคุณ";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="บัญชี MEGA ของคุณถูกระงับชั่วคราว เนื่องจากมีการร้องเรียนเรื่องการละเมิดลิขสิทธิ์ซ้ำหลายครั้ง หมายความว่าคุณไม่สามารถเข้าถึงบัญชีหรือข้อมูลใด ๆ ภายในบัญชีของคุณได้ ตรวจสอบกล่องจดหมายอีเมลของคุณเพื่อดูข้อมูลเพิ่มเติมเกี่ยวกับวิธีการยื่นเรื่องโต้แย้ง";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="บัญชีของคุณถูกยกเลิก เนื่องจากมีการกระทำที่ขัดต่อเงื่อนไขการให้บริการของ MEGA คุณจะไม่สามารถเข้าถึงข้อมูลที่เก็บไว้ หรือสมัครใช้บัญชี MEGA ใหม่ได้อีก";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="บัญชีของคุณถูกปิดใช้งานโดยผู้ดูแลระบบ ติดต่อผู้ดูแลระบบบัญชีธุรกิจของคุณเพื่อขอรายละเอียดเพิ่มเติม";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="บัญชีของคุณถูกลบโดยผู้ดูแลระบบ กรุณาติดต่อผู้ดูแลบัญชีธุรกิจของคุณเพื่อขอทราบรายละเอียดเพิ่มเติม";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="บัญชีของคุณถูกล็อกชั่วคราวเพื่อความปลอดภัย เนื่องจากตรวจพบการเข้าสู่ระบบที่อาจเป็นอันตราย กรุณาเปลี่ยนรหัสผ่านของคุณเพื่อกู้คืนการเข้าถึงบัญชี\nตรวจสอบกล่องจดหมายอีเมลของคุณเพื่อดูวิธีการปลดล็อกบัญชีและเคล็ดลับป้องกันไม่ให้เกิดเหตุการณ์นี้ซ้ำอีก";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="ส่งอีเมลอีกครั้ง";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="ส่งอีเมลแล้ว";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="โอเค เข้าใจแล้ว";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="คุณได้พยายามเข้าสู่ระบบด้วยข้อมูลที่ไม่ถูกต้องหลายครั้งเกินไป กรุณารอสักครู่และลองใหม่อีกครั้ง";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="เปลี่ยนรหัสผ่าน";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="บัญชีของฉัน";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="เปลี่ยนชื่อ";
+/* Help section - contact support */
+"settings.help.contactSupport"="ติดต่อฝ่ายสนับสนุน";
+/* About section - App version */
+"settings.about.version(%@)"="เวอร์ชัน %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="คีย์สำหรับการกู้คืน";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="ส่งออกคีย์การกู้คืน";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="เปิดใช้งานการแจ้งเตือนแล้ว";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="ปิดใช้งานการแจ้งเตือนแล้ว";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="เปิดใช้งานโหมดดีบัก";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="ไฟล์บันทึกจะถูกสร้างขึ้น เพื่อบันทึกข้อมูลที่เกี่ยวข้องกับบัญชีของคุณ";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="ปิดใช้งานโหมดดีบัก";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="ไฟล์บันทึกจะถูกลบ";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="แชร์ไฟล์บันทึก";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="ยกเลิก";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="ยืนยัน";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="ดำเนินการต่อ";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="ออกจากระบบ";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="แจ้งเตือนเกี่ยวกับรหัสผ่าน";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="คุณจำรหัสผ่านของคุณได้หรือไม่";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="ก่อนออกจากระบบ เราขอแนะนำให้คุณสำรองคีย์การกู้คืนไปไว้ในที่ปลอดภัย หากไม่มีคีย์การกู้คืน คุณจะไม่สามารถรีเซ็ตรหัสผ่านของคุณได้ [L]เรียนรู้เพิ่มเติม[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="ส่งออกคีย์การกู้คืน";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="คีย์สำหรับการกู้คืน";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="ทดสอบรหัสผ่าน";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="ไม่ต้องแสดงสิ่งนี้อีก";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="ดำเนินการต่อเพื่อออกจากระบบ";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="ไม่มีการเชื่อมต่ออินเทอร์เน็ต";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="ลบบัญชี MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="ไม่สามารถลบบัญชีได้ในขณะนี้ กรุณาเชื่อมต่ออินเทอร์เน็ตก่อน";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="คุณมีการสมัครใช้งานหลายรายการ เพื่อป้องกันการถูกเรียกเก็บซ้ำหลายครั้ง กรุณายกเลิกแผนที่คุณไม่ต้องการใช้งานออกก่อน";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="ดูแผน";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="หมดอายุแล้ว";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="รายละเอียดแผน";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="แผนของคุณมาพร้อมด้วย";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass ตัวจัดการรหัสผ่าน";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="พื้นที่เก็บข้อมูลและการถ่ายโอนเพิ่มเติม";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="โทรและประชุมได้ไม่จำกัด";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="ป้องกันลิงก์ด้วยรหัสผ่านได้";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="ย้อนกลับไฟล์และโฟลเดอร์ได้";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="ซ่อนไฟล์และโฟลเดอร์";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="จัดการการสมัครใช้งานนี้ได้ในแอป MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="จัดการการสมัครใช้งานนี้ได้บนเว็บไซต์ MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="สมัครใช้งาน";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="เริ่มทดลองใช้ฟรี";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="ยกเลิกทดลองใช้ฟรี";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="ยกเลิกการสมัครใช้งาน";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="จัดการทดลองใช้ฟรี";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="จัดการการสมัครใช้งาน";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="ทดลองใช้ %@ ฟรี";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="แผน %@";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="สิ้นสุดในวันที่ %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="ต่ออายุเมื่อวันที่ %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="หมดอายุในวันที่ %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="การสมัครใช้งานของคุณไม่ได้จัดการโดย Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="เนื่องจากคุณสมัครใช้งาน MEGA ผ่าน Google Play หากต้องการยกเลิกการสมัครใช้งาน คุณต้อง:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="การทดลองใช้ฟรีของคุณไม่ได้ถูกจัดการผ่าน Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="เนื่องจากคุณสมัครใช้งาน MEGA ผ่าน Google Play หากต้องการยกเลิกทดลองใช้ฟรี คุณต้อง:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="ในเว็บเบราว์เซอร์";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="ไปที่ [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="ลงชื่อเข้าใช้ด้วยบัญชี Google Play ของคุณ";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="คลิกที่รูปประจำตัวของคุณ";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="คลิก[B]การชำระเงินและการสมัครใช้งาน[/B]";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="คลิก[B]การสมัครใช้งาน[/B]";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="คลิก[B]ยกเลิกการสมัครใช้งาน[/B]ที่ปรากฎอยู่ใต้การสมัครใช้งาน MEGA ของคุณ";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="บนอุปกรณ์ Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="เปิดแอป Play Store";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="ลงชื่อเข้าใช้ด้วยบัญชี Google Play ของคุณ (หากระบบถาม)";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="แตะที่รูปประจำตัวของคุณ";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="แตะ[B]การชำระเงินและการสมัครใช้งาน[/B]";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="แตะ[B]การสมัครใช้งาน[/B]";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="คลิก[B]ยกเลิกการสมัครใช้งาน[/B]ที่ปรากฎอยู่ใต้การสมัครใช้งาน MEGA ของคุณ";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="คุณต้องใช้เว็บเบราว์เซอร์เพื่อยกเลิกการสมัครใช้งานของคุณ";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="เนื่องจากคุณสมัครใช้งาน MEGA ในเว็บเบราว์เซอร์ หากต้องการยกเลิกการสมัครใช้งาน คุณต้อง:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="คุณต้องใช้เว็บเบราว์เซอร์เพื่อจัดการทดลองใช้ฟรีของคุณ";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="เนื่องจากคุณสมัครใช้งาน MEGA ในเว็บเบราว์เซอร์ หากต้องการยกเลิกการทดลองใช้ฟรี คุณจะต้องทำตามขั้นตอนดังต่อไปนี้:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="บนคอมพิวเตอร์";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="ไปที่ [L]www.mega.nz[/L] ในเว็บเบราว์เซอร์ของคุณ";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="เข้าสู่ระบบบัญชี MEGA ของคุณ";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="คลิกที่เมนูหลัก";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="คลิก[B]การตั้งค่า[/B]";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="คลิก[B]แผน[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="คลิก[B]ยกเลิกการสมัครใช้งาน[/B]";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="บนอุปกรณ์มือถือ";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="แตะที่รูปประจำตัวของคุณ";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="แตะ[B]ยกเลิกการสมัครใช้งาน[/B]";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="ฟรี";

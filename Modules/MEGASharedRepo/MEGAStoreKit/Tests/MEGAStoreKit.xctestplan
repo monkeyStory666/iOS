@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "2D249631-95F8-44AD-8800-EB3B73BE450D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/MEGAStoreKit",
+        "identifier" : "MEGAStoreKitTests",
+        "name" : "MEGAStoreKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

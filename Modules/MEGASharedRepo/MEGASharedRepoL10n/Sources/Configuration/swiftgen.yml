@@ -1,0 +1,13 @@
+input_dir: ../Resources
+output_dir: ${DERIVED_SOURCES_DIR}
+
+strings:
+  inputs:
+    - Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      params:
+        forceFileNameEnum: true
+        publicAccess: true
+        enumName: SharedStrings
+      output: SharedStrings+Generated.swift

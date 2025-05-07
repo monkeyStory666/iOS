@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="名";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="姓";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="更新";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="姓名已更新";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="输入名字";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="输入姓氏";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="新密码";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="更改密码";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="密码已更新";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="最好包含：";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="确认密码";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="确认密码";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="必须至少有8个字符";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="您输入的密码与当前密码相同，请输入一个新密码。";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="至少一个数字或特殊字符";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="密码";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="密码不匹配。请检查并重试。";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="大写和小写字母";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="您的密码很容易被猜到。我们建议尝试更高强度的字符组合。";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="您的密码太容易猜到。请尝试更高强度的字符组合。";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="您的确认链接不再有效";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="您的帐户可能已经激活，或者您可能已经取消注册";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="帐户确认失败";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="您已经在此应用程序上登录了MEGA帐户。请首先登出此帐户，然后返回到您的电子邮件并再次使用相同的确认链接。";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="您的帐户已激活。请登录。";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="在您离开前，您能告诉我们原因吗？";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="如果缺少特定功能，请选择“其它”并告诉我们。";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="通过分享更多反馈来帮助我们改进";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="很高兴能联系我进行简短的后续跟进";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="其它（请注明）";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="跳过";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="不取消";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="请输入您的新电子邮件地址，我们会将确认电子邮件发送到新的电子邮件地址。";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="更新";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="电子邮件地址";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="电子邮件地址已更新";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="请输入其它电子邮件地址。";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="电子邮件地址已被使用";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="此电子邮件地址已注册MEGA帐户";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="请输入一个有效的电子邮件地址";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="输入名字";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="输入姓氏";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="确认密码";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="电子邮件地址";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="名";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="姓";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="密码";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="注册一个MEGA帐户";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="注册";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="已经有MEGA帐户？[L]登入[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="我已阅读并同意[L]MEGA的服务条款。[/L]";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="您需要接受服务条款";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="调试日志";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="启用调试日志";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="除非您将日志发送到客服进行调试，否则日志会存储在您的设备上";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="日志可能包括根据我们的[L]隐私与数据政策（第8条）[/L]收集的个人信息。如果共享给MEGA，它们将仅被用于调试。";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="启用调试日志？";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="启用日志记录可能会创建包含个人信息的日志，并存储在本地设备上。除非您选择将这些日志发送到客服进行调试，否则不会与MEGA共享这些日志。在共享之前，请仔细检查日志，以确保您对所含信息感到满意。";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="禁用调试日志？";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="应用程序将停止生成用于调试的日志，并且任何先前生成的日志都将从您的设备中删除。这些日志永远不会自动与MEGA共享。";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="禁用";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="联系客服";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="附上调试日志";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="您想附上调试日志吗？";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="查看日志";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="导出日志";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="日志记录已启用";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="日志记录已禁用";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="很惋惜看到您离开，但这里是接下来的情况";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="此外，以下内容将被删除：";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="您的MEGA文件和文件夹";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="存储在MEGA中的所有文件和文件夹都将被删除。任何共享链接都将无法访问。";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="您的MEGA照片和相册";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="您存储在MEGA中的所有照片和相册都将被删除。任何共享的相册都将无法访问。";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="您的MEGA联系人";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="您MEGA帐户中的所有联系人都将被删除。";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="您也将无法：";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="使用此帐户聊天";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="对于群聊，主持人需要向您发送一个聊天链接，以便您使用不同的帐户加入群聊。 ";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="使用此帐户加入会议";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="主持人需要向您发送一个会议链接，以便您使用不同帐户访问会议。";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="请注意";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="继续";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="不要删除";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="您目前已通过Apple付费订阅。您必须前往您的Apple帐户，然后从那里取消您的MEGA订阅。";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="您目前已通过Google付费订阅。您必须前往您的Google帐户，然后从那里取消您的MEGA订阅。";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="删除您的帐户也将取消您的付费订阅。";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="我们已经发送了一封电子邮件";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="我们已经向%@发送了一封电子邮件，其中包含确认删除您帐户的链接。";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="重新发送";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="电子邮件已重新发送";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="更改电子邮件地址";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="更改电子邮件地址";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="我们已经向%@发送了一封带有链接的电子邮件。点按链接以验证您的电子邮件地址并激活您的帐户。";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="如果您没有收到电子邮件，请检查您的垃圾邮件文件夹或重试。如有任何其它问题，请联系support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="这将取消注册流程。";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="取消帐户创建？";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="是，取消";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="不取消";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="电子邮件确认";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="邮件已发送";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="只有您知道您的密码，而且只有您能访问您的MEGA恢复密钥。如果您无法访问密码或验证应用程序，您将需要恢复密钥才能重新获得对您帐户的访问权限。\n\n请将其存放在安全的地方。 [L]了解更多[/L]关于您的恢复密钥的信息。";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="复制恢复密钥";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="或";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="保存到设备";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="已复制恢复密钥";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="恢复密钥已保存";
+/* Alert action - OK */
+"generalAction.actionOK"="好的";
+/* General action - OK, got it */
+"generalAction.okGotIt"="好的，明白了";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="请输入您的密码";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="请输入一个有效的电子邮件地址";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="请重试";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="电子邮件或密码无效";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="忘记密码了？";
+/* Header text for the Login screen */
+"login.headerTitle"="登录您的MEGA帐户";
+/* Email field in the login screen */
+"login.email"="电子邮件地址";
+/* Password field in the login screen */
+"login.password"="密码";
+/* Sign up text in the login screen. */
+"login.signup"="注册";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="没有MEGA帐户？[L]注册[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="登录";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="您的帐户注册未完成或已取消。检查您的电子邮件收件箱。";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="无网络连接";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="使用您的MEGA帐户登录";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="注册";
+/* Test Password - Information */
+"testPassword.information"="您即将登出，请测试您的密码以确保您记住它。如果您丢失密码，您将无法访问您的MEGA数据。";
+/* Test Password - Password */
+"testPassword.fieldTitle"="密码";
+/* Test Password - Button */
+"testPassword.buttonTitle"="测试密码";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="忘记密码了？";
+/* Test Password - Password is correct */
+"testPassword.correct"="密码正确";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="密码不正确";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="输入您身份验证应用程序中的6位数代码。";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="丢失了您的身份验证设备？";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="验证码不正确";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="双重验证";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="无法登入";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="查看您的收件箱";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="由于多次被指控侵犯版权，您的MEGA帐户已被停用。这意味着您无法访问您的帐户或其中的数据。检查您的电子邮件收件箱，了解有关如何提交抗辩通知的更多信息。";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="由于违反MEGA的服务条款，您的帐户已被终止。您将无法重新获得访问您存储数据的权限，也无权注册新的MEGA帐户。";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="您的帐户已被帐户管理员停用。请联系您的企业帐户管理员了解更多详情。";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="您的帐户已被管理员移除。请联系您的企业帐户管理员了解详情。";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="为了保护您的安全，在检测到恶意登录后，您的帐户已被锁定，因此我们要求您重置密码。\n检查您的电子邮件收件箱，了解有关解锁您帐户的说明以及如何防止这种情况再次发生的提示。";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="重新发送电子邮件";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="邮件已发送";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="好的，明白了";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="您尝试登入的次数过多。请稍后重试。";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="更改密码";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="我的帐户";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="更改名称";
+/* Help section - contact support */
+"settings.help.contactSupport"="联系客服";
+/* About section - App version */
+"settings.about.version(%@)"="版本%@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="恢复密钥";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="导出恢复密钥";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="通知已启用";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="通知已禁用";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="启用调试模式";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="将创建日志文件。日志会包含与您帐户相关的信息。";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="禁用调试模式";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="日志文件将被删除。";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="共享日志";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="取消";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="确认";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="继续";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="登出";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="密码提醒";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="您还记得您的密码吗？";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="在登出之前，我们建议您将恢复密钥导出到安全的地方。如果您没有恢复密钥，您将无法重置您的密码。[L]了解更多[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="导出恢复密钥";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="恢复密钥";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="测试密码";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="不再显示此信息";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="继续登出";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="无网络连接";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="删除MEGA帐户";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="需要互联网连接才能删除您的帐户";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="您拥有多个订阅。为避免多次收费，请取消任何您不需要的方案。";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="查看方案";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="已过期";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="方案详情";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="您的方案包括";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass密码管理器";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="更多的存储空间和传输流量";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="无限制的通话和会议";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="受密码保护的链接";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="还原文件和文件夹";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="隐藏的文件和文件夹";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="在MEGA应用程序中管理此订阅";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="在MEGA网站上管理此订阅";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="订阅";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="开始免费试用";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="取消试用";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="取消订阅";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="管理试用";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="管理订阅";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@免费试用";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="%@方案";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="结束日期%@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="续订日期%@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="到期日期%@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="您的订阅不由Apple管理";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="这是因为您通过Google Play订阅的MEGA。若要取消订阅，您需要：";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="您的免费试用不由Apple管理";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="这是因为您通过Google Play订阅的MEGA。要取消免费试用，您需要：";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="在网页浏览器中";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="访问[L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="使用您的Google Play帐户登录。";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="点击您的头像。";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="点击[B]付款&订阅[/B]。";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="点击[B]订阅[/B]。";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="在您的MEGA订阅下，点击[B]取消订阅[/B]。";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="在Android设备上";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="打开Play Store应用程序。";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="使用您的Google Play帐户登录（如果需要）。";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="点按您的头像。";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="点按[B]付款&订阅[/B]。";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="点按[B]订阅[/B]。";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="在您的MEGA订阅下，点击[B]取消订阅[/B]。";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="您需要使用网络浏览器取消您的订阅";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="这是因为您在网页浏览器中订阅了MEGA。若要取消订阅，您需要：";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="您需要使用网络浏览器管理免费试用";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="这是因为您在网络浏览器中订阅了MEGA。要取消免费试用，您需要：";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="在计算机上";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="在您的网络浏览器中访问[L]www.mega.nz[/L]。";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="登录您的MEGA帐户";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="点击主菜单。";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="点击[B]设置[/B]。";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="点击[B]方案[/B]。";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="点击[B]取消订阅[/B]。";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="在移动设备上";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="点按您的头像。";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="点按[B]取消订阅[/B]。";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="免费";

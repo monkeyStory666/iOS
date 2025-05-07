@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="Tên";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="Họ";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="Cập nhật";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="Tên đã được cập nhật";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="Điền tên";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="Điền họ";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="Mật khẩu mới";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="Đổi mật khẩu";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="Mật khẩu đã được cập nhật";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="Tốt hơn là nên có:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="Xác nhận lại mật khẩu";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="Xác nhận lại mật khẩu";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="Phải có ít nhất 8 ký tự";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="Mật khẩu vừa nhập trùng với mật khẩu hiện tại. Hãy nhập một mật khẩu mới.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="Ít nhất có một con số hoặc ký tự đặc biệt";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="Mật khẩu";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="Mật khẩu đã nhập không trùng khớp. Kiểm tra và thử lại.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="Chữ hoa và chữ thường";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="Mật khẩu của bạn dễ đoán. Chúng tôi khuyên bạn thử kết hợp các ký tự khác nhau để có mật khẩu mạnh hơn.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="Mật khẩu của bạn quá dễ đoán. Nên thử kết hợp các ký tự phức tạp khác nhau.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="Đường liên kết xác nhận của bạn không còn hiệu lực";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="Tài khoản của bạn có thể đã được kích hoạt rồi hoặc việc đăng ký đã bị hủy";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="Xác thực tài khoản thất bại";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="Bạn đã đăng nhập vào tài khoản MEGA trên ứng dụng này. Đăng xuất khỏi tài khoản này trước, sau đó quay lại thư email của bạn và sử dụng lại đường liên kết xác nhận đã nhấn.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="Tài khoản đã được kích hoạt rồi. Xin đăng nhập.";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="Trước khi bạn rời đi, bạn có thể cho chúng tôi biết lý do tại sao không?";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="Nếu do thiếu một tính năng cụ thể, vui lòng chọn mục Khác và cho chúng tôi biết thêm chi tiết";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="Hãy giúp chúng tôi cải thiện bằng cách chia sẻ thêm ý kiến ";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="Tôi cho phép MEGA liên hệ với tôi để trao đổi thêm";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="Khác (Vui lòng ghi rõ)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="Bỏ qua";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="Đừng hủy";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="Nhập địa chỉ email mới của bạn, chúng tôi sẽ gửi email xác nhận đến địa chỉ email mới này.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="Cập nhật";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="Email";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="Địa chỉ email đã được cập nhật";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="Xin nhập địa chỉ e-mail khác.";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="Email này có người dùng rồi";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="Địa chỉ email này đã có đăng ký một tài khoản với MEGA rồi";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="Nhập một email hợp lệ";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="Điền tên";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="Điền họ";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="Xác nhận lại mật khẩu";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="Email";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="Tên";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="Họ";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="Mật khẩu";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="Đăng ký tài khoản MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="Đăng ký";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="Bạn đã có tài khoản MEGA rồi? [L]Đăng nhập[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="Tôi đã đọc và đồng ý với [L]Điều Khoản Dịch Vụ[/L] của MEGA.";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="Bạn phải chấp thuận Điều Khoản Dịch Vụ.";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="Nhật ký gỡ lỗi";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="Bật ghi nhật ký gỡ lỗi";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="Nhật ký được lưu lại trong thiết bị của bạn trừ khi bạn gửi nó đến Hỗ Trợ để được gỡ lỗi";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="Nhật ký có thể có bao gồm thông tin cá nhân được thu thập theo [L]Chính Sách Dữ Liệu và Riêng Tư (Điều 8)[/L] của chúng tôi. Nếu được chia sẻ với MEGA, nội dung sẽ chỉ được sử dụng để gỡ lỗi.";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="Bật ghi nhật ký gỡ lỗi?";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="Việc kích hoạt ghi nhật ký có thể tạo ra tệp nhật ký với thông tin cá nhân, được lưu trữ cụ  bộ trong thiết bị của bạn. Những tệp nhật ký này không hề tự chia sẻ với MEGA trừ khi bạn quyết định gửi nó đến Hỗ Trợ để được gỡ lỗi. Vui lòng xem lại nhật ký cẩn thận trước khi chia sẻ để đảm bảo bạn cảm thấy thoải mái với những thông tin được bao gồm.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="Tắt ghi nhật ký gỡ lỗi?";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="Ứng dụng sẽ dừng tạo ra nhật ký để gỡ lỗi và mọi bản ghi đã được tạo trước đó sẽ bị xóa khỏi thiết bị của bạn. Những tệp nhật ký này không bao giờ được tự động chia sẻ với MEGA.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="Tắt";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="Liên hệ hỗ trợ";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="Đính kèm nhật ký gỡ lỗi";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="Bạn có muốn đính kèm nhật ký gỡ lỗi không?";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="Xem nhật ký";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="Xuất nhật ký";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="Ghi nhật ký gỡ lỗi được bật";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="Ghi nhật ký gỡ lỗi đã tắt";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="Thật buồn khi không được cùng bạn nữa, nhưng sau đây là những gì sẽ xảy ra";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="Ngoài ra, những thứ sau đây sẽ bị xóa:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="Các tệp tin và thư mục MEGA của bạn";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="Tất cả các tệp tin và thư mục được lưu trữ trong MEGA sẽ bị xóa. Bất kỳ đường liên kết nào đã được chia sẻ sẽ không thể truy cập được.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="Các hình ảnh và album trong MEGA của bạn";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="Tất cả các hình ảnh và album được lưu trữ trong MEGA sẽ bị xóa. Bất kỳ album nào đã được chia sẻ sẽ không thể truy cập được.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="Sổ liên lạc MEGA của bạn";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="Tất cả các tên liên lạc trong tài khoản MEGA của bạn sẽ bị xóa.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="Bạn cũng sẽ không còn có thể:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="Sử dụng chat với tài khoản này";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="Đối với các cuộc chat nhóm, người chủ trì sẽ cần phải gửi cho bạn một đường liên kết chat để mời bạn tham gia cuộc chat nhóm bằng một tài khoản khác. ";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="Tham gia cuộc họp với tài khoản này";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="Người chủ trì sẽ cần phải gửi cho bạn một đường liên kết họp để bạn truy cập cuộc họp bằng một tài khoản khác. ";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="Ghi chú";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="Tiếp tục";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="Đừng xóa";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="Bạn hiện có một gói đăng ký trả phí thông qua Apple. Bạn phải truy cập tài khoản Apple của mình và hủy đăng ký gói MEGA từ đó.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="Bạn hiện có một gói đăng ký trả phí thông qua Google. Bạn phải truy cập tài khoản Google của mình và hủy đăng ký gói MEGA từ đó.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="Việc xóa tài khoản của bạn cũng sẽ hủy gói đăng ký trả phí của bạn.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="Chúng tôi đã gửi email";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="Chúng tôi đã gửi email đến %@ với một đường liên kết để xác nhận việc xóa tài khoản của bạn.";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="Gửi lại";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="Email đã gửi lại";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="Đổi địa chỉ email";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="Đổi địa chỉ email";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="Chúng tôi đã gửi email đến %@ với một đường liên kết. Nhấp vào liên kết để xác thực địa chỉ email và kích hoạt tài khoản của bạn.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="Nếu bạn không nhận được email, hãy kiểm tra thư mục thư rác của bạn hoặc thử lại. Bất kỳ vấn đề nào khác, vui lòng liên hệ support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="Việc này sẽ hủy quá trình đăng ký.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="Hủy việc tạo tài khoản?";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="Đúng, hủy";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="Đừng hủy";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="Xác nhận email";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="Email đã được gửi";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="Chỉ bạn mới biết mật khẩu của mình và chỉ có bạn mới có quyền truy cập vào chìa khóa phục hồi MEGA của mình. Nếu bạn mật khẩu hoặc app lập xác thực, bạn sẽ cần phải có chìa khóa phục hồi để lấy lại quyền truy cập vào tài khoản của mình.\n\nXin lưu chìa khóa ở nơi an toàn dễ nhớ. [L]Tìm hiểu thêm[/L] về chìa khóa phục hồi.";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="Sao chép chìa khóa phục hồi";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="Hoặc";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="Lưu vào thiết bị";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="Chìa khóa phục hồi đã được sao chép";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="Đã lưu lại chìa khóa phục hồi";
+/* Alert action - OK */
+"generalAction.actionOK"="OK";
+/* General action - OK, got it */
+"generalAction.okGotIt"="OK, hiểu rồi";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="Nhập mật khẩu";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="Nhập một địa chỉ email hợp lệ";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="Vui lòng thử lại";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="Email hoặc mật khẩu không hợp lệ";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="Quên mất mật khẩu?";
+/* Header text for the Login screen */
+"login.headerTitle"="Đăng nhập vào tài khoản MEGA";
+/* Email field in the login screen */
+"login.email"="Email";
+/* Password field in the login screen */
+"login.password"="Mật khẩu";
+/* Sign up text in the login screen. */
+"login.signup"="Đăng ký";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="Chưa có tài khoản MEGA? [L]Đăng ký[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="Đăng nhập";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="Đăng ký tài khoản của bạn chưa hoàn tất hoặc đã bị hủy. Kiểm tra hộp thư email của bạn.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="Không có kết nối internet";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="Đăng nhập vào tài khoản MEGA của bạn";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="Đăng ký";
+/* Test Password - Information */
+"testPassword.information"="Bạn đang chuẩn bị tiến hành đăng xuất tài khoản, xin thử kiểm tra rằng bạn có nhớ mật khẩu. Nếu quên mất, bạn sẽ mất quyền truy cập vào dữ liệu MEGA của mình.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="Mật khẩu";
+/* Test Password - Button */
+"testPassword.buttonTitle"="Kiểm tra mật khẩu";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="Quên mất mật khẩu?";
+/* Test Password - Password is correct */
+"testPassword.correct"="Mật khẩu chính xác";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="Mật khẩu không đúng";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="Nhập mã gồm 6 chữ số được tạo bởi ứng dụng lập xác thực của bạn.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="Thiết bị dùng để nhận xác thực đã bị mất?";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="Mã xác thực không chính xác";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="Xác thực 2 yếu tố";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="Không thể đăng nhập";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="Xin kiểm tra hộp thư e-mail";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="Tài khoản MEGA của quý vị đã bị đình chỉ do đã nhiều lần bị cáo buộc vi phạm bản quyền. Điều này có nghĩa là quý vị không được phép truy cập tài khoản của mình hoặc bất cứ dữ liệu bên trong. Kiểm tra hộp thư email của quý vị để biết thêm thông tin và về cách gửi đơn phản cáo.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="Tài khoản của bạn đã bị chấm dứt do vi phạm Điều Khoản Dịch Vụ của MEGA. Bạn sẽ không thể lấy lại quyền truy cập vào dữ liệu đã được lưu trữ của mình hoặc được phép đăng ký tài khoản MEGA mới.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="Tài khoản của bạn đã bị đình chỉ bởi quản trị viên tài khoản. Xin liên hệ với người quản lý tài khoản Doanh Nghiệp của bạn để tìm hiểu lý do.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="Tài khoản này đã bị xóa bởi ban quản lý. Xin liên hệ trực tiếp với người quản lý tài khoản trong công ty để biết thêm chi tiết.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="Tài khoản của bạn đã bị khóa để bảo vệ bạn vì có phát hiện phiên đăng nhập đáng nghi ngờ, vì vậy chúng tôi yêu cầu bạn đặt lại mật khẩu của mình.\nKiểm tra hộp thư email của bạn để xem hướng dẫn mở khóa tài khoản và mẹo về cách ngăn chặn điều này lặp lại.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="Gửi lại email";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="Email đã được gửi";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="OK, hiểu rồi";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="Bạn đã nhập thông tin đăng nhập sai quá nhiều lần. Xin chờ rồi thử lại.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="Đổi mật khẩu";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="Tài khoản của tôi";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="Đổi tên";
+/* Help section - contact support */
+"settings.help.contactSupport"="Liên hệ hỗ trợ";
+/* About section - App version */
+"settings.about.version(%@)"="Phiên bản %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="Chìa khóa phục hồi";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="Xuất chìa khóa phục hồi";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="Đã bật thông báo";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="Đã tắt thông báo";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="Bật chế độ debug";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="Một tệp nhật ký log sẽ được tạo. Log có thể chứa các thông tin liên quan đến tài khoản của bạn.";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="Tắt chế độ debug";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="Tệp nhật ký log sẽ bị xóa.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="Chia sẻ tệp nhật ký log";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="Hủy";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="Xác nhận";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="Tiếp tục";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="Đăng xuất";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="Nhắc nhở mật khẩu";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="Bạn có còn nhớ mật khẩu của mình không?";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="Trước khi tiến hành đăng xuất, chúng tôi khuyên nên lưu lại chìa khóa phục hồi ở một nơi an toàn dễ nhớ. Không có chìa khóa phục hồi bạn sẽ không thể đặt lại mật khẩu của bạn. [L]Tìm hiểu thêm[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="Xuất chìa khóa phục hồi";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="Chìa khóa phục hồi";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="Kiểm tra mật khẩu";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="Đừng hiện cái này nữa";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="Tiến hành đăng xuất";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="Không có kết nối internet";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="Xóa bỏ tài khoản MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="Cần có kết nối internet để xóa tài khoản của bạn";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="Bạn có mua nhiều gói đăng ký. Để tránh bị tính phí nhiều hơn một lần, hãy hủy các gói bạn không cần dùng nữa.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="Xem các gói";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="Hết hạn";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="Chi tiết gói";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="Gói của bạn bao gồm";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass quản lý mật khẩu";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="Không gian lưu trữ và truyền tải nhiều hơn";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="Cuộc gọi và cuộc họp không hạn chế";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="Bảo vệ đường liên kết với mật khẩu";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="Tua lại các tệp tin và thư mục";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="Tệp tin và thư mục ẩn";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="Quản lý gói đăng ký này trong ứng dụng MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="Quản lý gói đăng ký này trên trang web MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="Mua đăng ký";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="Bắt đầu dùng thử miễn phí";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="Hủy dùng thử";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="Hủy gói đăng ký";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="Quản lý hạn dùng thử";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="Quản lý gói đăng ký";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="Hạn dùng thử %@";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="Gói %@";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="Hết hạn vào %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="Tự gia hạn vào %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="Hết hạn vào %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="Gói đăng ký của bạn không có quản lý bởi Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="Điều này là do bạn đã đăng ký MEGA thông qua Google Play. Để hủy gói đăng ký, bạn sẽ cần:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="Hạn dùng thử của bạn không có quản lý bởi Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="Điều này là do bạn đã đăng ký MEGA thông qua Google Play. Để hủy hạn dùng thử, bạn sẽ cần:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="Dùng một trình duyệt web";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="Vào trang [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Đăng nhập với tài khoản Google Play của bạn.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="Nhấp vào ảnh đại diện của bạn.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="Nhấp vào [B]Thanh toán và gói thuê bao[/B].";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="Nhấp vào [B]Gói thuê bao[/B].";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="Trong phần gói đăng ký MEGA của bạn, nhấp vào [B]Hủy đăng ký[/B].";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="Trên thiết bị Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Mở ứng dụng Cửa hàng Play.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Đăng nhập với tài khoản Google Play của bạn (nếu cần).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="Chạm vào ảnh đại diện của bạn.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="Chạm vào [B]Thanh toán và gói thuê bao[/B].";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="Chạm vào [B]Gói thuê bao[/B].";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="Trong phần gói đăng ký MEGA của bạn, nhấp vào [B]Hủy đăng ký[/B].";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="Bạn cần phải hủy gói đăng ký của mình bằng trình duyệt web";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="Điều này là do bạn đã đăng ký gói MEGA trong trình duyệt web của mình. Để hủy gói đăng ký, bạn sẽ cần:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="Bạn cần phải quản lý hạn dùng thử miễn phí của mình bằng trình duyệt web";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="Điều này là do bạn đã đăng ký gói MEGA trong trình duyệt web của mình. Để hủy hạn dùng thử miễn phí này, bạn sẽ cần:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="Trên máy tính";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="Truy cập [L]www.mega.nz[/L] bằng trình duyệt web.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="Đăng nhập vào tài khoản MEGA của bạn.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="Click vào menu chính.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="Click vào [B]Thiết Đặt[/B].";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="Click vào [B]Gói[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="Click vào [B]Hủy đăng ký[/B].";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="Trên thiết bị di động";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="Chạm vào ảnh đại diện của bạn.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="Chạm vào [B]Hủy đăng ký[/B].";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="Miễn phí";

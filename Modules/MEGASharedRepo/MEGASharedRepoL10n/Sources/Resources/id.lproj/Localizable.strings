@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="Nama depan";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="Nama Belakang";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="Perbarui";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="Nama diperbarui";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="Masukkan nama depan";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="Masukkan nama belakang";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="Kata sandi baru";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="Ganti Kata Sandi";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="Kata sandi diperbarui";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="Lebih baik memiliki:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="Konfirmasi password";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="Konfirmasi password";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="Harus memiliki minimal 8 karakter";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="Anda telah memasukkan kata sandi anda saat ini. Masukkan kata sandi baru.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="Setidaknya satu angka atau karakter khusus";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="Kata Sandi";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="Kata sandi tidak cocok. Periksa dan coba lagi.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="Huruf besar dan kecil";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="Kata sandi anda mudah ditebak. Kami menyarankan untuk mencoba kombinasi karakter yang lebih kuat.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="Kata sandi anda terlalu mudah ditebak. Cobalah kombinasi karakter yang lebih kuat.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="Tautan konfirmasi anda tidak lagi valid";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="Akun anda mungkin sudah diaktifkan atau anda mungkin telah membatalkan pendaftaran anda";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="Konfirmasi akun gagal";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="Anda sudah masuk ke akun MEGA di aplikasi ini. Keluar dari akun ini terlebih dahulu, lalu kembali ke email anda dan gunakan tautan konfirmasi yang sama lagi.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="Akun anda telah diaktifasi. Silahkan masuk akun anda";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="Sebelum anda pergi, bisakah anda memberi tahu kami alasannya?";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="Jika ada fitur tertentu yang hilang, silakan pilih Lainnya dan beri tahu kami tentang hal itu";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="Bantu kami meningkatkan dengan membagikan lebih banyak umpan balik";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="Saya senang dihubungi untuk tindak lanjut singkat";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="Lainnya (Harap sebutkan)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="Lewati";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="Jangan batalkan";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="Masukkan alamat email baru anda, kami akan mengirimkan konfirmasi email ke alamat email baru ini.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="Perbarui";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="Email";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="Alamat email diperbarui";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="Silakan masukkan alamat email lain.";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="Alamat email telah terpakai";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="Alamat email ini telah mendaftar untuk akun dengan MEGA";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="Masukan email yang benar";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="Masukkan nama depan";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="Masukkan nama belakang";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="Konfirmasi password";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="Email";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="Nama depan";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="Nama Belakang";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="Kata Sandi";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="Daftar untuk akun MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="Daftar";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="Sudah punya akun MEGA? [L]Masuk[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="Saya telah membaca dan setuju [L]Ketentuan Layanan MEGA.[/L]";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="Anda harus menyetujui  Kebijakan Pelayanan";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="Log debug";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="Aktifkan pencatatan debug";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="Log disimpan di perangkat anda kecuali anda mengirimkannya ke Pusat bantuan untuk debugging";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="Log dapat mencakup informasi pribadi yang dikumpulkan di bawah [L]Kebijakan Privasi dan Data (klausul 8)[/L]. Jika dibagikan dengan MEGA, mereka akan digunakan semata-mata untuk debugging.";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="Aktifkan pencatatan debug?";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="Mengaktifkan logging dapat membuat log dengan informasi pribadi, disimpan secara lokal di perangkat anda. Log ini tidak dibagikan dengan MEGA kecuali anda memilih untuk mengirimkannya ke Pusat Bantuan untuk debugging. Harap tinjau log dengan seksama sebelum berbagi untuk memastikan anda merasa nyaman dengan informasi yang disertakan.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="Nonaktifkan pencatatan debug?";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="Aplikasi akan berhenti menghasilkan log yang digunakan untuk debugging, dan setiap log yang dibuat sebelumnya akan dihapus dari perangkat anda. Log ini tidak pernah secara otomatis dibagikan dengan MEGA.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="Nonaktifkan";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="Hubungi santuan";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="Lampirkan log debug";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="Apakah anda ingin melampirkan log debug?";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="Lihat log";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="Ekspor log";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="Log diaktifkan";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="Logging dinonaktifkan";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="Sedih melihatmu pergi, tapi inilah yang akan terjadi";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="Juga, berikut ini akan dihapus:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="File dan folder MEGA anda";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="Semua file dan folder yang disimpan di MEGA akan dihapus. Tautan yang dibagikan akan menjadi tidak dapat diakses.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="Foto dan album MEGA anda";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="Semua foto dan album anda yang disimpan di MEGA akan dihapus. Setiap album bersama akan menjadi tidak dapat diakses.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="Kontak MEGA anda";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="Semua kontak di akun MEGA anda akan dihapus.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="Anda juga tidak akan dapat lagi:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="Ngobrol menggunakan akun ini";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="Untuk obrolan grup, tuan rumah harus mengirimi anda tautan obrolan untuk bergabung dengan obrolan grup menggunakan akun yang berbeda. ";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="Bergabunglah dengan rapat menggunakan akun ini";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="Tuan rumah harus mengirimi anda tautan rapat untuk mengakses rapat menggunakan akun yang berbeda.";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="Catatan";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="Lanjutkan";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="Jangan hapus";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="Saat ini anda memiliki langganan berbayar dengan Apple. Anda harus pergi ke akun Apple anda dan membatalkan langganan MEGA anda dari sana.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="Saat ini anda memiliki langganan berbayar dengan Google. Anda harus pergi ke akun Google anda dan membatalkan langganan MEGA anda dari sana.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="Menghapus akun anda juga akan membatalkan langganan berbayar anda.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="Kami telah mengirim email";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="Kami telah mengirim email ke %@ dengan tautan untuk mengkonfirmasi penghapusan akun anda.";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="Kirim ulang";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="Email dikirim ulang";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="Mengganti alamat email";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="Mengganti alamat email";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="Kami telah mengirim email ke %@ dengan link. Ketuk tautan untuk memverifikasi alamat email anda dan mengaktifkan akun anda.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="Jika anda tidak menerima email, periksa folder spam anda atau coba lagi. Untuk masalah lain, silakan hubungi support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="Ini akan membatalkan proses pendaftaran.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="Batalkan pembuatan akun?";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="Ya, batalkan";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="Jangan batalkan";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="Konfirmasi email";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="Email terkirim";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="Hanya anda yang tahu kata sandi anda dan hanya anda yang memiliki akses ke kunci pemulihan MEGA anda. Jika anda kehilangan akses ke kata sandi atau aplikasi otentikator, anda akan memerlukan kunci pemulihan untuk mendapatkan kembali akses ke akun anda.\n\nSilakan simpan di tempat yang aman. [L]Pelajari lebih lanjut[/L] tentang kunci pemulihan anda.";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="Salin kunci pemulihan";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="Atau";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="Simpan ke perangkat";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="Kunci pemulihan disalin";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="Kunci pemulihan disimpan";
+/* Alert action - OK */
+"generalAction.actionOK"="OK";
+/* General action - OK, got it */
+"generalAction.okGotIt"="OK, mengerti";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="Masukkan password anda";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="Masukan alamat email yang benar";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="Silakan coba lagi";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="Email atau kata sandi tidak valid";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="Lupa password?";
+/* Header text for the Login screen */
+"login.headerTitle"="Masuk ke akun MEGA anda";
+/* Email field in the login screen */
+"login.email"="Email";
+/* Password field in the login screen */
+"login.password"="Kata Sandi";
+/* Sign up text in the login screen. */
+"login.signup"="Daftar";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="Belum punya akun MEGA? [L]Daftar[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="Masuk";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="Pendaftaran akun anda tidak lengkap atau telah dibatalkan. Periksa kotak masuk email anda.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="Tidak ada koneksi internet";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="Log in with your MEGA account";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="Daftar";
+/* Test Password - Information */
+"testPassword.information"="Anda akan keluar, harap uji kata sandi anda untuk memastikan anda mengingatnya. Jika anda kehilangan kata sandi, anda kehilangan akses ke data MEGA anda.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="Kata Sandi";
+/* Test Password - Button */
+"testPassword.buttonTitle"="Uji kata sandi";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="Lupa password?";
+/* Test Password - Password is correct */
+"testPassword.correct"="Kata sandi benar";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="Kata sandi salah";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="Masukkan kode 6 digit dari aplikasi otentikator anda.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="Kehilangan perangkat authenticator anda?";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="Kode verifikasi salah";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="Otentikasi dua faktor";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="Tidak dapat masuk";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="Periksa kotak masuk anda";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="Akun MEGA anda telah ditangguhkan karena dugaan berulang pelanggaran hak cipta. Ini berarti anda tidak dapat mengakses akun atau data anda di dalamnya. Periksa kotak masuk email anda untuk informasi lebih lanjut tentang cara mengajukan pemberitahuan balasan.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="Akun anda dihentikan karena pelanggaran Ketentuan Layanan MEGA. Anda tidak akan dapat memperoleh kembali akses ke data yang disimpan atau diberi wewenang untuk mendaftar akun MEGA baru.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="Akun anda telah dinonaktifkan oleh administrator akun. Hubungi administrator akun Bisnis anda untuk detail lebih lanjut.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="Akun Anda telah dihapus oleh administrator Anda. Silakan hubungi administrator akun bisnis Anda untuk rincian lebih lanjut.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="Akun anda telah dikunci untuk perlindungan anda setelah mendeteksi login berbahaya, jadi kami meminta anda untuk mengatur ulang kata sandi anda.\nPeriksa kotak masuk email anda untuk petunjuk tentang membuka kunci akun anda dan tips tentang cara mencegah hal ini terjadi lagi.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="Kirim ulang e-mail";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="Email terkirim";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="OK, mengerti";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="Anda telah mencoba masuk terlalu berkali-kali. Harap tunggu dan coba lagi.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="Ganti Kata Sandi";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="Akun saya";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="Ganti Nama";
+/* Help section - contact support */
+"settings.help.contactSupport"="Hubungi santuan";
+/* About section - App version */
+"settings.about.version(%@)"="Versi %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="Kunci pemulihan";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="Expor kunci pemulihan";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="Pemberitahuan diaktifkan";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="Pemberitahuan dinonaktifkan";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="Nyalakan mode debug";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="File log akan dibuat. Log dapat berisi informasi yang terkait dengan akun anda.";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="Matikan mode debug";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="File log akan dihapus.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="Bagikan log";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="Batal";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="Konfirmasi";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="Lanjutkan";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="Keluar";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="Password Reminder";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="Apa anda ingat password anda?";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="Sebelum keluar, kami sarankan anda mengekspor kunci pemulihan anda ke tempat yang aman. Tanpa kunci pemulihan anda, anda tidak akan dapat mengatur ulang kata sandi anda. [L]Pelajari lebih lanjut[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="Expor kunci pemulihan";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="Kunci pemulihan";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="Uji kata sandi";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="Jangan tampilkan ini lagi";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="Lanjutkan untuk keluar";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="Tidak ada koneksi internet";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="Hapus akun MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="Koneksi internet diperlukan untuk menghapus akun anda";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="Anda memiliki beberapa langganan. Untuk menghindari tagihan lebih dari satu kali, batalkan paket apa pun yang tidak anda butuhkan.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="Lihat rencana";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="Kadaluarsa";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="Detil paket";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="Paket anda termasuk";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass pengelola kata sandi";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="Lebih banyak penyimpanan dan transfer";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="Panggilan dan rapat tanpa batas";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="Tautan yang dilindungi kata sandi";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="Putar ulang file dan folder";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="File dan folder tersembunyi";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="Kelola langganan ini di aplikasi MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="Kelola langganan ini di situs web MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="Langganan";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="Mulai uji coba gratis";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="Batalkan uji coba";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="Batalkan Langganan";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="Kelola uji coba";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="Kelola langganan";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@ uji coba gratis";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="paket %@ ";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="Berakhir pada %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="Diperbarui pada %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="Kedaluwarsa pada %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="Langganan anda tidak dikelola oleh Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="Ini karena anda berlangganan MEGA melalui Google Play. Untuk membatalkan langganan anda, anda harus:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="Uji coba gratis anda tidak dikelola oleh Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="Ini karena anda berlangganan MEGA melalui Google Play. Untuk membatalkan uji coba gratis anda, anda harus:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="Di browser web";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="Kunjungi [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Masuk dengan akun Google Play anda.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="Klik avatar anda.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="Klik [B]Pembayaran & langganan[/B].";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="Klik [B]Langganan[/B].";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="Di bawah langganan MEGA anda, klik [B]Batalkan langganan[/B].";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="Di perangkat Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Buka aplikasi Play Store.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Masuk dengan akun Google Play anda (Jika diperlukan).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="Ketuk avatar anda.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="Ketuk [B]Pembayaran & langganan[/B].";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="Ketuk [B]Langganan[/B].";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="Di bawah langganan MEGA anda, klik [B]Batalkan langganan[/B].";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="Anda perlu membatalkan langganan anda menggunakan browser web";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="Ini karena anda berlangganan MEGA di browser web anda. Untuk membatalkan langganan anda, anda harus:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="Anda perlu mengelola uji coba gratis menggunakan browser web";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="Ini karena anda berlangganan MEGA di browser web anda. Untuk membatalkan uji coba gratis anda, anda harus:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="Di komputer";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="Kunjungi [L]www.mega.nz[/L] di browser web anda.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="Masuk ke akun MEGA anda.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="Klik menu utama.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="Klik [B]Pengaturan[/B].";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="Klik [B]Paket[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="Klik [B]Batalkan langganan[/B].";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="Pada perangkat seluler";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="Ketuk avatar anda.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="Ketuk [B]Batalkan langganan[/B].";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="Gratis";

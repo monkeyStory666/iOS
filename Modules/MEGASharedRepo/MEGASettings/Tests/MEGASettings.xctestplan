@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "05201B72-3A1E-4327-926E-29AE0469F397",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/MEGASettings",
+        "identifier" : "MEGASettingsTests",
+        "name" : "MEGASettingsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

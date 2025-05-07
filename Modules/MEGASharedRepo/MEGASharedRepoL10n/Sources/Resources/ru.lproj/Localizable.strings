@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="Имя";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="Фамилия";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="Изменить";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="Имя изменено";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="Введите имя";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="Введите фамилию";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="Новый пароль";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="Изменить пароль";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="Пароль изменён";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="Лучше включить:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="Подтвердите пароль";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="Подтвердите пароль";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="Должно быть не менее 8 символов";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="Вы ввели текущий пароль. Введите новый пароль.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="Хотя бы одну цифру или специальный символ";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="Пароль";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="Пароли не совпадают. Проверьте и попробуйте ещё раз.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="Прописные и строчные буквы";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="Ваш пароль слишком угадать. Попробуйте более сложную комбинацию символов.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="Ваш пароль слишком легко угадать. Попробуйте более сложную комбинацию символов.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="Ваша ссылка для подтверждения больше не действительна";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="Ваш аккаунт может быть уже активирован или вы могли отменить регистрацию.";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="Подтверждение аккаунта не удалось";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="Вы уже вошли в аккаунт MEGA в этом приложении. Сначала выйдите из этого аккаунта, затем вернитесь к своей электронной почте и снова используйте ту же ссылку для подтверждения.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="Ваша учётная запись активирована. Пожалуйста, авторизируйтесь.";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="Прежде чем уйти, расскажите, пожалуйста, почему?";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="Если отсутствует какая-то конкретная функция, выберите «Другое» и расскажите нам об этом.";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="Помогите нам стать лучше, предоставив дополнительную обратную связь";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="Я буду рад, если со мной свяжутся для краткого уточнения";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="Другое (пожалуйста, укажите)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="Пропустить";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="Не отменять";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="Введите новый адрес электронной почты, мы отправим на него письмо с подтверждением.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="Изменить";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="Адрес электронной почты";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="Адрес электронной почты изменён";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="Пожалуйста, введите правильный адрес электронной почты.";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="Электронный адрес уже используется";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="На этот адрес электронной почты уже зарегистрирован аккаунт MEGA";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="Введите правильный адрес";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="Введите имя";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="Введите фамилию";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="Подтвердите пароль";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="Адрес электронной почты";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="Имя";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="Фамилия";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="Пароль";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="Регистрация в MEGA";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="Регистрация";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="Уже есть аккаунт MEGA? [L]Войти[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="Я прочитал и соглашаюсь с [L]Условиями использования MEGA[/L].";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="Вам нужно согласиться с условиями предоставления услуг";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="Логи отладки";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="Включить логирование для отладки";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="Журналы хранятся на устройстве, если вы не отправите их в поддержку для отладки";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="Журналы могут включать персональные данные, собранные в соответствии с нашей [L]Политикой конфиденциальности и данных (пункт 8)[/L]. Если вы передадите их MEGA, они будут использоваться исключительно для отладки";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="Включить логирование?";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="Включение логирования может привести к созданию журналов с личной информацией, хранящейся локально на вашем устройстве. Эти журналы не передаются MEGA, если вы не отправите их в поддержку для отладки. Пожалуйста, внимательно просмотрите журналы, прежде чем делиться ими, чтобы убедиться, что вас устраивает содержащаяся в них информация.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="Отключить логирование?";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="Приложение прекратит вести журналы, используемые для отладки, и любые ранее сгенерированные журналы будут удалены с устройства. Эти журналы никогда автоматически не передаются в MEGA.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="Отключение";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="Обратиться в поддержку";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="Прикрепление журналов";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="Прикрепить журналы отладки?";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="Просмотреть журналы";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="Экспортировать журналы";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="Логирование включено";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="Логирование отключено";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="Жаль, что вы уходите. Вот что произойдёт:";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="Также будут удалены:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="Ваши файлы и папки MEGA";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="Все файлы и папки в MEGA будут удалены. Все общие ссылки станут недоступны.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="Ваши фото и альбомы MEGA";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="Все ваши фото и альбомы в MEGA будут удалены. Все общие альбомы станут недоступны.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="Ваши контакты MEGA";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="Все контакты в вашем аккаунте MEGA будут удалены.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="Также вы больше не сможете:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="Писать сообщения с этого аккаунта";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="Для групповых чатов организатору нужно будет отправить вам ссылку на чат, чтобы вы смогли присоединиться под другим аккаунтом.";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="Подключаться к встречам с этого аккаунта";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="Организатору нужно будет отправить вам ссылку на встречу, чтобы вы смогли подключиться под другим аккаунтом.";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="Примечание";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="Продолжить";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="Не удалять";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="Сейчас у вас активна платная подписка через Apple. Вам нужно зайти в свой аккаунт Apple и отменить подписку MEGA оттуда.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="Сейчас у вас активна платная подписка через Google. Вам нужно зайти в свой аккаунт Google и отменить подписку MEGA оттуда.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="При удалении аккаунта также будет отменена ваша платная подписка.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="Мы отправили письмо";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="Мы отправили электронное письмо на %@ со ссылкой для подтверждения удаления аккаунта.";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="Выслать повторно";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="Письмо отправлено повторно";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="Изменить адрес почты";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="Изменить адрес почты";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="Мы отправили электронное письмо со ссылкой на %@. Нажмите на ссылку, чтобы подтвердить адрес электронной почты и активировать аккаунт.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="Если вы не получили его, проверьте папку «Спам» или повторите попытку. По любым другим вопросам пишите на support@mega.nz";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="Регистрация будет отменена.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="Отменить регистрацию?";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="Да, отменить";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="Не отменять";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="Подтверждение электронной почты";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="Письмо отправлено";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="Только вы знаете свой пароль и только у вас есть доступ к вашему ключу восстановления MEGA. Если вы утратите доступ к паролю или приложению для аутентификации, вам понадобится ключ восстановления, чтобы восстановить доступ к аккаунту.\n\nХраните его в надёжном месте. [L]Подробнее[/L] о ключе восстановления.";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="Скопируйте ключ восстановления";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="Или";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="Сохранить на устройстве";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="Ключ восстановления скопирован";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="Ключ восстановления сохранён";
+/* Alert action - OK */
+"generalAction.actionOK"="ОК";
+/* General action - OK, got it */
+"generalAction.okGotIt"="Понятно";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="Введите пароль";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="Введите правильный адрес";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="Пожалуйста, попробуйте снова";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="Неверный адрес электронной почты или пароль";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="Забыли пароль?";
+/* Header text for the Login screen */
+"login.headerTitle"="Войти в аккаунт MEGA";
+/* Email field in the login screen */
+"login.email"="Адрес электронной почты";
+/* Password field in the login screen */
+"login.password"="Пароль";
+/* Sign up text in the login screen. */
+"login.signup"="Регистрация";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="Нет аккаунта MEGA? [L]Зарегистрироваться[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="Войти";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="Регистрация аккаунта не завершена или была отменена. Проверьте электронную почту.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="Нет подключения к Интернету";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="Войти в аккаунт MEGA";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="Регистрация";
+/* Test Password - Information */
+"testPassword.information"="Перед выходом из системы, пожалуйста, проверьте пароль, чтобы убедиться, что вы его помните. Без пароля вы утратите доступ ко всем своим данным в MEGA.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="Пароль";
+/* Test Password - Button */
+"testPassword.buttonTitle"="Проверить пароль";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="Забыли пароль?";
+/* Test Password - Password is correct */
+"testPassword.correct"="Пароль верен";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="Пароль неверен";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="Введите 6-значный код из приложения для аутентификации.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="Потеряли аутентификационное устройство?";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="Неверный код подтверждения";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="Двухфакторная аутентификация";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="Не удалось войти";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="Проверьте входящие";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="Ваш аккаунт MEGA был заблокирован из-за неоднократных обвинений в нарушении авторских прав. Это означает, что вы не можете получить доступ к аккаунту или данным в нём. Для получения дополнительной информации о том, как подать встречное заявление, проверьте свою электронную почту.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="Ваш аккаунт был удалён из-за нарушения Условий использования MEGA. Вы не сможете восстановить доступ к сохранённым данным или получить разрешение на регистрацию нового аккаунта MEGA.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="Администратор деактивировал ваш аккаунт. Пожалуйста, обратитесь к администратору вашего бизнес-аккаунта за подробностями.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="Ваш аккаунт был удалён администратором. Пожалуйста, свяжитесь с администратором вашего бизнес-аккаунта для получения более подробной информации.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="Ваш аккаунт был заблокирован для вашей защиты после обнаружения вредоносного входа в систему, поэтому вам необходимо сменить пароль.\nПроверьте электронную почту, чтобы получить инструкции по разблокировке аккаунта и советы о том, как предотвратить повторение этой ситуации.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="Отправить письмо повторно";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="Письмо отправлено";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="Понятно";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="Вы пытались зайти очень много раз. Пожалуйста, подождите и попробуйте снова.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="Изменить пароль";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="Мой аккаунт";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="Изменить имя";
+/* Help section - contact support */
+"settings.help.contactSupport"="Обратиться в поддержку";
+/* About section - App version */
+"settings.about.version(%@)"="Версия %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="Ключ восстановления";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="Экспорт ключа восстановления";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="Уведомления включены";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="Уведомления отключены";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="Включить режим отладки";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="Будет создан лог-файл. Логи могут содержать информацию о вашем аккаунте.";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="Отключить режим отладки";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="Лог-файл будет удалён.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="Поделиться логами";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="Отмена";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="Подтвердить";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="Продолжить";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="Выйти";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="Напоминание пароля";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="Вы помните пароль?";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="Перед выходом из системы советуем экспортировать ключ восстановления в надёжное место. Без ключа восстановления вы не сможете сбросить пароль. [L]Подробнее[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="Экспорт ключа восстановления";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="Ключ восстановления";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="Проверить пароль";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="Больше не показывать";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="Выйти из системы";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="Нет подключения к Интернету";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="Удалить аккаунт MEGA";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="Для удаления аккаунта требуется подключение к Интернету";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="У вас несколько подписок. Чтобы избежать повторной оплаты, отмените все планы, которые вам не нужны.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="Смотреть подписки";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="Истекло";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="Детали подписки";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="Ваш план включает";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="Менеджер паролей MEGA Pass";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="Больший объём хранилища и передач";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="Звонки и встречи без ограничений";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="Защищённые паролем ссылки";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="Перемотка файлов и папок";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="Скрытые файлы и папки";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="Управляйте этой подпиской в приложении MEGA";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="Управляйте этой подпиской на сайте MEGA";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="Оформить подписку";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="Начать бесплатную пробную версию";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="Отменить пробную версию";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="Отменить подписку";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="Управление пробной версией";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="Управление подпиской";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="Бесплатная пробная версия %@";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="План %@";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="Заканчивается %@";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="Продлевается %@";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="Истекает %@";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="Ваша подписка не управляется Apple";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="Это связано с тем, что вы подписались на MEGA через Google Play. Чтобы отменить подписку, выполните следующие шаги:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="Ваша бесплатная пробная версия не управляется Apple";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="Это связано с тем, что вы подписались на MEGA через Google Play. Чтобы отменить бесплатную пробную версию, выполните следующие шаги:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="В браузере";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="Посетите [L]play.google.com[/L]";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Войдите в свой аккаунт Google Play.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="Нажмите на свой аватар.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="Нажмите [B]«Платежи и подписки»[/B].";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="Нажмите [B]«Подписки»[/B].";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="Под подпиской MEGA нажмите [B]«Отменить подписку»[/B].";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="На устройстве Android";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Откройте приложение Play Store.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Войдите в свой аккаунт Google Play (если требуется).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="Нажмите на свой аватар.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="Нажмите [B]«Платежи и подписки»[/B].";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="Нажмите [B]«Подписки»[/B].";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="Под подпиской MEGA нажмите [B]«Отменить подписку»[/B].";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="Вам нужно отменить подписку через веб-браузер";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="Это связано с тем, что вы подписались на MEGA в браузере. Чтобы отменить подписку, выполните следующие шаги:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="Вам нужно управлять бесплатной пробной версией через веб-браузер";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="Это связано с тем, что вы подписались на MEGA в браузере. Чтобы отменить бесплатную пробную версию, выполните следующие шаги:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="На компьютере";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="Откройте сайт [L]www.mega.nz[/L] в веб-браузере.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="Войдите в свой аккаунт MEGA.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="Откройте главное меню.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="Нажмите [B]«Настройки»[/B].";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="Нажмите [B]«План»[/B].";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="Нажмите [B]«Отменить подписку»[/B].";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="На мобильном устройстве";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="Нажмите на свой аватар.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="Нажмите [B]«Отменить подписку»[/B].";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="Бесплатный";

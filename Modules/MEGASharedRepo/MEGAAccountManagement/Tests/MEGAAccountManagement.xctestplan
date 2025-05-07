@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "77438C8B-2697-43D4-B2BE-9DF30DAA9EE5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGAAccountManagementTests",
+        "name" : "MEGAAccountManagementTests"
+      }
+    }
+  ],
+  "version" : 1
+}

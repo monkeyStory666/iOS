@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "5A56A605-3A71-4810-97BF-0D5A1D4B15F3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "MEGADebugLoggerTests",
+        "name" : "MEGADebugLoggerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

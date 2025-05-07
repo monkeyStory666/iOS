@@ -1,0 +1,464 @@
+/* Account - Change Name - First name */
+"account.changeName.firstName"="이름";
+/* Account - Change Name - Last name */
+"account.changeName.lastName"="성";
+/* Account - Change Name - Update Button */
+"account.changeName.update"="변경";
+/* Account - Change Name - Update Button */
+"account.changeName.snackbar.success"="이름 변경됨";
+/* Account - Change Name - Enter first name */
+"account.changeName.enterFirstName"="이름을 입력하세요";
+/* Account - Change Name - Enter last name */
+"account.changeName.enterLastName"="성을 입력하세요";
+/* Account - Change Password - New password label */
+"account.changePassword.newPasswordLabel"="새 암호";
+/* Account - Change Password - Change password button label */
+"account.changePassword.button"="암호 변경";
+/* Account - Change Password - Snackbar success */
+"account.changePassword.snackbar.success"="암호 변경됨";
+/* Account - New Password - It is better to have */
+"account.newPassword.betterToHave"="다음을 포함하는 것이 좋습니다:";
+/* Account - New Password - Confirm password */
+"account.newPassword.confirmPasswordLabel"="암호 확인";
+/* Account - New Password - Did not confirm password error / Confirm password is empty */
+"account.newPassword.confirmPasswordError"="암호 확인";
+/* Account - New Password - Must have minimum 8 characters */
+"account.newPassword.minimumCharacter"="최소 8자 이상이 필요합니다";
+/* Account - New Password - old password used error */
+"account.newPassword.oldPasswordUsed"="현재 암호를 입력하였습니다. 새 암호를 입력하세요.";
+/* Account - New Password - One or more numbers or special characters */
+"account.newPassword.oneNumberOrSpecial"="최소 1개의 숫자 또는 특수문자";
+/* Account - New Password - Password */
+"account.newPassword.passwordLabel"="암호";
+/* Account - New Password - Password do not match */
+"account.newPassword.passwordDoNotMatch"="암호가 일치하지 않습니다. 확인하시고 나중에 다시 시도하세요.";
+/* Account - New Password - Upper and lower case letters */
+"account.newPassword.upperAndLowerCase"="영문 대소문자";
+/* Account - New Password - Your password is weak */
+"account.newPassword.weakPassword"="당신의 암호는 추측하기 쉽습니다. 더 강력한 문자의 조합을 추천합니다.";
+/* Account - New Password - Your password is very weak / invalid */
+"account.newPassword.veryWeakPassword"="당신의 암호는 너무 추측하기 쉽습니다. 더 강력한 문자의 조합을 이용하세요.";
+/* Account confirmation flow - Invalid link alert title */
+"accountConfirmation.invalidLink.title"="확인 링크가 더 이상 유효하지 않습니다.";
+/* Account confirmation flow - Invalid link alert message */
+"accountConfirmation.invalidLink.message"="계정이 이미 활성화되었거나 가입을 취소했을 수 있습니다.";
+/* Account confirmation flow - Logged into different account alert title */
+"accountConfirmation.loggedInDifferentAccount.title"="계정 확인 실패";
+/* Account confirmation flow - Logged into different account alert message */
+"accountConfirmation.loggedInDifferentAccount.message"="당신은 이미 이 앱에서 MEGA 계정에 로그인하였습니다. 먼저 이 계정에서 로그아웃한 후, 이메일로 돌아가서 같은 확인 링크를 다시 이용하세요.";
+/* Account confirmation flow - Account activated snackbar message */
+"accountConfirmation.snackbar.success"="당신의 계정은 활성화되었습니다. 로그인 하세요.";
+/* Title for the header of the Cancel Survey screen */
+"cancelSurvey.header.title"="떠나기 전에, 이유를 알 수 있을까요?";
+/* Subtitle for the header of the Cancel Survey screen */
+"cancelSurvey.header.subtitle"="원하는 특정한 기능이 없는 것이라면, 기타를 선택하고 말해주세요.";
+/* Footer text title to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.title"="더 많은 피드백을 공유하여 개선을 도와주세요";
+/* Footer text subtitle to ask user to share more feedback in the cancel survey screen */
+"cancelSurvey.footer.subtitle"="간단한 후속 조사를 위해 연락하는 것에 동의합니다";
+/* Text for the "Other" option in the Cancel Survey screen */
+"cancelSurvey.options.other"="기타 (자세히 알려주세요)";
+/* Skip button for the Cancel Survey screen */
+"cancelSurvey.skip"="건너뛰기";
+/* Don't cancel button for the Cancel Survey screen */
+"cancelSurvey.dontCancel"="취소하지 마세요";
+/* Change Email screen during sign up: Message shown to the user indicating what the screen does. */
+"changeEmail.message"="새 이메일 주소를 입력하세요. 이 새 이메일 주소로 이메일 확인을 보낼 것입니다.";
+/* Change Email screen during sign up: Button title to update the email. */
+"changeEmail.update"="변경";
+/* Change Email screen during sign up: Header for the email text field. */
+"changeEmail.textfield.title"="이메일";
+/* Change Email Screen: Success toast message for email update. */
+"changeEmail.successToastMessage"="이메일 주소가 변경되었습니다";
+/* Create account screen: Email already in use error popup message. */
+"createAccount.errorPopup.emailAlreadyInUse.message"="다른 이메일 주소를 입력하세요.";
+/* Create account screen: Email already in use error popup title. */
+"createAccount.errorPopup.emailAlreadyInUse.title"="이미 사용중인 이메일 주소입니다";
+/* Create account screen: Message shown to the user indicating email already taken. */
+"createAccount.emailFieldAlreadyTaken.message"="이 이메일 주소는 이미 MEGA에 가입되어 있습니다";
+/* Create account screen: Message shown to the user indicating user must valid email. */
+"createAccount.emailFieldEmptyOrInvalid.message"="올바른 이메일을 입력하세요";
+/* Create account screen: Message shown to the user indicating user must enter first name. */
+"createAccount.firstNameFieldEmpty.message"="이름을 입력하세요";
+/* Create account screen: Message shown to the user indicating user must enter last name. */
+"createAccount.lastNameFieldEmpty.message"="성을 입력하세요";
+/* Create account screen: Title of the confirm password text field. */
+"createAccount.confirmPasswordTextField.title"="암호 확인";
+/* Create account screen: Title of the email text field. */
+"createAccount.emailTextField.title"="이메일";
+/* Create account screen: Title of the first name text field. */
+"createAccount.firstNameTextField.title"="이름";
+/* Create account screen: Title of the last name text field. */
+"createAccount.lastNameTextField.title"="성";
+/* Create account screen: Title of the password text field. */
+"createAccount.passwordTextField.title"="암호";
+/* Create account screen: Navigation title. */
+"createAccount.navigation.title"="MEGA 계정에 가입";
+/* Create account screen: Button title to create an account. */
+"createAccount.buttonTitle"="가입";
+/* Create account screen: Message shown to user if in case the account already exists */
+"createAccount.accountAlreadyExists.message"="이미 MEGA 계정이 있나요? [L]로그인[/L]";
+/* Create account screen: terms of service message */
+"createAccount.termsOfService.message"="나는 [L]MEGA의 이용 약관[/L]을 읽었고 이에 동의합니다";
+/* Create account screen: Message shown to the user indicating user must must agree to terms of service. */
+"createAccount.termsOfServiceUnchecked.message"="이용 약관에 동의하여야 합니다.";
+/* Title for the Debug Logs settings */
+"debugLogs.settings.title"="디버그 기록";
+/* Title for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.title"="디버그 기록 활성화";
+/* Subtitle for the Debug Logs settings toggle row */
+"debugLogs.settings.toggle.subtitle"="기록은 디버그를 위해 고객 센터로 보내기 전까지 장치에 저장됩니다.";
+/* Disclaimer for the debug logs */
+"debugLogs.settings.toggle.disclaimer"="기록은 [L]개인정보 및 데이터 정책 (8조)[/L]에 의하여 수집된 개인 정보가 포함되어 있을 수도 있습니다. 만약 MEGA와 공유한다면, 디버그를 위한 목적으로만 이용됩니다.";
+/* Title for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.title"="디버그 기록을 활성화할까요?";
+/* Message for the alert when enabling debug logs */
+"debugLogs.settings.enable.alert.message"="기록을 활성화하면 개인 정보가 포함된 기록을 생성할 수도 있고, 장치에 저장됩니다. 이러한 기록은 당신이 디버그를 위해 고객 센터에 보내기 전까지 MEGA와 공유되지 않습니다. 포함된 정보에 대하여 당신이 편안함을 느끼는 것을 확실하게 하기 위해 공유하기 전에 기록을 꼼꼼히 살피세요.";
+/* Title for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.title"="디버그 기록을 비활성화할까요?";
+/* Message for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.message"="앱이 디버그용으로 생성하던 기록을 멈출 것이며, 이전에 생성된 기록은 장치에서 삭제됩니다. 이러한 기록은 절대 MEGA와 자동으로 공유되지 않습니다.";
+/* Disable action for the alert when disabling debug logs */
+"debugLogs.settings.disable.alert.action"="해제";
+/* Contact support button title in Debug Logs page */
+"debugLogs.settings.buttons.contactSupport"="지원 부서에 연락";
+/* Title for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.title"="디버그 기록 첨부";
+/* Subtitle for the alert after tapping on contact support on the debug logs page */
+"debugLogs.settings.contactSupport.alert.message"="디버그 기록을 첨부하시겠습니까?";
+/* View log button title in Debug Logs page */
+"debugLogs.settings.buttons.viewLog"="기록 보기";
+/* EXport log button title in Debug Logs page */
+"debugLogs.settings.buttons.exportLog"="기록 내보내기";
+/* Snackbar text after enabling debug logs */
+"debugLogs.settings.snackbar.enabled"="기록이 활성화 되었습니다";
+/* Snackbar text after disabling debug logs */
+"debugLogs.settings.snackbar.disabled"="기록이 비활성화 되었습니다";
+/* Delete account details screen: Navigation title. */
+"deleteAccount.details.headerTitle"="떠나시는 것을 보니 슬픕니다, 무슨 일이 일어날지 확인하세요";
+/* Delete account details screen: Title for the cloud drive section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.cloudDriveTitle"="또한, 다음의 항목들이 삭제됩니다:";
+/* Delete account details screen: Title for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersTitle"="당신의 MEGA 파일과 폴더";
+/* Delete account details screen: Description for the files and folder row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.filesAndFoldersDescription"="MEGA에 저장된 모든 파일과 폴더가 삭제됩니다. 어떠한 공유한 링크도 접근 불가하게 됩니다.";
+/* Delete account details screen: Title for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsTitle"="당신의 MEGA 사진과 사진첩";
+/* Delete account details screen: Description for the photos and albums row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.photoAlbumsDescription"="MEGA에 저장된 모든 사진과 사진첩이 삭제됩니다. 어떠한 공유한 사진첩도 접근 불가하게 됩니다.";
+/* Delete account details screen: Title for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsTitle"="MEGA 연락처";
+/* Delete account details screen: Description for the contacts row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.contactsDescription"="MEGA 계정의 모든 연락처가 삭제됩니다.";
+/* Delete account details screen: Title for the chats and meetings section indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsAndMeetingsTitle"="다음에 더 이상 접근할 수 없게 됩니다:";
+/* Delete account details screen: Title for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsTitle"="이 계정을 이용한 대화";
+/* Delete account details screen: Description for the chats row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.chatsDescription"="그룹 대화의 경우, 다른 계정으로 그룹 대화에 참여하려면 주최자가 당신에게 대화 링크를 보내야 합니다.";
+/* Delete account details screen: Title for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsTitle"="이 계정을 이용한 회의 참여";
+/* Delete account details screen: Description for the meetings row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.meetingsDescription"="다른 계정으로 회의에 접근하려면 주최자가 회의 링크를 보내야 합니다.";
+/* Delete account details screen: Title for the subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.subscriptionTitle"="참고";
+/* Delete account details screen: Button title to continue with the account deletion process. */
+"deleteAccount.details.continueButtonTitle"="계속";
+/* Delete account details screen: Button title to abort the account deletion process. */
+"deleteAccount.details.dontDeleteAccountButtonTitle"="삭제하지 않겠습니다";
+/* Delete account details screen: Description for the Apple subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.appleSubscriptionDescription"="현재 Apple에 유료 구독이 있습니다. Apple 계정으로 가서 MEGA 구독을 취소하여야 합니다.";
+/* Delete account details screen: Description for the Google subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.androidSubscriptionDescription"="현재 Google에 유료 구독이 있습니다. Google 계정으로 가서 MEGA 구독을 취소하여야 합니다.";
+/* Delete account details screen: Description for the other platform subscription note row indicating that the user will lose the data when the account is deleted. */
+"deleteAccount.details.otherPlatformSubscriptionDescription"="계정을 삭제하는 것은 유료 구독을 취소합니다.";
+/* Email confirmation screen during account deletion: title shown to the user indicating what this screen is about. */
+"emailConfirmation.deleteAccount.title"="이메일을 발송하였습니다";
+/* Email confirmation screen during account deletion: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"confirmationText.deleteAccount.message (%@)"="%@에 계정 삭제를 확인하는 링크가 담긴 이메일을 보냈습니다. ";
+/* Email confirmation screen during sign up: Button title to resend the confirmation email. */
+"emailConfirmation.resend.buttonTitle"="재발송";
+/* Email confirmation screen during delete account: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.deleteAccount.toastMessage.success"="이메일 재발송됨";
+/* Email confirmation screen during sign up: Button title to change email. */
+"emailConfirmation.changeEmail.buttonTitle"="이메일 주소 변경";
+/* Change Email screen during sign up: Navigation title. */
+"emailConfirmation.changeEmail.navigationTitle"="이메일 주소 변경";
+/* Email confirmation screen during sign up: Message shown to the user indicating what the user needs to do next. - Parameter: User email */
+"emailConfirmation.message (%@)"="%@에 링크가 담긴 이메일을 보냈습니다. 이메일 주소를 확인하고 계정을 활성화하려면 링크를 탭하세요.";
+/* Email confirmation screen: Support help message shown to the user */
+"confirmationText.support.message"="만약 이메일을 받지 못 하였다면, 스팸 폴더를 확인하거나 다시 시도하세요. 다른 문제는, support@mega.nz에 연락하세요";
+/* Email confirmation screen during sign up: Cancel registration popup action message. */
+"emailConfirmation.cancelRegistrationPopup.message"="이것은 가입 과정을 취소합니다.";
+/* Email confirmation screen during sign up: Cancel registration popup action title. */
+"emailConfirmation.cancelRegistrationPopup.title"="가입을 취소할까요?";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the Registration process. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelRegistration"="네, 취소합니다";
+/* Email confirmation screen during sign up: Cancel registration popup action button to cancel the popup. */
+"emailConfirmation.cancelRegistrationPopup.button.cancelPopup"="취소하지 마세요";
+/* Email confirmation screen during sign up: title shown to the user indicating what this screen is about. */
+"emailConfirmation.title"="이메일 확인";
+/* Email confirmation screen during sign up: Success message shown to the user when tapped on the resend email option. */
+"emailConfirmation.toastMessage.success"="이메일 발송됨";
+/* Recovery Key Information */
+"exportRecoveryKey.information"="당신만 암호를 알고 있고 당신만 당신의 MEGA 복구 키에 대한 접근 권한이 있습니다. 만약 암호 또는 인증기 앱에 대한 접근을 잃어버리면, 계정에 대한 접근 권한을 다시 획득하기 위해 복구 키가 필요하게 됩니다.\n\n안전한 곳에 보관하세요. 복구 키에 대해 [L]더 알아보기[/L]";
+/* Recovery Key - Copy your recovery key */
+"exportRecoveryKey.copyYourRecoveryKey"="복구 키 복사";
+/* Recovery Key - Or Divider */
+"exportRecoveryKey.or"="또는";
+/* Recovery Key - Save to Device */
+"exportRecoveryKey.saveToDevice"="장치에 저장";
+/* Recovery Key - Snackbar Alert - Copied */
+"exportRecoveryKey.snackbar.copied"="복구 키 복사됨";
+/* Recovery Key - Snackbar Alert - Saved */
+"exportRecoveryKey.snackbar.saved"="복구 키 저장됨";
+/* Alert action - OK */
+"generalAction.actionOK"="OK";
+/* General action - OK, got it */
+"generalAction.okGotIt"="알겠습니다";
+/* Error message shown when user enters an empty password */
+"login.enterPasswordError.message"="암호를 입력하세요";
+/* Error message shown when user enters an invalid email */
+"login.enterValidEmailError.message"="올바른 이메일을 입력하세요";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.message"="다시 시도하세요";
+/* Error message shown when user enters invalid credentials */
+"login.invalidDetailsError.title"="잘못된 이메일 또는 암호입니다";
+/* Button title for the forget password action */
+"login.forgotPasswordButtonTitle"="암호를 잊었나요?";
+/* Header text for the Login screen */
+"login.headerTitle"="MEGA 계정에 로그인";
+/* Email field in the login screen */
+"login.email"="이메일";
+/* Password field in the login screen */
+"login.password"="암호";
+/* Sign up text in the login screen. */
+"login.signup"="가입";
+/* Message for the user to sign up in the login screen */
+"login.signupButtonTitle"="MEGA 계정이 없나요? [L]가입하세요[/L]";
+/* Button title to verify the username and password in the login screen */
+"login.verifyButtonTitle"="로그인";
+/* Error snackbar shown when user tries to login with not validated account */
+"login.snackbar.accountNotValidated"="계정 가입이 완료되지 않았거나 취소되었습니다. 이메일 수신함을 확인하세요.";
+/* Error snackbar shown when user tries to login or sign up without internet connection */
+"onboarding.snackbar.noNetwork"="인터넷 연결이 없습니다";
+/* Onboarding Carousel - Log in button label */
+"onboarding.Button.login"="MEGA 계정으로 로그인";
+/* Onboarding Carousel - Create MEGA account button label */
+"onboarding.Button.createAccount"="가입";
+/* Test Password - Information */
+"testPassword.information"="로그아웃 하려고 합니다, 당신이 암호를 기억하는지 시험해보세요. 만약 암호를 잊으면, MEGA 데이터에 대한 접근을 잃게 됩니다.";
+/* Test Password - Password */
+"testPassword.fieldTitle"="암호";
+/* Test Password - Button */
+"testPassword.buttonTitle"="암호 시험";
+/* Test Password - Forgot password */
+"testPassword.forgotPassword"="암호를 잊었나요?";
+/* Test Password - Password is correct */
+"testPassword.correct"="암호가 맞습니다";
+/* Test Password - Password is not correct */
+"testPassword.incorrect"="암호가 틀립니다";
+/* Message shown at the top of 2FA screen */
+"twoFactorAuthentication.message"="인증기 앱의 6자리 코드를 입력하세요.";
+/* Button title in case the authenticator device lost for 2FA screen */
+"twoFactorAuthentication.lostDevice.buttonTitle"="인증기 장치를 잃어버렸나요?";
+/* Message shown to the user when incorrect 2FA is entered on the screen */
+"twoFactorAuthentication.incorrect.message"="잘못된 인증 코드";
+/* 2FA Navigation title */
+"twoFactorAuthentication.navTitle"="2단계 인증";
+/* Generic account suspension alert title */
+"login.suspendedAccount.title"="로그인할 수 없음";
+/* Email verification account suspension alert title */
+"login.suspendedAccountEmailVerification.title"="수신함을 확인하세요";
+/* Copyright account suspension message */
+"login.suspendedAccountCopyright.body"="당신의 MEGA 계정이 반복된 저작권 침해 혐의로 인해 정지 되었습니다. 이것은 당신의 계정이나 그 안의 데이터에 접근할 수 없다는 뜻입니다. 이의 제기를 제출하는 방법에 대한 자세한 정보는 이메일 수신함을 확인하세요.";
+/* Non-Copyright account suspension message */
+"login.suspendedAccountNonCopyright.body"="당신의 계정이 MEGA의 이용 약관 위반으로 삭제되었습니다. 저장된 데이터에 대한 접근 또는 새 MEGA 계정에 가입하는 것이 금지됩니다.";
+/* Disabled business account suspension message */
+"login.suspendedAccountBusinessDisabled.body"="당신의 계정은 계정 관리자에 의해 정지되었습니다. 자세한 사항은 비즈니스 계정 관리자에게 연락하세요.";
+/* Removed business account suspension message */
+"login.suspendedAccountBusinessRemoved.body"="당신의 계정이 관리자에 의해 삭제되었습니다. 자세한 사항은 당신의 비즈니스 계정 관리자에게 문의하세요.";
+/* Email verification account suspension message */
+"login.suspendedAccountEmailVerification.body"="당신의 계정이 위협적인 로그인이 감지된 후 당신의 보호를 위해 잠겼으며, 암호를 재설정할 것을 요구합니다.\n계정을 잠금 해제하는 방법과 이런 일이 다시 일어나지 않게 하는 팁을 확인하려면 이메일 수신함을 확인하세요.";
+/* Email verification account suspension alert button title */
+"login.suspendedAccountEmailVerification.button.title"="이메일 재발송";
+/* Snackbar title after email has been sent */
+"login.suspendedAccountEmailVerification.snackbar"="이메일 발송됨";
+/* Generic account suspension alert button title */
+"login.suspendedAccount.alert.button.title"="알겠습니다";
+/* Error message when a user tries to login too many times */
+"login.tooManyLoginAttempts.message"="로그인 시도를 너무 많이 했습니다. 기다렸다가 다시 시도하세요.";
+/* Account Settings - Change Password */
+"settings.accountDetail.changePassword"="암호 변경";
+/* Account Settings - Navigation Title */
+"settings.accountDetail.navigationTitle"="내 계정";
+/* Account Settings - Change Name */
+"settings.accountDetail.changeName"="이름 변경";
+/* Help section - contact support */
+"settings.help.contactSupport"="지원 부서에 연락";
+/* About section - App version */
+"settings.about.version(%@)"="버전 %@";
+/* Account Settings - Recovery key section title */
+"settings.accountDetail.recoveryKey.sectionTitle"="복구 키";
+/* Account Settings - Export recovery key button title */
+"settings.accountDetail.recoveryKey.exportKey"="복구 키 내보내기";
+/* Notification Settings - Snackbar to show when notification is enabled */
+"settings.notifications.snackbar.enabled"="알림 활성화됨";
+/* Notification Settings - Snackbar to show when notification is disabled */
+"settings.notifications.snackbar.disabled"="알림 비활성화됨";
+/* Alert title shown when the DEBUG mode is enabled */
+"enableDebugMode.title"="디버그 모드 활성화";
+/* Alert message shown when the DEBUG mode is enabled */
+"enableDebugMode.message"="기록 파일이 생성될 것입니다. 기록은 당신의 계정과 관련된 정보를 포함할 수 있습니다";
+/* Alert title shown when the DEBUG mode is disabled */
+"disableDebugMode.title"="디버그 모드 비활성화";
+/* Alert message shown when the DEBUG mode is disabled */
+"disableDebugMode.message"="기록 파일이 삭제될 것입니다.";
+/* Action button title to share debug logs. */
+"debugMode.shareLogs"="기록 공유";
+/* Cancel - Used in views that signify canceling a certain action */
+"cancel"="취소";
+/* Confirm - Used in views that signify confirming a certain action */
+"confirm"="확인";
+/* Continue - Used in views that signify continuing a certain action */
+"continue"="계속";
+/* Log out - Used in buttons that indicate that the user will log out of their current account */
+"logOut"="로그아웃";
+/* Offboarding Password Reminder Navigation Title */
+"offboarding.passwordReminder.navigationTitle"="암호 리마인더";
+/* Offboarding Password Reminder title */
+"offboarding.passwordReminder.title"="암호를 기억하고 계신가요?";
+/* Offboarding Password Reminder subtitle */
+"offboarding.passwordReminder.subtitle"="로그아웃 하기 전에, 복구 키를 안전한 곳에 내보낼 것을 권장합니다. 복구 키가 없으면, 암호를 재설정할 수 없습니다. [L]더 알아보기[/L]";
+/* Offboarding Export Recovery Key Button */
+"offboarding.exportRecoveryKey.buttonTitle"="복구 키 내보내기";
+/* Offboarding Export Recovery Key  title */
+"offboarding.recoveryKey.title"="복구 키";
+/* Offboarding Test Password Button */
+"offboarding.testPassword.buttonTitle"="암호 시험";
+/* Offboarding Don't Show this Again */
+"offboarding.dontShowThisAgain.checkmarkLabel"="이것을 다시 보여주지 마세요";
+/* Offboarding Proceed to Logout */
+"offboarding.proceedToLogout.buttonTitle"="로그아웃 진행";
+/* No Internet Connection - Label */
+"noInternetConnection.label"="인터넷 연결이 없습니다";
+/* Account Settings - Delete account */
+"settings.accountDetail.deleteAccount"="MEGA 계정 삭제";
+/* Delete account details screen: Text of the alert we display when the user taps on delete account while he's not connected to the internet */
+"settings.accountDetail.deleteAccountNoInternetAlertTitle"="계정을 삭제하려면 인터넷 연결이 필요합니다";
+/* Title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.title"="당신은 여러 구독을 가지고 있습니다. 다중결제를 피하려면 필요하지 않은 요금제를 취소하세요.";
+/* Button title of the warning view we display when the user has two active subscriptions (ex. VPN standalone and Pro) */
+"twoSubscriptionsActiveWarning.cta"="요금제 보기";
+/* Shown when user have an Expired pro flexi plan */
+"subscriptionPlanDetails.expired"="만료됨";
+/* Navigation title on the subscription plan details screen */
+"subscriptionPlanDetails.navigationTitle"="요금제 세부사항";
+/* Section title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.sectionTitle"="요금제에 포함된 것";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.accessMegaPassFeature.title"="MEGA Pass 암호 관리자";
+/* Feature one title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureOne.title"="MEGA VPN";
+/* Feature two title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureTwo.title"="더 많은 저장소와 전송";
+/* Feature three title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureThree.title"="제한 없는 통화와 회의";
+/* Feature four title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFour.title"="비밀번호로 보호된 링크";
+/* Feature five title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureFive.title"="파일과 폴더 되감기";
+/* Feature six title for the PRO plan on the subscription plan details screen */
+"subscriptionPlanDetails.proPlan.featureSix.title"="숨겨진 파일과 폴더";
+/* Footer title for plans that is managed in the MEGA app on the subscription plan details screen */
+"subscriptionPlanDetails.megaApp.footer"="MEGA 앱에서 이 구독 관리";
+/* Footer title for plans that is managed in the website on the subscription plan details screen */
+"subscriptionPlanDetails.webClient.footer"="MEGA 웹사이트에서 이 구독 관리";
+/* Title for subscribe button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.subscribe"="구독";
+/* Title for start free trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.startFreeTrial"="무료 체험 시작";
+/* Title for cancel trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelTrial"="체험 취소";
+/* Title for cancel subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.cancelSubscription"="구독 취소";
+/* Title for manage subscription button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageTrial"="체험 관리";
+/* Title for manage trial button subscription plan details screen */
+"subscriptionPlanDetails.buttonText.manageSubscription"="구독 관리";
+/* Suffix for free trial plans display name details screen with parameter - Parameter: Plan name */
+"subscriptionPlanDetails.freeTrial(%@)"="%@ 무료 체험";
+/* Suffix for feature plans display name details screen with parameter - Parameter: Plan name - Parameter: Plan name */
+"subscriptionPlanDetails.featurePlan(%@)"="%@ 요금제";
+/* Title for free trial ends on plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.endsOn(%@)"="%@에 종료";
+/* Title for renew row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.renewsOn(%@)"="%@에 갱신";
+/* Title for expires row plan details screen with parameter - Parameter: Date */
+"subscriptionPlanDetails.expiresOn(%@)"="%@에 만료";
+/* Title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.title"="당신의 구독은 Apple에 의해 관리되지 않습니다";
+/* Subtitle on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.subtitle"="이것은 당신이 Google Play를 통해 MEGA를 구독하였기 때문입니다. 구독을 취소하려면, 다음을 하세요:";
+/* Title on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.title"="당신의 무료 체험은 Apple에 의해 관리되지 않습니다";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.freeTrial.google.subtitle"="이것은 당신이 Google Play를 통해 MEGA를 구독하였기 때문입니다. 무료 체험을 취소하려면, 다음을 하세요:";
+/* Web browser section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.title"="웹 브라우저에서";
+/* Web browser section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.visitGooglePlay"="[L]play.google.com[/L]에 방문합니다";
+/* Web browser section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.signInWithGooglePlayAccount"="Google Play 계정으로 로그인 합니다.";
+/* Web browser section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickYourAvatar"="아바타를 클릭합니다.";
+/* Web browser section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickPaymentsAndSubscriptions"="[B]결제 및 정기 결제[/B]를 클릭합니다.";
+/* Web browser section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickSubscriptionsTab"="[B]구독[/B]을 탭합니다.";
+/* Web browser section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.webBrowserSection.clickCancel"="MEGA 구독 아래에, [B]구독 취소[/B]를 클릭합니다.";
+/* Android section title on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.title"="Android 장치에서";
+/* Android section first item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.openPlayStoreApp"="Play Store 앱을 엽니다.";
+/* Android section second item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.signInWithGooglePlayAccountIfNeeded"="Google Play 계정으로 로그인합니다 (필요한 경우).";
+/* Android section third item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapYourAvatar"="아바타를 탭합니다.";
+/* Android section fourth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapPaymentsAndSubscriptions"="[B]결제 및 정기 결제[/B]를 탭합니다.";
+/* Android section fifth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.tapSubscriptionsTab"="[B]정기 결제[/B]를 탭합니다.";
+/* Android section sixth item on the subscription not manageable screen when subscribed through Google */
+"subscriptionNotManageableScreen.google.androidSection.cancelSubscription"="MEGA 구독 아래에, [B]구독 취소[/B]를 클릭합니다.";
+/* Title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.title"="웹 브라우저를 이용하여 구독을 취소하여야 합니다";
+/* Subtitle on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.subtitle"="당신이 웹 브라우저에서 MEGA를 구독하였기 때문입니다.\n구독을 취소 하려면, 다음을 해야 합니다:";
+/* Title on the free trial subscription not manageable screen when subscribed through Web - Parameter: Trial in days */
+"subscriptionNotManageableScreen.freeTrial.web.title"="웹 브라우저를 이용하여 무료 체험을 관리하여야 합니다";
+/* Subtitle on the free trial subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.freeTrial.web.subtitle"="당신이 웹 브라우저에서 MEGA를 구독하였기 때문입니다. 무료 체험을 취소하려면, 다음을 하세요:";
+/* On a computer section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.title"="컴퓨터에서";
+/* On a computer section first item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.visitMegaWebsite"="웹 브라우저에서 [L]www.mega.nz[/L]에 방문합니다.";
+/* On a computer section second item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.general.loginWithMegaAccount"="MEGA 계정에 로그인합니다.";
+/* On a computer section third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.openMainMenu"="메인 메뉴를 클릭합니다.";
+/* On a computer section fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickSettings"="[B]설정[/B]을 클릭합니다.";
+/* On a computer section fifth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickPlanTab"="[B]요금제[/B]를 클릭합니다.";
+/* On a computer section sixth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onComputerSection.clickCancel"="[B]구독 취소[/B]를 클릭합니다.";
+/* On a mobile device section title on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.title"="휴대 장치에서";
+/* On a mobile device third item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapYourAvatar"="아바타를 탭합니다.";
+/* On a mobile device fourth item on the subscription not manageable screen when subscribed through Web */
+"subscriptionNotManageableScreen.web.onMobileDeviceSection.tapCancelSubscription"="[B]구독 취소[/B]를 탭합니다.";
+/* Free plan title we display in the account section */
+"subscriptions.freePlan.title"="무료";

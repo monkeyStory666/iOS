@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "874A02A2-38D3-4101-9A74-CE20CB94CAD1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/MEGANotifications",
+        "identifier" : "MEGANotificationsTests",
+        "name" : "MEGANotificationsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
