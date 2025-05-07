@@ -17920,7 +17920,7 @@
 		};
 		943E6BBC2A60056100A92F94 /* XCRemoteSwiftPackageReference "mobile-analytics-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://code.developers.mega.co.nz/mobile/kmm/mobile-analytics-ios";
+			repositoryURL = "https://github.com/meganz/mobile-analytics-ios.git";
 			requirement = {
 				branch = main;
 				kind = branch;
