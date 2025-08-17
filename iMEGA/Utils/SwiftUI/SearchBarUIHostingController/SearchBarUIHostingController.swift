@@ -11,6 +11,8 @@ import SwiftUI
 // use .searchable.
 
 // Add delegate methods for BrowserViewControllerDelegate, should end editing
+/// 确保所有UI操作都在主线程执行，避免SwiftUI异步渲染线程崩溃
+@MainActor
 class SearchBarUIHostingController<Content>: UIHostingController<Content>, AudioPlayerPresenterProtocol where Content: View {
     private var wrapper: SearchControllerWrapper?
     private var selectionHandler: SearchControllerSelectionHandler?
@@ -61,35 +63,45 @@ class SearchBarUIHostingController<Content>: UIHostingController<Content>, Audio
         self.navigationItem.searchController = searchBarVisible ? wrapper?.searchController : nil
         wrapper?.onUpdateSearchBarVisibility = { [weak self] isVisible in
             guard let self, let wrapper = self.wrapper else { return }
-            self.searchBarVisible = isVisible
-            if isVisible {
-                wrapper.attachToViewController(self)
-            } else {
-                navigationItem.searchController = nil
+            // 确保在主线程执行UI更新
+            ThreadSafeUIUpdater.performOnMainThread {
+                self.searchBarVisible = isVisible
+                if isVisible {
+                    wrapper.attachToViewController(self)
+                } else {
+                    navigationItem.searchController = nil
+                }
             }
         }
         
         selectionHandler?.onSelectionModeChange = { [weak self] enabled, config in
             guard let self else { return }
-            
-            selectionModeEnabled = enabled
-            
-            if enabled {
-                addToolbar(for: config, animated: true)
-            } else {
-                removeToolbar(animated: true)
-            }
-            if let audioPlayerManager, audioPlayerManager.isPlayerAlive() {
-                audioPlayerManager.playerHidden(enabled, presenter: self)
+            // 确保在主线程执行UI更新
+            ThreadSafeUIUpdater.performOnMainThread {
+                selectionModeEnabled = enabled
+                
+                if enabled {
+                    addToolbar(for: config, animated: true)
+                } else {
+                    removeToolbar(animated: true)
+                }
+                if let audioPlayerManager, audioPlayerManager.isPlayerAlive() {
+                    audioPlayerManager.playerHidden(enabled, presenter: self)
+                }
             }
         }
         
         selectionHandler?.onSelectionChanged = { [weak self] config in
-            self?.updateToolbar(with: config)
+            // 确保在主线程执行UI更新
+            ThreadSafeUIUpdater.performOnMainThread {
+                self?.updateToolbar(with: config)
+            }
         }
         
         browseDelegate.endEditingMode = { [weak self] in
-            self?.removeToolbar(animated: true)
+            ThreadSafeUIUpdater.performOnMainThread {
+                self?.removeToolbar(animated: true)
+            }
         }
         
         if let searchBar = self.wrapper?.searchController.searchBar {
@@ -100,16 +112,29 @@ class SearchBarUIHostingController<Content>: UIHostingController<Content>, Audio
     
     deinit {
         CrashlyticsLogger.log(category: .viewLifecycle, "SearchBarUIHostingController deinit - Before removeToolbar")
-        
+        ensureMainThreadCleanup()
+        CrashlyticsLogger.log(category: .viewLifecycle, "SearchBarUIHostingController deinit.")
+    }
+    
+    // MARK: - Cleanup Manager
+    private func ensureMainThreadCleanup() {
+        if Thread.isMainThread {
+            performCleanup()
+        } else {
+            // 使用同步方式确保清理完成，避免在deinit过程中出现线程问题
+            DispatchQueue.main.sync { [weak self] in
+                self?.performCleanup()
+            }
+        }
+    }
+    
+    private func performCleanup() {
         removeToolbar(animated: false)
         wrapper?.onUpdateSearchBarVisibility = nil
         selectionHandler?.onSelectionModeChange = nil
         selectionHandler?.onSelectionChanged = nil
         browseDelegate.endEditingMode = nil
-        
         navigationItem.searchController = nil
-        
-        CrashlyticsLogger.log(category: .viewLifecycle, "SearchBarUIHostingController deinit.")
     }
     
     // MARK: - CancelSearch outside the controller
@@ -147,6 +172,13 @@ class SearchBarUIHostingController<Content>: UIHostingController<Content>, Audio
     }
     
     private func removeToolbar(animated: Bool) {
+        // 确保在主线程执行UI操作
+        ThreadSafeUIUpdater.performOnMainThread {
+            self._removeToolbar(animated: animated)
+        }
+    }
+    
+    private func _removeToolbar(animated: Bool) {
         guard animated else {
             self.toolbar?.removeFromSuperview()
             return

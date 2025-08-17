@@ -2420,6 +2420,9 @@
 		BFFE2293293488980063CFF2 /* FutureMeetingRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFE2292293488980063CFF2 /* FutureMeetingRoomViewModel.swift */; };
 		BFFE22952934A7D10063CFF2 /* FutureMeetingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFE22942934A7D10063CFF2 /* FutureMeetingRoomView.swift */; };
 		BFFED4B326FB094F00B9EBEC /* FolderLinkCollectionViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFED4B226FB094F00B9EBEC /* FolderLinkCollectionViewDiffableDataSource.swift */; };
+		C2B28EB62E5172F90073EC9A /* ThreadSafeUIUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B28EB22E5172F90073EC9A /* ThreadSafeUIUpdater.swift */; };
+		C2B28EB82E5172F90073EC9A /* CrashAnalysis.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EAE2E5172F90073EC9A /* CrashAnalysis.md */; };
+		C2B28EBA2E5175B30073EC9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EB92E5175B30073EC9A /* README.md */; };
 		C403FA4A2BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403FA492BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift */; };
 		C403FA4D2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403FA4C2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift */; };
 		C41047CD2566FCB500531936 /* AudioPlayer+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41047CC2566FCB500531936 /* AudioPlayer+Protocols.swift */; };
@@ -5131,6 +5134,9 @@
 		BFFE2292293488980063CFF2 /* FutureMeetingRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureMeetingRoomViewModel.swift; sourceTree = "<group>"; };
 		BFFE22942934A7D10063CFF2 /* FutureMeetingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureMeetingRoomView.swift; sourceTree = "<group>"; };
 		BFFED4B226FB094F00B9EBEC /* FolderLinkCollectionViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderLinkCollectionViewDiffableDataSource.swift; sourceTree = "<group>"; };
+		C2B28EAE2E5172F90073EC9A /* CrashAnalysis.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CrashAnalysis.md; sourceTree = "<group>"; };
+		C2B28EB22E5172F90073EC9A /* ThreadSafeUIUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeUIUpdater.swift; sourceTree = "<group>"; };
+		C2B28EB92E5175B30073EC9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C403FA492BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+QuickUploadAction.swift"; sourceTree = "<group>"; };
 		C403FA4C2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveQuickUploadActionRouter.swift; sourceTree = "<group>"; };
 		C41047CC2566FCB500531936 /* AudioPlayer+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioPlayer+Protocols.swift"; sourceTree = "<group>"; };
@@ -5914,6 +5920,7 @@
 		137361811A6664C300B740E8 = {
 			isa = PBXGroup;
 			children = (
+				C2B28EB32E5172F90073EC9A /* Question1 */,
 				1373618C1A6664C300B740E8 /* iMEGA */,
 				B6CED48C22B8AC70009C4861 /* MEGAUnitTests */,
 				942254D71EDC02CB0074C51A /* Extensions */,
@@ -12442,6 +12449,16 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		C2B28EB32E5172F90073EC9A /* Question1 */ = {
+			isa = PBXGroup;
+			children = (
+				C2B28EB92E5175B30073EC9A /* README.md */,
+				C2B28EAE2E5172F90073EC9A /* CrashAnalysis.md */,
+				C2B28EB22E5172F90073EC9A /* ThreadSafeUIUpdater.swift */,
+			);
+			path = Question1;
+			sourceTree = "<group>";
+		};
 		C403FA4B2BAD8DB4007642AD /* QuickActions */ = {
 			isa = PBXGroup;
 			children = (
@@ -13543,6 +13560,7 @@
 				832DEFEB2AB46199004573D5 /* AllowNonHostToInviteTableViewCell.xib in Resources */,
 				5B727395240D32F9005816AB /* altIconDay@2x.png in Resources */,
 				5B3B0D202684B8F200479A68 /* altIconDay@2x~ipad.png in Resources */,
+				C2B28EBA2E5175B30073EC9A /* README.md in Resources */,
 				5B72739B240D3465005816AB /* altIconDay@3x.png in Resources */,
 				5B3B0D272684B91B00479A68 /* altIconDay@3x~ipad.png in Resources */,
 				5B727393240D32F9005816AB /* altIconMinimal@2x.png in Resources */,
@@ -13667,6 +13685,7 @@
 				A88E7FEB2549FD8A001B0A66 /* RecentsTableViewHeaderView.xib in Resources */,
 				839B9FCF283D2DCA001A49DF /* reconnecting.wav in Resources */,
 				BFC214812547C04800AD648A /* RichPreviewContentView.xib in Resources */,
+				C2B28EB82E5172F90073EC9A /* CrashAnalysis.md in Resources */,
 				83CB60E82AC58A6C00042EBD /* SeeAllParticipantsInWaitingRoomTableViewCell.xib in Resources */,
 				5B82814A1E7BE8300079C1BB /* SelectableTableViewCell.xib in Resources */,
 				415226981A692ECC00EC7BB6 /* Settings.storyboard in Resources */,
@@ -14266,6 +14285,7 @@
 				2F18DEEF24592F0E00E7EE27 /* ChatViewController+Menus.swift in Sources */,
 				2F18DEF5245BD07F00E7EE27 /* ChatViewController+MessageCellDelegate.swift in Sources */,
 				BFB464122435820700FB90B9 /* ChatViewController+MessageLayoutDelegate.swift in Sources */,
+				C2B28EB62E5172F90073EC9A /* ThreadSafeUIUpdater.swift in Sources */,
 				BFB464162435825A00FB90B9 /* ChatViewController+MessagesDataSource.swift in Sources */,
 				BFB464142435823400FB90B9 /* ChatViewController+MessagesDisplayDelegate.swift in Sources */,
 				BFE6DBFE2431489C00E2E5B4 /* ChatViewController+NavigationBar.swift in Sources */,
