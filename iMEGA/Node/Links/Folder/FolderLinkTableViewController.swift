@@ -25,7 +25,11 @@ class FolderLinkTableViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.backgroundView = UIView()
+        
+        // 确保表格视图支持多选编辑模式
+        tableView.allowsMultipleSelectionDuringEditing = true
     }
     
     @IBAction func nodeActionsTapped(_ sender: UIButton) {
@@ -39,54 +43,58 @@ class FolderLinkTableViewController: UIViewController {
     }
     
     @objc func setTableViewEditing(_ editing: Bool, animated: Bool) {
+        // 修复：确保正确设置编辑模式
         tableView.setEditing(editing, animated: animated)
+        
+        // 确保多选模式在编辑时启用
+        if editing {
+            tableView.allowsMultipleSelectionDuringEditing = true
+        }
         
         folderLink.setViewEditing(editing)
         folderLink.setNavigationBarButton(editing)
         
+        // 修复：为所有可见单元格设置正确的背景视图
         tableView.visibleCells.forEach { (cell) in
+            if let nodeCell = cell as? NodeTableViewCell {
+                configureCellForEditing(nodeCell, editing: editing)
+            }
+        }
+    }
+    
+    private func configureCellForEditing(_ cell: NodeTableViewCell, editing: Bool) {
+        if editing {
+            // 修复：确保单选按钮区域不被遮挡
             let view = UIView()
             view.backgroundColor = .clear
-            cell.selectedBackgroundView = editing ?  UIView() : nil
+            cell.selectedBackgroundView = view
+            
+            // 确保单元格内容不会覆盖单选按钮
+            cell.contentView.clipsToBounds = false
+        } else {
+            cell.selectedBackgroundView = nil
+            cell.contentView.clipsToBounds = true
         }
     }
     
     private func getNode(at indexPath: IndexPath) -> MEGANode? {
-        nodes[safe: indexPath.row]
+        return nodes[safe: indexPath.row]
     }
     
     @objc func reload(node: MEGANode) {
-        guard
-            isOnline,
-            let rowIndex = nodes.firstIndex(of: node),
-            tableView.hasRow(at: IndexPath(row: rowIndex, section: 0))
-        else { return }
-        
-        UIView.performWithoutAnimation {
-            tableView.reloadRows(at: [IndexPath(row: rowIndex, section: 0)], with: .none)
+        if MEGAReachabilityManager.isReachable() {
+            tableView.reloadData()
+        } else {
+            tableView.reloadData()
         }
     }
-}
-
-extension FolderLinkTableViewController {
-    var nodes: [MEGANode] {
-        guard isOnline else {
-            return []
-        }
-            
-        if isSearching {
-            return folderLink.searchNodesArray ?? []
-        }
-        
+    
+    @objc func reloadData() {
+        tableView.reloadData()
+    }
+    
+    private var nodes: [MEGANode] {
         return folderLink.nodesArray
-    }
-    
-    var isOnline: Bool {
-        MEGAReachabilityManager.isReachable()
-    }
-    
-    var isSearching: Bool {
-        folderLink.searchController.isActive
     }
 }
 
@@ -94,24 +102,16 @@ extension FolderLinkTableViewController {
 
 extension FolderLinkTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        nodes.count
+        return nodes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: "nodeCell", for: indexPath) as? NodeTableViewCell
-        else {
-            fatalError("Could not instantiate NodeCollectionViewCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "nodeCell", for: indexPath) as? NodeTableViewCell,
+              let node = getNode(at: indexPath) else {
+            return UITableViewCell()
         }
         
-        cell.backgroundColor = TokenColors.Background.page
-        cell.infoLabel.textColor = TokenColors.Text.secondary
-        
-        if let node = getNode(at: indexPath) {
-            config(cell, by: node, at: indexPath)
-        } else {
-            CrashlyticsLogger.log("Node at \(indexPath) not found, nodes \(nodes.map { $0.handle }), is online \(isOnline), isSearching: \(isSearching)")
-        }
+        config(cell, by: node, at: indexPath)
         
         return cell
     }
@@ -134,18 +134,20 @@ extension FolderLinkTableViewController: UITableViewDataSource {
         cell.nameLabel.textColor = TokenColors.Text.primary
         cell.node = node
         
+        // 修复：正确处理编辑模式下的选择状态
         if tableView.isEditing {
-            folderLink.selectedNodesArray?.forEach {
-                if let tempNode = $0 as? MEGANode, tempNode.handle == node.handle {
-                    tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-                }
+            // 检查节点是否已被选择
+            if let selectedNodes = folderLink.selectedNodesArray as? [MEGANode],
+               selectedNodes.contains(where: { $0.handle == node.handle }) {
+                tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            } else {
+                tableView.deselectRow(at: indexPath, animated: false)
             }
             
-            let view = UIView()
-            view.backgroundColor = .clear
-            cell.selectedBackgroundView = view
+            // 配置单元格的编辑状态
+            configureCellForEditing(cell, editing: true)
         } else {
-            cell.selectedBackgroundView = nil
+            configureCellForEditing(cell, editing: false)
         }
         
         cell.separatorView.layer.borderColor = TokenColors.Border.strong.cgColor
@@ -165,39 +167,55 @@ extension FolderLinkTableViewController: UITableViewDelegate {
         guard let node = getNode(at: indexPath) else {
             return
         }
+        
         if tableView.isEditing {
-            folderLink.selectedNodesArray?.add(node)
+            // 修复：确保选择操作正确执行
+            if folderLink.selectedNodesArray == nil {
+                folderLink.selectedNodesArray = NSMutableArray()
+            }
+            
+            // 检查节点是否已经被选择
+            if let selectedNodes = folderLink.selectedNodesArray as? [MEGANode],
+               !selectedNodes.contains(where: { $0.handle == node.handle }) {
+                folderLink.selectedNodesArray?.add(node)
+            }
+            
             folderLink.setNavigationBarTitleLabel()
             folderLink.setToolbarButtonsEnabled(true)
             folderLink.areAllNodesSelected = folderLink.selectedNodesArray?.count == folderLink.nodesArray.count
+            
+            // 确保UI正确更新
+            tableView.reloadRows(at: [indexPath], with: .none)
             return
         }
         
         folderLink.didSelect(node)
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if tableView.isEditing {
-            guard let node = getNode(at: indexPath), let selectedNodesCopy = folderLink.selectedNodesArray as? [MEGANode] else {
+            guard let node = getNode(at: indexPath) else {
                 return
             }
-
-            selectedNodesCopy.forEach { (tempNode) in
-                if node.handle == tempNode.handle {
-                    folderLink.selectedNodesArray?.remove(tempNode)
-                }
+            
+            // 修复：确保取消选择操作正确执行
+            if let selectedNodes = folderLink.selectedNodesArray as? [MEGANode] {
+                let nodesToRemove = selectedNodes.filter { $0.handle == node.handle }
+                nodesToRemove.forEach { folderLink.selectedNodesArray?.remove($0) }
             }
             
             folderLink.setNavigationBarTitleLabel()
             folderLink.setToolbarButtonsEnabled(folderLink.selectedNodesArray?.count != 0)
             folderLink.areAllNodesSelected = false
+            
+            // 确保UI正确更新
+            tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
     
     func tableView(_ tableView: UITableView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool {
-        true
+        return true
     }
     
     func tableView(_ tableView: UITableView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
@@ -230,6 +248,18 @@ extension FolderLinkTableViewController: UITableViewDelegate {
         guard let folderLinkVC = animator.previewViewController as? FolderLinkViewController else { return }
         animator.addCompletion {
             self.navigationController?.pushViewController(folderLinkVC, animated: true)
+        }
+    }
+    
+    // 修复：确保单选按钮区域正确响应
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if tableView.isEditing {
+            // 确保单选按钮可见且可交互
+            cell.setEditing(true, animated: false)
+            
+            if let nodeCell = cell as? NodeTableViewCell {
+                configureCellForEditing(nodeCell, editing: true)
+            }
         }
     }
 }

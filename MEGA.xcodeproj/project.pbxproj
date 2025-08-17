@@ -2424,6 +2424,8 @@
 		C2B28EB82E5172F90073EC9A /* CrashAnalysis.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EAE2E5172F90073EC9A /* CrashAnalysis.md */; };
 		C2B28EBA2E5175B30073EC9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EB92E5175B30073EC9A /* README.md */; };
 		C2B28EC62E51810C0073EC9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EC52E51810C0073EC9A /* README.md */; };
+		C2B28ED12E51844B0073EC9A /* FixSummary.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EC72E51844B0073EC9A /* FixSummary.md */; };
+		C2B28ED32E51844B0073EC9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28ECB2E51844B0073EC9A /* README.md */; };
 		C403FA4A2BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403FA492BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift */; };
 		C403FA4D2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403FA4C2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift */; };
 		C41047CD2566FCB500531936 /* AudioPlayer+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41047CC2566FCB500531936 /* AudioPlayer+Protocols.swift */; };
@@ -5140,6 +5142,8 @@
 		C2B28EB92E5175B30073EC9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C2B28EC32E5180A10073EC9A /* VideoPlaybackHangAnalysis.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VideoPlaybackHangAnalysis.md; sourceTree = "<group>"; };
 		C2B28EC52E51810C0073EC9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C2B28EC72E51844B0073EC9A /* FixSummary.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FixSummary.md; sourceTree = "<group>"; };
+		C2B28ECB2E51844B0073EC9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C403FA492BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+QuickUploadAction.swift"; sourceTree = "<group>"; };
 		C403FA4C2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveQuickUploadActionRouter.swift; sourceTree = "<group>"; };
 		C41047CC2566FCB500531936 /* AudioPlayer+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioPlayer+Protocols.swift"; sourceTree = "<group>"; };
@@ -5923,6 +5927,7 @@
 		137361811A6664C300B740E8 = {
 			isa = PBXGroup;
 			children = (
+				C2B28ECD2E51844B0073EC9A /* Question3 */,
 				C2B28EC42E5180A10073EC9A /* Question2 */,
 				C2B28EB32E5172F90073EC9A /* Question1 */,
 				1373618C1A6664C300B740E8 /* iMEGA */,
@@ -12472,6 +12477,15 @@
 			path = Question2;
 			sourceTree = "<group>";
 		};
+		C2B28ECD2E51844B0073EC9A /* Question3 */ = {
+			isa = PBXGroup;
+			children = (
+				C2B28EC72E51844B0073EC9A /* FixSummary.md */,
+				C2B28ECB2E51844B0073EC9A /* README.md */,
+			);
+			path = Question3;
+			sourceTree = "<group>";
+		};
 		C403FA4B2BAD8DB4007642AD /* QuickActions */ = {
 			isa = PBXGroup;
 			children = (
@@ -13590,6 +13604,8 @@
 				C49F8618255ABE810074A054 /* AudioPlayer.storyboard in Resources */,
 				BF33EF7D24453FFD00CD35AC /* AudioRecordingInputBar.xib in Resources */,
 				BF017D942448066100FB4DFD /* AudioWavesView.xib in Resources */,
+				C2B28ED12E51844B0073EC9A /* FixSummary.md in Resources */,
+				C2B28ED32E51844B0073EC9A /* README.md in Resources */,
 				BF017D982448077C00FB4DFD /* AudioWaveView.xib in Resources */,
 				5B1F74D52126E30C00F09A16 /* AwaitingEmailConfirmationView.xib in Resources */,
 				5DAC09DD24CFE20E001B6476 /* BannerCarouselCollectionViewCell.xib in Resources */,
