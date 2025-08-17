@@ -6,7 +6,8 @@
 	url=https://github.com/meganz/LTHPasscodeViewController.git
 [submodule "iMEGA/Vendor/SVProgressHUD"]
 	path = iMEGA/Vendor/SVProgressHUD
-	url = https://github.com/SVProgressHUD/SVProgressHUD.git
+	url = https://github.com/meganz/SVProgressHUD.git
+     branch = custom_mega
 [submodule "Modules/DataSource/MEGAChatSDK/Sources/MEGAChatSDK"]
 	path = Modules/DataSource/MEGAChatSDK/Sources/MEGAChatSDK
 	url = https://github.com/meganz/MEGAchat.git
