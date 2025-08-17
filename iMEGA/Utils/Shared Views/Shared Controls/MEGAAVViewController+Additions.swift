@@ -71,7 +71,11 @@ extension MEGAAVViewController {
             .sink { [weak self] status in
                 guard let self else { return }
                 switch status {
-                case .readyToPlay: player?.play()
+                case .readyToPlay:
+                    // 只有在没有进行seek操作时才自动播放
+                    if !self.isSeeking {
+                        player?.play()
+                    }
                 case .failed: logError(for: playerItem)
                 default: break
                 }
@@ -84,14 +88,42 @@ extension MEGAAVViewController {
     }
     
     @objc func seekTo(mediaDestination: MOMediaDestination?) {
-        guard let mediaDestination = mediaDestination else {
-            player?.seek(to: CMTimeMake(value: 0, timescale: 1))
+        // 使用异步seek操作，避免阻塞主线程
+        Task { @MainActor in
+            await performAsyncSeek(to: mediaDestination)
+        }
+    }
+    
+    private func performAsyncSeek(to mediaDestination: MOMediaDestination?) async {
+        guard let player = player else {
+            MEGALogWarning("[MEGAAVViewController] performAsyncSeek called with nil player")
             return
         }
         
-        let time = CMTimeMake(value: mediaDestination.destination as? Int64 ?? 0, timescale: mediaDestination.timescale as? Int32 ?? 0)
-        if CMTIME_IS_VALID(time) {
-            player?.seek(to: time)
+        // 检查播放器状态
+        guard player.currentItem?.status == .readyToPlay else {
+            MEGALogWarning("[MEGAAVViewController] Player not ready for seek operation")
+            return
+        }
+        
+        do {
+            let targetTime: CMTime
+            if let mediaDestination = mediaDestination {
+                targetTime = CMTimeMake(value: mediaDestination.destination as? Int64 ?? 0, timescale: mediaDestination.timescale as? Int32 ?? 0)
+                guard CMTIME_IS_VALID(targetTime) else {
+                    MEGALogError("[MEGAAVViewController] Invalid target time for seek")
+                    return
+                }
+            } else {
+                targetTime = CMTimeMake(value: 0, timescale: 1)
+            }
+            
+            // 使用异步seek操作
+            let finished = await player.seek(to: targetTime, toleranceBefore: CMTimeMake(1, 1), toleranceAfter: CMTimeMake(1, 1))
+            MEGALogInfo("[MEGAAVViewController] Async seek completed: \(finished)")
+            
+        } catch {
+            MEGALogError("[MEGAAVViewController] Seek operation failed: \(error)")
         }
     }
     
@@ -203,9 +235,17 @@ extension MEGAAVViewController {
     
     private func replayVideo() {
         guard let player else { return }
-        player.seek(to: CMTime.zero)
-        player.play()
-        isEndPlaying = false
+        
+        // 使用异步seek操作
+        Task { @MainActor in
+            do {
+                _ = await player.seek(to: .zero)
+                player.play()
+                isEndPlaying = false
+            } catch {
+                MEGALogError("[MEGAAVViewController] Replay seek failed: \(error)")
+            }
+        }
     }
     
     private func applicationDidEnterBackground() {
@@ -227,18 +267,45 @@ extension MEGAAVViewController {
 
         guard let apiForStreaming,
               MEGAReachabilityManager.isReachable(), let node, let fileUrl else { return }
+        
         let oldFileURL = fileUrl
         setFileUrl(apiForStreaming: apiForStreaming, node: node)
 
         if oldFileURL != fileUrl {
             MEGALogDebug("[MEGAAVViewController] fileUrl changed from \(oldFileURL) to \(fileUrl)")
-            let currentTime = self.player?.currentTime()
-            let newPlayerItem = AVPlayerItem(url: fileUrl)
-            setPlayerItemMetadata(playerItem: newPlayerItem, node: node)
-            self.player?.replaceCurrentItem(with: newPlayerItem)
             
-            guard let currentTime, currentTime.isValid else { return }
-            self.player?.seek(to: currentTime)
+            // 异步处理网络变化，避免阻塞主线程
+            Task { @MainActor in
+                await handleNetworkChange(oldFileURL: oldFileURL, newFileURL: fileUrl)
+            }
+        }
+    }
+    
+    private func handleNetworkChange(oldFileURL: URL, newFileURL: URL) async {
+        guard let currentTime = player?.currentTime(), currentTime.isValid else { return }
+        
+        // 创建新的播放器项目
+        let newPlayerItem = AVPlayerItem(url: newFileURL)
+        setPlayerItemMetadata(playerItem: newPlayerItem, node: node)
+        
+        // 替换当前项目
+        player?.replaceCurrentItem(with: newPlayerItem)
+        
+        // 等待播放器准备就绪
+        for await status in newPlayerItem.publisher(for: \.status).values {
+            if status == .readyToPlay {
+                // 异步seek到之前的位置
+                do {
+                    _ = await player?.seek(to: currentTime)
+                    MEGALogInfo("[MEGAAVViewController] Successfully seeked to previous position after network change")
+                } catch {
+                    MEGALogError("[MEGAAVViewController] Failed to seek after network change: \(error)")
+                }
+                break
+            } else if status == .failed {
+                MEGALogError("[MEGAAVViewController] Player item failed to load after network change")
+                break
+            }
         }
     }
     
@@ -256,41 +323,10 @@ extension MEGAAVViewController {
     }
 
     private func logError(for playerItem: AVPlayerItem) {
-        guard let error = playerItem.error else { return }
-        MEGALogError("[MEGAAVViewController] Could play media \(playerItem) because of error: \(error)")
-    }
-
-    @objc func streamingPath(node: MEGANode) -> URL? {
-        guard let apiForStreaming else { return nil }
-        let streamingInfoRepository = StreamingInfoRepository(sdk: apiForStreaming)
-        let streamingInfoUseCase = StreamingInfoUseCase(streamingInfoRepository: streamingInfoRepository)
-        let path = streamingInfoUseCase.path(fromNode: node)
-        return path
+        MEGALogError("[MEGAAVViewController] Player item failed with error: \(String(describing: playerItem.error))")
     }
     
-    @objc func checkIsFileViolatesTermsOfService() {
-        guard let node else { return }
-        Task {
-            let nodeInfoUseCase = NodeInfoUseCase()
-            let isTakenDown = try await nodeInfoUseCase.isTakenDown(node: node, isFolderLink: isFolderLink)
-            if isTakenDown {
-                showTermsOfServiceAlert()
-            }
-        }
-    }
-    
-    @MainActor
-    private func showTermsOfServiceAlert() {
-        let alertController = UIAlertController(
-            title: Strings.Localizable.General.Alert.TermsOfServiceViolation.title,
-            message: Strings.Localizable.fileLinkUnavailableText2,
-            preferredStyle: .alert
-        )
-        alertController.addAction(UIAlertAction(title: Strings.Localizable.dismiss, style: .default, handler: { [weak self] _ in
-            self?.dismiss(animated: true)
-        }))
-        present(alertController, animated: true)
-    }
+    // MARK: - View Configuration
     
     @objc func configureViewColor() {
         view.backgroundColor = TokenColors.Background.page

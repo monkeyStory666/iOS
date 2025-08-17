@@ -13,11 +13,16 @@
 @import MEGAL10nObjc;
 
 static const NSUInteger MIN_SECOND = 10; // Save only where the users were playing the file, if the streaming second is greater than this value.
+static const NSTimeInterval SEEK_TIMEOUT = 10.0; // 10 seconds timeout for seek operations
 
 @interface MEGAAVViewController () <AVPlayerViewControllerDelegate>
 
 @property (nonatomic, assign, getter=isViewDidAppearFirstTime) BOOL viewDidAppearFirstTime;
 @property (nonatomic, strong) NSMutableSet *subscriptions;
+@property (nonatomic, assign) BOOL isSeeking;
+@property (nonatomic, assign) BOOL isPlayerPreparing;
+@property (nonatomic, strong) dispatch_queue_t playerQueue;
+@property (nonatomic, strong) NSTimer *seekTimeoutTimer;
 
 @end
 
@@ -34,6 +39,9 @@ static const NSUInteger MIN_SECOND = 10; // Save only where the users were playi
         _isFolderLink   = NO;
         _subscriptions = [[NSMutableSet alloc] init];
         _hasPlayedOnceBefore = NO;
+        _isSeeking = NO;
+        _isPlayerPreparing = NO;
+        _playerQueue = dispatch_queue_create("com.mega.avplayer.queue", DISPATCH_QUEUE_SERIAL);
     }
     
     return self;
@@ -50,6 +58,9 @@ static const NSUInteger MIN_SECOND = 10; // Save only where the users were playi
         self.fileUrl         = [self streamingPathWithNode:node];
         MEGALogInfo(@"[MEGAAVViewController] init with node %@, is folderLink: %d, fileUrl: %@, apiForStreaming: %@", self.node, folderLink, self.fileUrl, apiForStreaming);
         _hasPlayedOnceBefore = NO;
+        _isSeeking = NO;
+        _isPlayerPreparing = NO;
+        _playerQueue = dispatch_queue_create("com.mega.avplayer.queue", DISPATCH_QUEUE_SERIAL);
     }
         
     return self;
@@ -78,6 +89,12 @@ static const NSUInteger MIN_SECOND = 10; // Save only where the users were playi
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    // 检查视图控制器状态，避免在转换期间执行seek操作
+    if (![self isViewVisible]) {
+        MEGALogWarning(@"[MEGAAVViewController] View not visible, deferring seek operation");
+        return;
+    }
     
     NSString *fingerprint = [self fileFingerprint];
 
@@ -124,6 +141,9 @@ static const NSUInteger MIN_SECOND = 10; // Save only where the users were playi
     if ([[AVPlayerManager shared] isPIPModeActiveFor:self]) {
         return;
     }
+    
+    // 取消正在进行的seek操作
+    [self cancelSeekOperation];
     
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         [self stopStreaming];
@@ -181,31 +201,131 @@ static const NSUInteger MIN_SECOND = 10; // Save only where the users were playi
 
 - (void)seekToDestination:(MOMediaDestination *)mediaDestination play:(BOOL)play {
     if (!self.fileUrl) {
+        MEGALogWarning(@"[MEGAAVViewController] seekToDestination called with nil fileUrl");
         return;
     }
     
+    // 防止重复调用
+    if (self.isSeeking || self.isPlayerPreparing) {
+        MEGALogWarning(@"[MEGAAVViewController] seekToDestination called while operation in progress");
+        return;
+    }
+    
+    // 检查视图控制器状态
+    if (![self isViewVisible]) {
+        MEGALogWarning(@"[MEGAAVViewController] seekToDestination called when view not visible");
+        return;
+    }
+    
+    self.isPlayerPreparing = YES;
     [self willStartPlayer];
+    
+    // 异步创建AVAsset和AVPlayerItem，避免阻塞主线程
+    dispatch_async(self.playerQueue, ^{
+        MEGALogInfo(@"[MEGAAVViewController] Creating AVAsset on background queue");
+        
+        AVAsset *asset = [AVAsset assetWithURL:self.fileUrl];
+        AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
+        
+        // 回到主线程设置播放器和元数据
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setupPlayerWithItem:playerItem mediaDestination:mediaDestination play:play];
+        });
+    });
+}
 
-    AVAsset *asset = [AVAsset assetWithURL:self.fileUrl];
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
+- (void)setupPlayerWithItem:(AVPlayerItem *)playerItem mediaDestination:(MOMediaDestination *)mediaDestination play:(BOOL)play {
+    // 再次检查视图状态
+    if (![self isViewVisible]) {
+        MEGALogWarning(@"[MEGAAVViewController] setupPlayerWithItem called when view not visible");
+        self.isPlayerPreparing = NO;
+        return;
+    }
+    
     [self setPlayerItemMetadataWithPlayerItem:playerItem node:self.node];
     self.player = [AVPlayer playerWithPlayerItem:playerItem];
     [self.subscriptions addObject:[self bindPlayerItemStatusWithPlayerItem:playerItem]];
     
-    [self seekToMediaDestination:mediaDestination];
+    // 使用已存在的seekTo方法，而不是未实现的seekToMediaDestination
+    [self seekTo:mediaDestination];
     
     if (play) {
-        [self.player play];
+        // 检查播放器状态后再播放
+        if (self.player.currentItem.status == AVPlayerItemStatusReadyToPlay) {
+            [self.player play];
+        } else {
+            MEGALogWarning(@"[MEGAAVViewController] Player not ready to play, status: %ld", (long)self.player.currentItem.status);
+        }
     }
     
     [self.subscriptions addObject:[self bindPlayerTimeControlStatus]];
+    
+    self.isPlayerPreparing = NO;
+    MEGALogInfo(@"[MEGAAVViewController] Player setup completed");
+}
+
+- (void)cancelSeekOperation {
+    if (self.isSeeking) {
+        MEGALogInfo(@"[MEGAAVViewController] Cancelling seek operation");
+        [self.player.currentItem cancelPendingSeeks];
+        self.isSeeking = NO;
+    }
+    
+    if (self.isPlayerPreparing) {
+        MEGALogInfo(@"[MEGAAVViewController] Cancelling player preparation");
+        self.isPlayerPreparing = NO;
+    }
+    
+    [self cancelSeekTimeoutTimer];
+}
+
+- (void)startSeekTimeoutTimer {
+    [self cancelSeekTimeoutTimer];
+    self.seekTimeoutTimer = [NSTimer scheduledTimerWithTimeInterval:SEEK_TIMEOUT
+                                                             target:self
+                                                           selector:@selector(seekTimeoutHandler)
+                                                           userInfo:nil
+                                                            repeats:NO];
+}
+
+- (void)cancelSeekTimeoutTimer {
+    if (self.seekTimeoutTimer) {
+        [self.seekTimeoutTimer invalidate];
+        self.seekTimeoutTimer = nil;
+    }
+}
+
+- (void)seekTimeoutHandler {
+    MEGALogError(@"[MEGAAVViewController] Seek operation timed out");
+    [self cancelSeekOperation];
+    
+    // 显示错误提示
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:LocalizedString(@"error", @"")
+                                                                       message:LocalizedString(@"video.seek.timeout", @"Seek operation timed out")
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:LocalizedString(@"ok", @"")
+                                                  style:UIAlertActionStyleDefault
+                                                handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    });
+}
+
+- (BOOL)isViewVisible {
+    return self.view.window != nil && !self.isBeingDismissed && !self.isMovingFromParentViewController;
 }
 
 - (void)replayVideo {
     if (self.player) {
-        [self.player seekToTime:kCMTimeZero];
-        [self.player play];
-        self.isEndPlaying = NO;
+        [self cancelSeekOperation];
+        [self.player seekToTime:kCMTimeZero toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+            if (finished) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.player play];
+                    self.isEndPlaying = NO;
+                });
+            }
+        }];
     }
 }
 
@@ -241,6 +361,12 @@ static const NSUInteger MIN_SECOND = 10; // Save only where the users were playi
     }
     
     return fingerprint;
+}
+
+- (void)dealloc {
+    [self cancelSeekOperation];
+    [self cancelSeekTimeoutTimer];
+    MEGALogInfo(@"[MEGAAVViewController] dealloc");
 }
 
 @end

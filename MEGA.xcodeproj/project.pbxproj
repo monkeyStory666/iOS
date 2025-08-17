@@ -2423,6 +2423,7 @@
 		C2B28EB62E5172F90073EC9A /* ThreadSafeUIUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B28EB22E5172F90073EC9A /* ThreadSafeUIUpdater.swift */; };
 		C2B28EB82E5172F90073EC9A /* CrashAnalysis.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EAE2E5172F90073EC9A /* CrashAnalysis.md */; };
 		C2B28EBA2E5175B30073EC9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EB92E5175B30073EC9A /* README.md */; };
+		C2B28EC62E51810C0073EC9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2B28EC52E51810C0073EC9A /* README.md */; };
 		C403FA4A2BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403FA492BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift */; };
 		C403FA4D2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403FA4C2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift */; };
 		C41047CD2566FCB500531936 /* AudioPlayer+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41047CC2566FCB500531936 /* AudioPlayer+Protocols.swift */; };
@@ -5137,6 +5138,8 @@
 		C2B28EAE2E5172F90073EC9A /* CrashAnalysis.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CrashAnalysis.md; sourceTree = "<group>"; };
 		C2B28EB22E5172F90073EC9A /* ThreadSafeUIUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeUIUpdater.swift; sourceTree = "<group>"; };
 		C2B28EB92E5175B30073EC9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C2B28EC32E5180A10073EC9A /* VideoPlaybackHangAnalysis.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VideoPlaybackHangAnalysis.md; sourceTree = "<group>"; };
+		C2B28EC52E51810C0073EC9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C403FA492BAD89C9007642AD /* AppDelegate+QuickUploadAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+QuickUploadAction.swift"; sourceTree = "<group>"; };
 		C403FA4C2BAD8DCB007642AD /* CloudDriveQuickUploadActionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveQuickUploadActionRouter.swift; sourceTree = "<group>"; };
 		C41047CC2566FCB500531936 /* AudioPlayer+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioPlayer+Protocols.swift"; sourceTree = "<group>"; };
@@ -5920,6 +5923,7 @@
 		137361811A6664C300B740E8 = {
 			isa = PBXGroup;
 			children = (
+				C2B28EC42E5180A10073EC9A /* Question2 */,
 				C2B28EB32E5172F90073EC9A /* Question1 */,
 				1373618C1A6664C300B740E8 /* iMEGA */,
 				B6CED48C22B8AC70009C4861 /* MEGAUnitTests */,
@@ -12459,6 +12463,15 @@
 			path = Question1;
 			sourceTree = "<group>";
 		};
+		C2B28EC42E5180A10073EC9A /* Question2 */ = {
+			isa = PBXGroup;
+			children = (
+				C2B28EC52E51810C0073EC9A /* README.md */,
+				C2B28EC32E5180A10073EC9A /* VideoPlaybackHangAnalysis.md */,
+			);
+			path = Question2;
+			sourceTree = "<group>";
+		};
 		C403FA4B2BAD8DB4007642AD /* QuickActions */ = {
 			isa = PBXGroup;
 			children = (
@@ -13677,6 +13690,7 @@
 				C450470B25794A7A00EE510E /* PlaylistHeaderFooterView.xib in Resources */,
 				2F85307324885FAB00064E83 /* PreviewersView.xib in Resources */,
 				6DF356B22BAD36320099FCF1 /* PrivacyInfo.xcprivacy in Resources */,
+				C2B28EC62E51810C0073EC9A /* README.md in Resources */,
 				A8C93C1422D71C470030CE1B /* Profile.storyboard in Resources */,
 				2F6F0893253E387600C5B5D7 /* ProgressIndicatorView.xib in Resources */,
 				BFCA9A1D25ABA33900D1F4E0 /* PSAView.xib in Resources */,
